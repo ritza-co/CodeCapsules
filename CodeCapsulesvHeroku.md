@@ -1,14 +1,12 @@
 # The Easiest Serverless Platform? CodeCapsules vs Heroku
 
-
 Producing a web application which the entire world can use is complicated. This involves setting up a physical server,
 choosing the operating system, configuring the server, and monitoring the server. We will be taking a look at two serverless applications, CodeCapsules and Heroku, which perform all the above for you at a fraction of
 the time. They even accept code from GitHub - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
 This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on [CodeCapsules](https://codecapsules.io/) and [Heroku](https://www.heroku.com/). 
 
-
-### Prerequisites
+## Prerequisites
 
 In addition to general programming knowledge, you must have the following:
   - [Python](https://www.python.org/downloads/) version 3.5 or above installed.
@@ -21,7 +19,8 @@ The above links contain instructions on how to:
   - Create a GitHub account
   - Install Git
 
-#### Installing virtualenv
+### Installing virtualenv
+
 If you already have virtualenv and know what it does, [skip](#creating-the-python-application) to the next section. 
 
 
@@ -37,9 +36,10 @@ pip3 install virtualenv
 Now that you have a current version of Python, Git, a GitHub account, and virtualenv
 installed, you can create the "Hello, world!" application.
 
-### Creating the Python application
+## Creating the Python application
 
-#### Setting up the virtual environment
+### Setting up the virtual environment
+
 First, create a directory for your project. I named my directory "helloWorld". Open your command line, and enter the created directory.
 
 Within the directory, create the virtual Python environment by typing
@@ -60,7 +60,8 @@ Your terminal should now look something like this:
 As in the image above, ensure that to the left of your username you see **(env)** or similar.
 This means you have entered the virtual environment.
 
-#### Installing the web application tools
+### Installing the web application tools
+
 For this program we will be using two popular Python tools for web development; Flask and Gunicorn:
 
   - Flask is a light-weight web-development framework for Python. It provides a number
@@ -74,7 +75,8 @@ virtual environment before running this command.
 
 `pip3 install flask gunicorn`
 
-#### Coding the application
+### Coding the application
+
 Now that we have setup our requirements, we can program our application. Create a
 new Python file within the current directory and name it anything. I named mine
 "helloFlask". Next, enter the following code.
@@ -93,7 +95,8 @@ if __name__ == '__main__':
 ```
 
 This program will display "Hello, world!" on the domain hosted by CodeCapsules or Heroku.
-#### Creating the Procfile
+
+### Creating the Procfile
 
 A Procfile is necessary to tell our platform of choice what to do with our code. You can read
 more about what a Procfile does [here](https://devcenter.heroku.com/articles/procfile).
@@ -104,7 +107,7 @@ Create a new file within the same directory. Name it Procfile. After, open the P
 
  Replace "fileName" with the name of your Python file. Save the Procfile.
 
-#### Freezing the requirements
+### Freezing the requirements
 
 Our final step before uploading the program to GitHub is to create a list of requirements for the program.
 This is necessary for the server to know what needs to install to run our program. Luckily, pip makes this easy. In the same terminal, enter:
@@ -121,9 +124,10 @@ ProjectDirectory
 
 ```
 
-### Uploading to GitHub
+## Uploading to GitHub
 
-#### Creating the remote repository
+### Creating the remote repository
+
 We can now send our program to GitHub. CodeCapsules and Heroku will connect to our GitHub repository, and use it to create a website. If you already know how to send code from a local repository to a remote repository on GitHub, do so for the code created and [skip](#codecapsules) to the next section. Otherwise, follow these steps:
 
   1. Go to www.github.com and login.
@@ -134,31 +138,34 @@ We can now send our program to GitHub. CodeCapsules and Heroku will connect to o
 ![CreateRepo](Images/GithubCreateRepo.png)
 *The link to your repository is located under Quick setup* ****
 
-#### Sending files to the GitHub repository
-The final step before deploying the code to CodeCapsules and Heroku is to send our Python file, Procfile, and requirements file to the newly created GitHub repository. Open your terminal and navigate to the folder containing these files. Type each command in order.
+### Sending files to the GitHub repository
 
-1. `git init`
-2. `git add Procfile nameOfPythonFile.py requirements.txt`
-3. `git commit -m "First commit!"`
-4. `git branch -M main`
-5. `git remote add origin https://github.com/yourusername/yourrepositoryname.git`
-6. `git push -u origin main`
+The final step before deploying the code to CodeCapsules and Heroku is to send our Python file, Procfile, and requirements file to the newly created GitHub repository. Open your terminal and navigate to the folder containing these files. Type each command in order.
+```
+  git init
+  git add Procfile nameOfPythonFile.py requirements.txt
+  git commit -m "First commit!"
+  git branch -M main
+  git remote add origin https://github.com/yourusername/yourrepositoryname.git
+  git push -u origin main
+```
 
 For step 2 replace "nameOfPythonFile.py" with the name of the Python file containing your code.
 For step 5, replace the URL with the URL you copied in the previous section.
 
 Now, you can see your code by going to your repository on [GitHub](www.github.com). We are ready to send our code to production.
 
-### Sending the application to production
+## Sending the application to production
 We will test two different platforms that will handle production and allow anyone in the world to view our application. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
 
 Both CodeCapsules and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be keeping track of various metrics that will track this simplicity. First, we will try CodeCapsules.
 
-### CodeCapsules
+## CodeCapsules
 
 CodeCapsules is the newest of the two platforms. Based in Cape Town, South Africa, CodeCapsules aims to provide a platform as a contender to Heroku. CodeCapsules advertises ease of use and time saved as their main advantages.
 
-#### Creating an account with CodeCapsules and connecting to Github
+### Creating an account with CodeCapsules and connecting to Github
+
 First, we need to create an account with CodeCapsules. Follow these instructions to get started:
 
 1. Go to [CodeCapsules](www.codecapsules.io).
@@ -178,7 +185,8 @@ Now that we have created a CodeCapsules account, we can connect CodeCapsules to 
 
 We are now connected to GitHub! Only a few more steps to go. Navigate back to the main screen.
 
-#### Creating a team, space, and a capsule
+### Creating a team, space, and a capsule
+
 CodeCapsules organizes your code into three different containers:
 - Teams
 - Spaces
@@ -201,7 +209,7 @@ Take these steps to get your code into production:
 
 ![CapCreate](Images/CreateCapsuleCC.png)
 
-#### Viewing your work
+### Viewing your work
 
 Now that you have created a Capsule, you can see your website.
 
@@ -209,11 +217,12 @@ Now that you have created a Capsule, you can see your website.
 
 Click on the "Overview" button. Your URL is displayed under "domain". Enter it into your browser to see your program!
 
+## Heroku
 
-### Heroku
 Heroku provides similar services as CodeCapsules. Heroku advertises itself as a _Cloud platform as service_ (PaaS). Heroku aims to allow developers to focus on their core product, while they take care of the rest. How simple is Heroku to use?
 
-#### Creating an account with Heroku and creating an application
+### Creating an account with Heroku and creating an application
+
 We must first create a Heroku account. Do the following:
 
 1. Go to www.heroku.com
@@ -233,8 +242,8 @@ Now that we have created a Heroku account, we can create an application. An appl
 
 ![CreateAppHeoku](Images/HerokuCreateApp.png)
 
+### Connecting to GitHub and sending to production
 
-#### Connecting to GitHub and sending to production
 After creating your app, Heroku presents many options to you. Under Deployment method, click "Github", and follow these steps:
 
 1. Click the connect to GitHub option, and perform the required tasks.
@@ -245,7 +254,8 @@ After creating your app, Heroku presents many options to you. Under Deployment m
 
 After connecting, click "Deploy Branch" in the "Manual Deploy" section at the bottom of the page. Wait until it has finished deploying. When deployment is finished, navigate to the top of the page and click "Open app" to see the result!
 
-### Conclusions
+## Results
+
 I performed this process twice for CodeCapsules and Heroku. For these attempts, I recorded how long it took me to get from GitHub to production. Below are the results.
 
 |    Attempt #| CodeCapsules| Heroku |
@@ -256,3 +266,4 @@ I performed this process twice for CodeCapsules and Heroku. For these attempts, 
 My first attempt represents the first time I've ever used these platforms. I found that Heroku has much more UI clutter, mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
 
 CodeCapsules was clearer to me. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is simply less to click on to be able to get to production.
+
