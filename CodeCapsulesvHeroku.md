@@ -1,4 +1,4 @@
-# The Easiest Serverless Platform? CodeCapsules vs Heroku
+# The Easiest Serverless Platform? CodeCapsules vs Heroku - You Decide
 
 Producing a web application which the entire world can use is complicated. This involves setting up a physical server,
 choosing the operating system, configuring the server, and monitoring the server. We will be taking a look at two serverless applications, CodeCapsules and Heroku, which perform all the above for you at a fraction of
