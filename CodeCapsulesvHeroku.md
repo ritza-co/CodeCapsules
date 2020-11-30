@@ -2,19 +2,19 @@
 
 
 Producing a web application which the entire world can use is complicated. This involves setting up a physical server,
-choosing the operating system, configuring the server, and monitoring the server. We will be taking a look at two serverless applications,
-CodeCapsules and Heroku, which perform all the above for you at a fraction of
+choosing the operating system, configuring the server, and monitoring the server. We will be taking a look at two serverless applications, CodeCapsules and Heroku, which perform all the above for you at a fraction of
 the time. They even accept code from GitHub - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
-This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python and publishing it on [CodeCapsules](https://codecapsules.io/) and [Heroku](https://www.heroku.com/).
+This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on [CodeCapsules](https://codecapsules.io/) and [Heroku](https://www.heroku.com/). 
+
 
 ### Prerequisites
 
-To follow this tutorial, you must have the following:
+In addition to general programming knowledge, you must have the following:
   - [Python](https://www.python.org/downloads/) version 3.5 or above installed.
   - A [GitHub account](https://github.com/) and [Git](
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
-  - Pythons [virtualenv](https://pypi.org/project/virtualenv/) installed.
+  - Pythons [virtualenv](https://pypi.org/project/virtualenv/) [installed](#installing-virtualenv).
 
 The above links contain instructions on how to:
   - Install Python
@@ -22,6 +22,8 @@ The above links contain instructions on how to:
   - Install Git
 
 #### Installing virtualenv
+If you already have virtualenv and know what it does, [skip](#creating-the-python-application) to the next section. 
+
 
 Using virtualenv, you can create a virtual Python environment. This virtual environment will only contain the essential modules for your web-application.
 
@@ -43,13 +45,19 @@ First, create a directory for your project. I named my directory "helloWorld". O
 Within the directory, create the virtual Python environment by typing
 `virtualenv env`.
 
-To activate the virtual environment, type `source env/bin/activate`.
+To activate the virtual environment, type the following from within the newly created directory:
+
+(Linux/MacOSX)
+`source env/bin/activate`
+
+(Windows)
+`env\Scripts\activate.bat`
 
 Your terminal should now look something like this:
 
 ![VirtualEnv](Images/VirtualEnvSETUP.png)
 
-As in the image above, ensure that to the left of your username you see **(env)**.
+As in the image above, ensure that to the left of your username you see **(env)** or similar.
 This means you have entered the virtual environment.
 
 #### Installing the web application tools
@@ -116,7 +124,7 @@ ProjectDirectory
 ### Uploading to GitHub
 
 #### Creating the remote repository
-We can now send our program to GitHub. CodeCapsules and Heroku will connect to our GitHub repository, and use it to create a website. If you already know how to send code from a local repository to a remote repository on GitHub, do so for the code created and skip to the next section. Otherwise, follow these steps:
+We can now send our program to GitHub. CodeCapsules and Heroku will connect to our GitHub repository, and use it to create a website. If you already know how to send code from a local repository to a remote repository on GitHub, do so for the code created and [skip](#codecapsules) to the next section. Otherwise, follow these steps:
 
   1. Go to www.github.com and login.
   2. Find the "Create new repository" button and click it.
@@ -124,7 +132,7 @@ We can now send our program to GitHub. CodeCapsules and Heroku will connect to o
   4. Copy the URL given to you under "Quick setup".
 
 ![CreateRepo](Images/GithubCreateRepo.png)
-*The link to your repository is located under Quick setup* 
+*The link to your repository is located under Quick setup* ****
 
 #### Sending files to the GitHub repository
 The final step before deploying the code to CodeCapsules and Heroku is to send our Python file, Procfile, and requirements file to the newly created GitHub repository. Open your terminal and navigate to the folder containing these files. Type each command in order.
