@@ -260,10 +260,15 @@ I performed this process twice for CodeCapsules and Heroku. For these attempts, 
 
 |    Attempt #| CodeCapsules| Heroku |
 | ----------- |-------------|--------|
-| 1           | ~7.5 min| ~10 min  |
-| 2           | 4 min 45 sec       |      6.5 min  |
+| 1           | ~7.5 min|   ~10 min  |
+| 2           | 4 min 45 sec       |      5  min|
 
 My first attempt represents the first time I've ever used these platforms. I found that Heroku has much more UI clutter, mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
 
-CodeCapsules was clearer to me. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is simply less to click on to be able to get to production.
+I also counted total number of UI clicks, that is, the total number of clicks after creating an account to get to a deployed product.
 
+| CodeCapsules| Heroku |
+| ----------- |--------|
+| 8 clicks    | 9 clicks|    
+
+After going through this process, I found that CodeCapsules was clearer to me. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production.  
