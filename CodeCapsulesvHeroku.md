@@ -124,7 +124,7 @@ We can now send our program to GitHub. CodeCapsules and Heroku will connect to o
   4. Copy the URL given to you under "Quick setup".
 
 ![CreateRepo](Images/GithubCreateRepo.png)
-*The link to your repository is located under Quick setup* **FIXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX**
+*The link to your repository is located under Quick setup* 
 
 #### Sending files to the GitHub repository
 The final step before deploying the code to CodeCapsules and Heroku is to send our Python file, Procfile, and requirements file to the newly created GitHub repository. Open your terminal and navigate to the folder containing these files. Type each command in order.
