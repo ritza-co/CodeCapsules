@@ -60,15 +60,15 @@ Your terminal should now look something like this:
 As in the image above, ensure that to the left of your username you see **(env)** or similar.
 This means you have entered the virtual environment.
 
-### Installing the Flask and Gunicorn
+### Installing Flask and Gunicorn
 
 For this program we will be using two popular Python tools for web development; [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Gunicorn](https://gunicorn.org/):
 
-  - [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a light-weight web-development framework for Python. It provides a number
+  - Flask is a light-weight web-development framework for Python. It provides a number
 of easy to use resources and tools for building and maintaining web applications,
 websites, and similar services.
 
-  - [Gunicorn](https://gunicorn.org/) is our WSGI server of choice for sending our code to the production environment. Check out this link to read more about [WSGI servers](https://www.fullstackpython.com/wsgi-servers.html).
+  - Gunicorn is our WSGI server of choice for sending our code to the production environment. Check out this link to read more about [WSGI servers](https://www.fullstackpython.com/wsgi-servers.html).
 
 Install these tools with the following pip command. Ensure you are in your
 virtual environment before running this command.
