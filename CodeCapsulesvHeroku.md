@@ -24,7 +24,7 @@ The above links contain instructions on how to:
 If you already have virtualenv and know what it does, [skip](#creating-the-python-application) to the next section. 
 
 
-Using virtualenv, you can create a virtual Python environment. This virtual environment will only contain the essential modules for your web-application.
+Using virtualenv, you can create a virtual Python environment. This virtual environment will contain only the essential modules for your web-application.
 
 To install virtualenv, open
 up your terminal and type:
@@ -271,4 +271,4 @@ I also counted total number of UI clicks, that is, the total number of clicks af
 | ----------- |--------|
 | 8 clicks    | 9 clicks|    
 
-After going through this process, I found that CodeCapsules was clearer to me. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production.  
+After going through this process, I found that CodeCapsules was clearer to me. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production. Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - CodeCapsules accepted my first Capsule name immediately. 
