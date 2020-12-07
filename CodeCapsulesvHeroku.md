@@ -3,7 +3,7 @@
 Producing a web application which the entire world can use is complicated. You must setup a physical server,
 choose the operating system, configure the server, and monitor the server. I tested three "Cloud platform as a Service" (PaaS) providers which perform all the above for you at a fraction of the time, and accept code from Github - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
-For the following platforms, I tracked two metrics detailed in the "[Benchmarks]"(#benchmarks) section reflecting ease of use for each:
+For the following platforms, I tracked two metrics detailed in the ["Benchmarks"](#benchmarks) section reflecting ease of use for each:
 
 - [Code Capsules](https://codecapsules.io/)
 - [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
