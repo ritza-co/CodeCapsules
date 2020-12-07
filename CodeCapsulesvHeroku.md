@@ -1,18 +1,19 @@
-# The Easiest Serverless Platform? CodeCapsules vs Heroku - You Decide
+# The Easiest Serverless Platform? Digital Oceans vs Heroku vs CodeCapsules - You Decide
 
-Producing a web application which the entire world can use is complicated. This involves setting up a physical server,
-choosing the operating system, configuring the server, and monitoring the server. We will be taking a look at two serverless applications, CodeCapsules and Heroku, which perform all the above for you at a fraction of
+Producing a web application which the entire world can use is complicated. You must setup a physical server,
+choose the operating system, configure the server, and monitor the server. We will be taking a look at three serverless platforms, [CodeCapsules](https://codecapsules.io/), [Digital Oceans](https://www.digitalocean.com/products/app-platform/), and [Heroku](https://www.heroku.com/), which perform all the above for you at a fraction of
 the time. They even accept code from GitHub - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
-This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on [CodeCapsules](https://codecapsules.io/) and [Heroku](https://www.heroku.com/). 
+This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on CodeCapsules, Heroku and Digital Oceans. 
 
 ## Prerequisites
 
-In addition to general programming knowledge, you must have the following:
+To follow this tutorial, you must have general programming knowledge and know how to use GitHub. This means you can send code from a local repository to a remote repository on GitHub. You must also have:
   - [Python](https://www.python.org/downloads/) version 3.5 or above installed.
   - A [GitHub account](https://github.com/) and [Git](
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
   - Pythons [virtualenv](https://pypi.org/project/virtualenv/) [installed](#installing-virtualenv).
+  - A working credit card to test out Digital Oceans (free of charge).
 
 The above links contain instructions on how to:
   - Install Python
@@ -124,41 +125,16 @@ ProjectDirectory
 
 ```
 
-## Uploading to GitHub
+### Uploading to Github
 
-### Creating the remote repository
+Send the Procfile, requirements.txt, and Python files to a remote repository on GitHub. If you are unfamiliar with how to do this, read [this](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) article for further information. 
 
-We can now send our program to GitHub. CodeCapsules and Heroku will connect to our GitHub repository, and use it to create a website. If you already know how to send code from a local repository to a remote repository on GitHub, do so for the code created and [skip](#codecapsules) to the next section. Otherwise, follow these steps:
-
-  1. Go to www.github.com and login.
-  2. Find the "Create new repository" button and click it.
-  3. Name your repository whatever you like. I named mine "flask-hello".
-  4. Copy the URL given to you under "Quick setup".
-
-![CreateRepo](Images/GithubCreateRepo.png)
-*The link to your repository is located under Quick setup* ****
-
-### Sending files to the GitHub repository
-
-The final step before deploying the code to CodeCapsules and Heroku is to send our Python file, Procfile, and requirements file to the newly created GitHub repository. Open your terminal and navigate to the folder containing these files. Type each command in order.
-```
-  git init
-  git add Procfile nameOfPythonFile.py requirements.txt
-  git commit -m "First commit!"
-  git branch -M main
-  git remote add origin https://github.com/yourusername/yourrepositoryname.git
-  git push -u origin main
-```
-
-For step 2 replace "nameOfPythonFile.py" with the name of the Python file containing your code.
-For step 5, replace the URL with the URL you copied in the previous section.
-
-Now, you can see your code by going to your repository on [GitHub](www.github.com). We are ready to send our code to production.
+With our application on GitHub, we are now ready to deploy it.
 
 ## Sending the application to production
-We will test two different platforms that will handle production and allow anyone in the world to view our application. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
+We will test three different platforms that will handle production and allow anyone in the world to view our application. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
 
-Both CodeCapsules and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be keeping track of various metrics that will track this simplicity. First, we will try CodeCapsules.
+CodeCapsules, Digital Oceans, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be keeping track of various metrics that will track this simplicity. First, we will try CodeCapsules.
 
 ## CodeCapsules
 
@@ -254,21 +230,66 @@ After creating your app, Heroku presents many options to you. Under Deployment m
 
 After connecting, click "Deploy Branch" in the "Manual Deploy" section at the bottom of the page. Wait until it has finished deploying. When deployment is finished, navigate to the top of the page and click "Open app" to see the result!
 
+## Digital Oceans App Platform
+
+The Digital Oceans App Platform was designed to compete against to Heroku. It offers similar features to CodeCapsules and Heroku. Like Heroku, it advertises itself as a "Platform as a Service". 
+
+### Account creation and repository linking
+
+Digital Oceans is the only platform here which requires a credit card. At the time of writing, Digital Oceans offers a free trial worth $100 credit on their platform, so you will **not** be charged. Ensure that you have canceled your billing account, so that you will not be charged in the future. 
+
+Create a new account by:
+
+1. Visiting https://www.digitalocean.com/products/app-platform/.
+2. Click the "Get Started" button, and sign up via email.
+3. You will now need to enter your payment information - I chose a credit card.
+4. Click "Deploy a Github Repo".
+5. Click "Launch Your App".
+6. Choose "Link your GitHub account".
+7. Login to your GitHub account and press the "Only select repositories" button.
+8. Pick the repository containing your Flask application.
+9. Press the "Authorize and Install" button.
+10. From the drop down menu, choose the repository containing the Flask application.
+
+![DO1](Images/DigitalOceans1.png)
+
+### Finishing steps, and deploying your code
+
+Digital Oceans redirects you to a new set of steps. Follow the remaining instructions carefully:
+
+1. Choose your region - I chose New York.
+2. Pick the proper branch you want to deploy from (default is "main").
+3. Change the "run" command to `gunicorn --worker-tmp-dir /dev/shm file:app`
+  - This is **important**. Without performing this step, your application will not deploy.
+  - Change "file" to the name of your Python file (mine was "helloFlask").
+
+![DO2](Images/DigitalOceans2.png)
+
+4. Select the Basic plan. 
+5. Press "Launch Basic App" and your application will now be built. 
+
+View the application by entering the link under the applications name. 
+
 ## Results
 
-I performed this process twice for CodeCapsules and Heroku. For these attempts, I recorded how long it took me to get from GitHub to production. Below are the results.
+I performed this process twice for these platforms. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
 
-|    Attempt #| CodeCapsules| Heroku |
-| ----------- |-------------|--------|
-| 1           | ~7.5 min|   ~10 min  |
-| 2           | 4 min 45 sec       |      5  min|
+|    Attempt #| CodeCapsules| Heroku | Digital Oceans|
+| ----------- |-------------|--------|---------------|
+| 1           | ~7.5 min|   ~10 min  |12 mins 11 sec|
+| 2           | 4 min 45 sec       |      5  min| 6 min 1 sec|
 
-My first attempt represents the first time I've ever used these platforms. I found that Heroku has much more UI clutter, mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
+My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
+
+Digital Oceans and CodeCapsules had a much more intuitive UI. However, Digital Oceans requires you to enter payment information upon account creation. Digital Oceans also took the longest time to deploy the application, which is reflected by it taking the longest time to get to production in both attempts. 
+
+Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - CodeCapsules accepted my first Capsule name immediately. Digital Oceans doesn't let you enter your own domain name, unless you tinker in the settings.
 
 I also counted total number of UI clicks, that is, the total number of clicks after creating an account to get to a deployed product.
 
-| CodeCapsules| Heroku |
-| ----------- |--------|
-| 8 clicks    | 9 clicks|    
+| CodeCapsules| Heroku |Digital Oceans|
+| ----------- |--------|-------|
+| 8 clicks    | 9 clicks|   11 |
 
-After going through this process, I found that CodeCapsules was clearer to me. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production. Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - CodeCapsules accepted my first Capsule name immediately. 
+
+Following this process, I found that CodeCapsules was easier. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
