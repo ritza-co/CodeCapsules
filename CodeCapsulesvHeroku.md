@@ -1,10 +1,10 @@
-# The Easiest Serverless Platform? Digital Oceans vs Heroku vs CodeCapsules - You Decide
+# The Easiest Serverless Platform? Digital Oceans vs Heroku vs Code Capsules - You Decide
 
 Producing a web application which the entire world can use is complicated. You must setup a physical server,
 choose the operating system, configure the server, and monitor the server. We will be taking a look at three serverless platforms, [Code Capsules](https://codecapsules.io/), [Digital Oceans](https://www.digitalocean.com/products/app-platform/), and [Heroku](https://www.heroku.com/), which perform all the above for you at a fraction of
 the time. They even accept code from GitHub - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
-This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on CodeCapsules, Heroku and Digital Oceans. 
+This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on Code Capsules, Heroku and Digital Oceans. 
 
 ## Prerequisites
 
@@ -136,28 +136,28 @@ We will test three different platforms that handle production and allow anyone i
 
 Code Capsules, Digital Oceans, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be recording various metrics that track this simplicity. First, we will try Code Capsules.
 
-## CodeCapsules
+## Code Capsules
 
-CodeCapsules is the newest of the three platforms. CodeCapsules aims to provide a platform as a contender to Heroku. CodeCapsules advertises ease of use and time saved as their main advantages.
+Code Capsules is the newest of the three platforms. Code Capsules aims to provide a platform as a contender to Heroku. Code Capsules advertises ease of use and time saved as their main advantages.
 
-### Creating an account with CodeCapsules and connecting to Github
+### Creating an account with Code Capsules and connecting to Github
 
-First, we need to create an account with CodeCapsules. Follow these instructions to get started:
+First, we need to create an account with Code Capsules. Follow these instructions to get started:
 
-1. Go to [CodeCapsules](www.codecapsules.io).
+1. Go to [Code Capsules](www.codecapsules.io).
 2. Click "Sign Up" in the top right corner and follow the instructions.
 3. Check your email and confirm your account.
-4. Go back to [CodeCapsules](www.codecapsules.io) and login into your newly created account.
+4. Go back to [Code Capsules](www.codecapsules.io) and login into your newly created account.
 
 After logging in, Code Capsules brings you to a page which will look similar to this. For now, ignore anything that you see on this picture that isn't on your account.
 
 ![MainCodeCap](Images/MainScreenCC.png)
 
-Now that we have created a CodeCapsules account, we can connect CodeCapsules to our GitHub account. Perform the following:
+Now that we have created a Code Capsules account, we can connect Code Capsules to our GitHub account. Perform the following:
 
   1. Click your profile name on the top right corner and click edit profile.
   2. Under "GitHub" details, click the GitHub button.
-  3. Under repository access, give CodeCapsules access to our recently created repository.
+  3. Under repository access, give Code Capsules access to our recently created repository.
 
 We are now connected to GitHub! Only a few more steps to go. Navigate back to the main screen.
 
@@ -196,7 +196,7 @@ Click on the "Overview" button. Your URL is displayed under "domain". Enter it i
 
 ## Heroku
 
-Heroku provides similar services to CodeCapsules and Digital Oceans. Heroku advertises itself as a _Cloud platform as service_ (PaaS). Heroku aims to allow developers to focus on their core product, while they take care of the rest.
+Heroku provides similar services to Code Capsules and Digital Oceans. Heroku advertises itself as a _Cloud platform as service_ (PaaS). Heroku aims to allow developers to focus on their core product, while they take care of the rest.
 
 ### Creating an account with Heroku and creating an application
 
@@ -275,22 +275,22 @@ View the application by entering the link under the applications name.
 
 I performed this process twice for each platform. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
 
-|    Attempt #| CodeCapsules| Heroku | Digital Oceans|
+|    Attempt #| Code Capsules| Heroku | Digital Oceans|
 | ----------- |-------------|--------|---------------|
 | 1           | 7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
 | 2           | 4 min 45 sec       |      5  min 2 sec| 6 min 1 sec|
 
 My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
 
-Digital Oceans and CodeCapsules have a much more intuitive UI. However, Digital Oceans requires you to enter payment information upon account creation. Digital Oceans also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
+Digital Oceans and Code Capsules have a much more intuitive UI. However, Digital Oceans requires you to enter payment information upon account creation. Digital Oceans also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
 
-Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - CodeCapsules accepted my first Capsule name immediately. Digital Oceans doesn't let you enter your own domain name, unless you tinker in the settings.
+Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. Digital Oceans doesn't let you enter your own domain name, unless you tinker in the settings.
 
 I also counted total number of UI clicks, that is, the total number of clicks after creating an account to get to a deployed product.
 
-| CodeCapsules| Heroku |Digital Oceans|
+| Code Capsules| Heroku |Digital Oceans|
 | ----------- |--------|-------|
 | 8 clicks    | 9 clicks|   11 clicks |
 
 
-Through this process, I found that CodeCapsules was easier. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Through this process, I found that Code Capsules was easier. Code Capsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
