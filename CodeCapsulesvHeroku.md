@@ -10,7 +10,7 @@ For the following platforms, I tracked two metrics detailed in the [benchmarks](
 - [Heroku](https://www.heroku.com/)
 
 
-This guide will help you decide which platform will get your code to production (a website) the quickest. We will also learn how to deploy a simple "Hello, world!" application in Python using Flask, and publish it on Code Capsules, Heroku and the DigitalOcean App Platform (DigitalOcean).
+This guide will help you decide which platform will get your web application to production the quickest. We will also learn how to use each platform by deploying a simple "Hello, world!" application written in Python using Flask to each platform provider. 
 
 ## Prerequisites
 
