@@ -40,7 +40,7 @@ I also counted the total number of UI clicks, that is, the number of clicks afte
 | 8 clicks    | 9 clicks|   11 clicks |
 
 
-Through this process, I found that Code Capsules was easier. As detailed in the [Code Capsules](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Through this process, I found that Code Capsules was easier. Detailed in the [Code Capsules](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
 
 Let's take a look at how to create the web application I tested these platforms with, and how to deploy them to the platforms tested. 
 
