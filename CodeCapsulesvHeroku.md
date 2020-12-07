@@ -1,6 +1,6 @@
 # The Easiest Serverless Platform? DigitalOcean vs Heroku vs Code Capsules - You Decide
 
-Producing a web application which the entire world can use is complicated. You must setup a physical server,
+Producing a web application which the entire world can use is complicated. You must set up a physical server,
 choose the operating system, configure the server, and monitor the server. I tested three "Cloud platform as a Service" (PaaS) providers which perform all the above for you at a fraction of the time, and accept code from Github - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
 For the following platforms, I tracked two metrics detailed in the [next](#benchmarks) section reflecting ease of use for each:
@@ -31,9 +31,9 @@ My first attempt represents the first time I've ever used these platforms. I fou
 
 DigitalOcean and Code Capsules have a much more intuitive UI. However, DigitalOcean requires you to enter payment information upon account creation. DigitalOcean also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
 
-Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. DigitalOcean doesn't let you enter your own domain name, unless you tinker in the settings.
+Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. DigitalOcean doesn't let you enter your own domain name unless you tinker in the settings.
 
-I also counted total number of UI clicks, that is, the number of clicks after creating an account to reach a deployed product.
+I also counted the total number of UI clicks, that is, the number of clicks after creating an account to reach a deployed product.
 
 | Code Capsules| Heroku |DigitalOcean|
 | ----------- |--------|-------|
@@ -42,11 +42,11 @@ I also counted total number of UI clicks, that is, the number of clicks after cr
 
 Through this process, I found that Code Capsules was easier. As detailed in the [Code Capsules](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
 
-Lets take a look at how to create the web application I tested these platforms with, and how to deploy them to the platforms tested. 
+Let's take a look at how to create the web application I tested these platforms with, and how to deploy them to the platforms tested. 
 
 ## Prerequisites
 
-To follow this tutorial, you must have general programming knowledge and know how to use GitHub. This means you can send code from a local repository to a remote repository. You must also have:
+To follow this tutorial, you must have general programming knowledge and be able to use GitHub. This means you can send code from a local repository to a remote repository. You must also have:
   - [Python](https://www.python.org/downloads/) version 3.5 or above installed.
   - A [GitHub account](https://github.com/) and [Git](
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
@@ -118,7 +118,7 @@ virtual environment before running this command.
 
 ### Coding the application
 
-Now that we have setup our requirements, we can program our application. Create a
+Now that we have set up our requirements, we can program our application. Create a
 new Python file within the current directory and name it anything. I named mine
 "helloFlask". Next, enter the following code.
 
@@ -183,7 +183,7 @@ First, we need to create an account with Code Capsules. Follow these instruction
 3. Check your email and confirm your account.
 4. Go back to [Code Capsules](www.codecapsules.io) and login into your newly created account.
 
-After logging in, Code Capsules brings you to a page which will look similar to this. For now, ignore anything that you see on this picture that isn't on your account.
+After logging in, Code Capsules brings you to a page that will look similar to this. For now, ignore anything that you see on this picture that isn't on your account.
 
 ![MainCodeCap](Images/MainScreenCC.png)
 
@@ -255,7 +255,7 @@ Now that we have created a Heroku account, we can create an application. An appl
 
 ### Connecting to GitHub and sending to production
 
-After creating your app, Heroku presents many options to you. Under Deployment method, click "Github", and follow these steps:
+After creating your app, Heroku presents several options to you. Under Deployment method, click "Github", and follow these steps:
 
 1. Click the connect to GitHub option, and perform the required tasks.
 2. Now that you are connected to GitHub, type your repositories name under "Search for a repository to connect to". I've named mine "flask-hello".
@@ -263,7 +263,7 @@ After creating your app, Heroku presents many options to you. Under Deployment m
 
 ![HerokuToGit](Images/HerokuConnectToGit.png)
 
-After connecting, click "Deploy Branch" in the "Manual Deploy" section at the bottom of the page. Wait until it has finished deploying. When deployment is finished, navigate to the top of the page and click "Open app" to see the result!
+After connecting, click "Deploy Branch" in the "Manual Deploy" section at the bottom of the page. Wait until it has finished deploying. When the deployment is finished, navigate to the top of the page and click "Open app" to see the result!
 
 ## DigitalOcean App Platform
 
@@ -271,7 +271,7 @@ The DigitalOcean App Platform is another PaaS alternative. It contains the same 
 
 ### Account creation and repository linking
 
-DigitalOcean is the only platform here which requires a credit card. At the time of writing, DigitalOcean offers a free trial worth a $100 credit on their platform, so you will **not** be charged, until the $100 is spent. Ensure that you have canceled your billing account, so that you will not be charged in the future.
+DigitalOcean is the only platform here which requires a credit card. At the time of writing, DigitalOcean offers a free trial worth a $100 credit on their platform, so you will **not** be charged until the $100 is spent. Ensure that you have canceled your billing account so that you will not be charged in the future.
 
 Create a new account by:
 
@@ -284,7 +284,7 @@ Create a new account by:
 7. Login to your GitHub account and press the "Only select repositories" button.
 8. Pick the repository containing your Flask application.
 9. Press the "Authorize and Install" button.
-10. From the drop down menu, choose the repository containing the Flask application.
+10. From the drop-down menu, choose the repository containing the Flask application.
 
 ![DO1](Images/DigitalOceans1.png)
 
@@ -303,4 +303,4 @@ DigitalOcean redirects you to a new set of steps. Follow the remaining instructi
 4. Select the Basic plan.
 5. Press "Launch Basic App" and your application will now be built.
 
-View the application by entering the link under the applications name.
+View the application by entering the link under the application's name.
