@@ -10,7 +10,7 @@ For the following platforms, I tracked two metrics detailed in the [next](#bench
 - [Heroku](https://www.heroku.com/)
 
 
-This guide will help you decide which platform will get your web application to production the quickest and easiest. We will first look at how easy I found each platform to use, then learn how to work with each platform. We will create and deploy a simple "Hello, world!" application written in Python with Flask to each platform provider. 
+This guide will help you decide which platform will get your web application to production the quickest and easiest. We will first look at the ease of use metrics I tracked for each platform, then learn how to work with each platform. We will create and deploy a simple "Hello, world!" application written in Python with Flask to each platform provider. 
 
 ## Benchmarks
 
