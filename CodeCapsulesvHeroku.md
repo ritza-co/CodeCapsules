@@ -114,7 +114,7 @@ Create a new file within the same directory. Name it Procfile. After, open the P
 
 `web: gunicorn fileName:app`
 
- Replace "fileName" with the name of your Python file. Save the Procfile.
+Replace "fileName" with the name of your Python file. Save the Procfile.
 
 ### Freezing the requirements
 
@@ -136,13 +136,13 @@ ProjectDirectory
 
 Send the Procfile, requirements.txt, and Python files to a remote repository on GitHub. If you are unfamiliar with how to do this, read [this](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) article for further information.
 
-With our application on GitHub, we will be able to link it to each platform we will test, and deploy our web application.
+With our application on GitHub, we will be able to link the repository to each platform we test and deploy our web application.
 
 ## Benchmarks
 
 Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to deploy our "Hello, world!" application on each platform, we will look at:
 
-- How quickly I was able to deploy our web application to production for each platform
+- How quickly I was able to deploy our web application to production on each platform
 - How complicated each platforms user interface is
 - How easy the platforms were to use overall
 
