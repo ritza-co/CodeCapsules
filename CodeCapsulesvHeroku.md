@@ -49,9 +49,11 @@ Within the directory, create the virtual Python environment by typing
 To activate the virtual environment, type the following from within the newly created directory:
 
 (Linux/MacOSX)
+
 `source env/bin/activate`
 
 (Windows)
+
 `env\Scripts\activate.bat`
 
 Your terminal should now look something like this:
