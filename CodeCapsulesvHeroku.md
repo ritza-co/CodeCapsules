@@ -14,9 +14,9 @@ This guide will help you decide which platform will get your web application to 
 
 ## Benchmarks
 
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to deploy our "Hello, world!" application on each platform, we will look at:
+Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to creeate and deploy our "Hello, world!" application on each platform, we will look at:
 
-- How quickly I was able to deploy our web application to production on each platform
+- How quickly I was able to deploy the web application to production on each platform
 - How complicated each platforms user interface is
 - How easy the platforms were to use overall
 
@@ -33,14 +33,14 @@ DigitalOcean and Code Capsules have a much more intuitive UI. However, DigitalOc
 
 Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. DigitalOcean doesn't let you enter your own domain name, unless you tinker in the settings.
 
-I also counted total number of UI clicks, that is, the total number of clicks after creating an account to get to a deployed product.
+I also counted total number of UI clicks, that is, the number of clicks after creating an account to reach a deployed product.
 
 | Code Capsules| Heroku |DigitalOcean|
 | ----------- |--------|-------|
 | 8 clicks    | 9 clicks|   11 clicks |
 
 
-Through this process, I found that Code Capsules was easier. As detailed in the [next](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Through this process, I found that Code Capsules was easier. As detailed in the how to use [Code Capsules](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
 
 Lets take a look at how to create the web application I tested these platforms with, and how to deploy them to the platforms tested. 
 
