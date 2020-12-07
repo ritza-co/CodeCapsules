@@ -272,12 +272,12 @@ View the application by entering the link under the applications name.
 
 ## Results
 
-I performed this process twice for these platforms. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
+I performed this process twice for each platform. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
 
 |    Attempt #| CodeCapsules| Heroku | Digital Oceans|
 | ----------- |-------------|--------|---------------|
-| 1           | ~7.5 min|   ~10 min  |12 mins 11 sec|
-| 2           | 4 min 45 sec       |      5  min| 6 min 1 sec|
+| 1           | ~7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
+| 2           | 4 min 45 sec       |      5  min 2 sec| 6 min 1 sec|
 
 My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
 
