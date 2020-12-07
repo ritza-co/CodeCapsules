@@ -276,7 +276,7 @@ I performed this process twice for each platform. Each attempt I recorded how lo
 
 |    Attempt #| CodeCapsules| Heroku | Digital Oceans|
 | ----------- |-------------|--------|---------------|
-| 1           | ~7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
+| 1           | 7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
 | 2           | 4 min 45 sec       |      5  min 2 sec| 6 min 1 sec|
 
 My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
@@ -289,7 +289,7 @@ I also counted total number of UI clicks, that is, the total number of clicks af
 
 | CodeCapsules| Heroku |Digital Oceans|
 | ----------- |--------|-------|
-| 8 clicks    | 9 clicks|   11 |
+| 8 clicks    | 9 clicks|   11 clicks |
 
 
 Following this process, I found that CodeCapsules was easier. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
