@@ -254,7 +254,7 @@ Create a new account by:
 
 ![DO1](Images/DigitalOceans1.png)
 
-### Finishing steps, and deploying your code
+### Finishing steps and deploying your code
 
 Digital Oceans redirects you to a new set of steps. Follow the remaining instructions carefully:
 
