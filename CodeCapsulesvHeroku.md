@@ -3,14 +3,46 @@
 Producing a web application which the entire world can use is complicated. You must setup a physical server,
 choose the operating system, configure the server, and monitor the server. I tested three "Cloud platform as a Service" (PaaS) providers which perform all the above for you at a fraction of the time, and accept code from Github - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
-For the following platforms, I tracked two metrics detailed in the [benchmarks](#benchmarks) section reflecting ease of use for each:
+For the following platforms, I tracked two metrics detailed in the [next](#benchmarks) section reflecting ease of use for each:
 
 - [Code Capsules](https://codecapsules.io/)
 - [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
 - [Heroku](https://www.heroku.com/)
 
 
-This guide will help you decide which platform will get your web application to production the quickest and easiest. We will also learn how to use each platform by deploying a simple "Hello, world!" application written in Python with Flask to each platform provider. 
+This guide will help you decide which platform will get your web application to production the quickest and easiest. We will first look at how easy I found each platform to use, then learn how to work with each platform. We will create and deploy a simple "Hello, world!" application written in Python with Flask to each platform provider. 
+
+## Benchmarks
+
+Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to deploy our "Hello, world!" application on each platform, we will look at:
+
+- How quickly I was able to deploy our web application to production on each platform
+- How complicated each platforms user interface is
+- How easy the platforms were to use overall
+
+To test how simple these platforms make this process, I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
+
+|    Attempt #| Code Capsules| Heroku | DigitalOcean|
+| ----------- |-------------|--------|---------------|
+| 1           | 7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
+| 2           | 4 min 45 sec       |      5  min 2 sec| 6 min 1 sec|
+
+My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
+
+DigitalOcean and Code Capsules have a much more intuitive UI. However, DigitalOcean requires you to enter payment information upon account creation. DigitalOcean also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
+
+Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. DigitalOcean doesn't let you enter your own domain name, unless you tinker in the settings.
+
+I also counted total number of UI clicks, that is, the total number of clicks after creating an account to get to a deployed product.
+
+| Code Capsules| Heroku |DigitalOcean|
+| ----------- |--------|-------|
+| 8 clicks    | 9 clicks|   11 clicks |
+
+
+Through this process, I found that Code Capsules was easier. As detailed in the [next](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+
+Lets take a look at how to create the web application I tested these platforms with, and how to deploy them to the platforms tested. 
 
 ## Prerequisites
 
@@ -137,36 +169,6 @@ ProjectDirectory
 Send the Procfile, requirements.txt, and Python files to a remote repository on GitHub. If you are unfamiliar with how to do this, read [this](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) article for further information.
 
 With our application on GitHub, we will be able to link the repository to each platform we test and deploy our web application.
-
-## Benchmarks
-
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to deploy our "Hello, world!" application on each platform, we will look at:
-
-- How quickly I was able to deploy our web application to production on each platform
-- How complicated each platforms user interface is
-- How easy the platforms were to use overall
-
-To test how simple these platforms make this process, I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
-
-|    Attempt #| Code Capsules| Heroku | DigitalOcean|
-| ----------- |-------------|--------|---------------|
-| 1           | 7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
-| 2           | 4 min 45 sec       |      5  min 2 sec| 6 min 1 sec|
-
-My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
-
-DigitalOcean and Code Capsules have a much more intuitive UI. However, DigitalOcean requires you to enter payment information upon account creation. DigitalOcean also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
-
-Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. DigitalOcean doesn't let you enter your own domain name, unless you tinker in the settings.
-
-I also counted total number of UI clicks, that is, the total number of clicks after creating an account to get to a deployed product.
-
-| Code Capsules| Heroku |DigitalOcean|
-| ----------- |--------|-------|
-| 8 clicks    | 9 clicks|   11 clicks |
-
-
-Through this process, I found that Code Capsules was easier. As detailed in the [next](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
 
 ## Code Capsules
 
