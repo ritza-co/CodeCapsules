@@ -6,11 +6,11 @@ choose the operating system, configure the server, and monitor the server. I tes
 For the following platforms, I tracked two metrics detailed in the [benchmarks](#benchmarks) section which reflect my experience and the ease of use for each platform:
 
 - [Code Capsules](https://codecapsules.io/)
-- [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/)(DigitalOcean)
-- [Heroku](https://www.heroku.com/),
+- [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
+- [Heroku](https://www.heroku.com/)
 
 
-This guide will help you decide which platform will get your code to production (a website) the quickest. We will also learn how to deploy a simple "Hello, world!" application in Python using Flask, and publish it on Code Capsules, Heroku and the DigitalOcean App Platform.
+This guide will help you decide which platform will get your code to production (a website) the quickest. We will also learn how to deploy a simple "Hello, world!" application in Python using Flask, and publish it on Code Capsules, Heroku and the DigitalOcean App Platform (DigitalOcean).
 
 ## Prerequisites
 
@@ -139,14 +139,11 @@ Send the Procfile, requirements.txt, and Python files to a remote repository on 
 
 With our application on GitHub, we are now ready to deploy it.
 
-## Sending the application to production
-We will test three different platforms that handle production and allow anyone in the world to view our application. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
-
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be recording various metrics that track this simplicity. First, we will try Code Capsules.
-
 ## Benchmarks
 
-I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
+Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
+
+To test how simple these platforms make this process, I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
 
 |    Attempt #| Code Capsules| Heroku | DigitalOcean|
 | ----------- |-------------|--------|---------------|
@@ -167,7 +164,6 @@ I also counted total number of UI clicks, that is, the total number of clicks af
 
 
 Through this process, I found that Code Capsules was easier. Code Capsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
-
 
 ## Code Capsules
 
