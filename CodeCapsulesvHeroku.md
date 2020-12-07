@@ -3,14 +3,14 @@
 Producing a web application which the entire world can use is complicated. You must setup a physical server,
 choose the operating system, configure the server, and monitor the server. I tested three "Cloud platform as a Service" (PaaS) providers which perform all the above for you at a fraction of the time, and accept code from Github - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
-For the following platforms, I tracked two metrics detailed in the [benchmarks](#benchmarks) section which reflect my experience and the ease of use for each platform:
+For the following platforms, I tracked two metrics detailed in the [benchmarks](#benchmarks) section which reflect the ease of use for each platform:
 
 - [Code Capsules](https://codecapsules.io/)
 - [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
 - [Heroku](https://www.heroku.com/)
 
 
-This guide will help you decide which platform will get your web application to production the quickest. We will also learn how to use each platform by deploying a simple "Hello, world!" application written in Python using Flask to each platform provider. 
+This guide will help you decide which platform will get your web application to production the quickest and easiest. We will also learn how to use each platform by deploying a simple "Hello, world!" application written in Python with Flask for each platform provider. 
 
 ## Prerequisites
 
@@ -136,11 +136,11 @@ ProjectDirectory
 
 Send the Procfile, requirements.txt, and Python files to a remote repository on GitHub. If you are unfamiliar with how to do this, read [this](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) article for further information.
 
-With our application on GitHub, we are now ready to deploy it.
+With our application on GitHub, we will be able to link it to each platform we will test, and deploy our web application.
 
 ## Benchmarks
 
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
+Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. The rest of this article contains information on how to deploy our "Hello, world!" web application on each platform. Below I've included information my personal experience with how easy to use each platform was. 
 
 To test how simple these platforms make this process, I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
 
@@ -162,7 +162,7 @@ I also counted total number of UI clicks, that is, the total number of clicks af
 | 8 clicks    | 9 clicks|   11 clicks |
 
 
-Through this process, I found that Code Capsules was easier. As detailed in the next section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Through this process, I found that Code Capsules was easier. As detailed in the [next](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
 
 ## Code Capsules
 
