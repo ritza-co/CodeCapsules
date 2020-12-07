@@ -162,7 +162,7 @@ I also counted total number of UI clicks, that is, the total number of clicks af
 | 8 clicks    | 9 clicks|   11 clicks |
 
 
-Through this process, I found that Code Capsules was easier. Code Capsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Through this process, I found that Code Capsules was easier. As detailed in the next section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
 
 ## Code Capsules
 
