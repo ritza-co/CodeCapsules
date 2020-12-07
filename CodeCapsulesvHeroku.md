@@ -1,14 +1,14 @@
 # The Easiest Serverless Platform? Digital Oceans vs Heroku vs CodeCapsules - You Decide
 
 Producing a web application which the entire world can use is complicated. You must setup a physical server,
-choose the operating system, configure the server, and monitor the server. We will be taking a look at three serverless platforms, [CodeCapsules](https://codecapsules.io/), [Digital Oceans](https://www.digitalocean.com/products/app-platform/), and [Heroku](https://www.heroku.com/), which perform all the above for you at a fraction of
+choose the operating system, configure the server, and monitor the server. We will be taking a look at three serverless platforms, [Code Capsules](https://codecapsules.io/), [Digital Oceans](https://www.digitalocean.com/products/app-platform/), and [Heroku](https://www.heroku.com/), which perform all the above for you at a fraction of
 the time. They even accept code from GitHub - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
 
 This guide will help you decide which platform will get your code to production (a website) the quickest. We will see which is easier to set up by creating a simple "Hello, world!" application in Python using Flask, and publishing it on CodeCapsules, Heroku and Digital Oceans. 
 
 ## Prerequisites
 
-To follow this tutorial, you must have general programming knowledge and know how to use GitHub. This means you can send code from a local repository to a remote repository on GitHub. You must also have:
+To follow this tutorial, you must have general programming knowledge and know how to use GitHub. This means you can send code from a local repository to a remote repository. You must also have:
   - [Python](https://www.python.org/downloads/) version 3.5 or above installed.
   - A [GitHub account](https://github.com/) and [Git](
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
@@ -95,7 +95,7 @@ if __name__ == '__main__':
 	app.run()
 ```
 
-This program will display "Hello, world!" on the domain hosted by CodeCapsules or Heroku.
+This program will display "Hello, world!" on the domain hosted by Code Capsules, Heroku, and Digital Oceans.
 
 ### Creating the Procfile
 
@@ -111,11 +111,11 @@ Create a new file within the same directory. Name it Procfile. After, open the P
 ### Freezing the requirements
 
 Our final step before uploading the program to GitHub is to create a list of requirements for the program.
-This is necessary for the server to know what needs to install to run our program. Luckily, pip makes this easy. In the same terminal, enter:
+This is necessary for the platform to know what to install to run our program. Luckily, pip makes this easy. In the same terminal, enter:
 
 `pip3 freeze > requirements.txt`
 
-This will create a file titled "requirements.txt" that contains all the project's requirements. Your directory should look similar to this:
+This will create a file titled "requirements.txt", that contains all the project's requirements. Your directory should look similar to this:
 ```
 ProjectDirectory
 +   env
@@ -132,13 +132,13 @@ Send the Procfile, requirements.txt, and Python files to a remote repository on 
 With our application on GitHub, we are now ready to deploy it.
 
 ## Sending the application to production
-We will test three different platforms that will handle production and allow anyone in the world to view our application. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
+We will test three different platforms that handle production and allow anyone in the world to view our application. We can link our GitHub code to these platforms, without having to worry about managing servers and the other time-consuming work that comes with hosting a web application.
 
-CodeCapsules, Digital Oceans, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be keeping track of various metrics that will track this simplicity. First, we will try CodeCapsules.
+Code Capsules, Digital Oceans, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. To test how simple these platforms make this process, I will be recording various metrics that track this simplicity. First, we will try Code Capsules.
 
 ## CodeCapsules
 
-CodeCapsules is the newest of the two platforms. Based in Cape Town, South Africa, CodeCapsules aims to provide a platform as a contender to Heroku. CodeCapsules advertises ease of use and time saved as their main advantages.
+CodeCapsules is the newest of the three platforms. CodeCapsules aims to provide a platform as a contender to Heroku. CodeCapsules advertises ease of use and time saved as their main advantages.
 
 ### Creating an account with CodeCapsules and connecting to Github
 
@@ -149,7 +149,7 @@ First, we need to create an account with CodeCapsules. Follow these instructions
 3. Check your email and confirm your account.
 4. Go back to [CodeCapsules](www.codecapsules.io) and login into your newly created account.
 
-After logging in, CodeCapsules brings you to a page which will look similar to this. For now, ignore anything that you see on this picture that isn't on your account.
+After logging in, Code Capsules brings you to a page which will look similar to this. For now, ignore anything that you see on this picture that isn't on your account.
 
 ![MainCodeCap](Images/MainScreenCC.png)
 
@@ -163,7 +163,8 @@ We are now connected to GitHub! Only a few more steps to go. Navigate back to th
 
 ### Creating a team, space, and a capsule
 
-CodeCapsules organizes your code into three different containers:
+Code Capsules organizes your code into three distinct containers:
+
 - Teams
 - Spaces
 - Capsules
@@ -195,7 +196,7 @@ Click on the "Overview" button. Your URL is displayed under "domain". Enter it i
 
 ## Heroku
 
-Heroku provides similar services as CodeCapsules. Heroku advertises itself as a _Cloud platform as service_ (PaaS). Heroku aims to allow developers to focus on their core product, while they take care of the rest. How simple is Heroku to use?
+Heroku provides similar services to CodeCapsules and Digital Oceans. Heroku advertises itself as a _Cloud platform as service_ (PaaS). Heroku aims to allow developers to focus on their core product, while they take care of the rest.
 
 ### Creating an account with Heroku and creating an application
 
@@ -207,7 +208,7 @@ We must first create a Heroku account. Do the following:
 4. Accept terms of service
 5. Check your email and confirm your account
 
-Now that we have created a Heroku account, we can create an application. An application is similar to a CodeCapsules "Capsule".
+Now that we have created a Heroku account, we can create an application. An application is similar to the Code Capsules "Capsule".
 
 
 1. Go to www.heroku.com and log in.
@@ -232,11 +233,11 @@ After connecting, click "Deploy Branch" in the "Manual Deploy" section at the bo
 
 ## Digital Oceans App Platform
 
-The Digital Oceans App Platform was designed to compete against to Heroku. It offers similar features to CodeCapsules and Heroku. Like Heroku, it advertises itself as a "Platform as a Service". 
+The Digital Oceans App Platform was also designed to compete against to Heroku. It contains the same key features as Code Capsules and Heroku. Like Heroku, it advertises itself as a "Platform as a Service". 
 
 ### Account creation and repository linking
 
-Digital Oceans is the only platform here which requires a credit card. At the time of writing, Digital Oceans offers a free trial worth $100 credit on their platform, so you will **not** be charged. Ensure that you have canceled your billing account, so that you will not be charged in the future. 
+Digital Oceans is the only platform here which requires a credit card. At the time of writing, Digital Oceans offers a free trial worth a $100 credit on their platform, so you will **not** be charged, until the $100 is spent. Ensure that you have canceled your billing account, so that you will not be charged in the future. 
 
 Create a new account by:
 
@@ -281,7 +282,7 @@ I performed this process twice for each platform. Each attempt I recorded how lo
 
 My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
 
-Digital Oceans and CodeCapsules had a much more intuitive UI. However, Digital Oceans requires you to enter payment information upon account creation. Digital Oceans also took the longest time to deploy the application, which is reflected by it taking the longest time to get to production in both attempts. 
+Digital Oceans and CodeCapsules have a much more intuitive UI. However, Digital Oceans requires you to enter payment information upon account creation. Digital Oceans also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
 
 Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - CodeCapsules accepted my first Capsule name immediately. Digital Oceans doesn't let you enter your own domain name, unless you tinker in the settings.
 
@@ -292,4 +293,4 @@ I also counted total number of UI clicks, that is, the total number of clicks af
 | 8 clicks    | 9 clicks|   11 clicks |
 
 
-Following this process, I found that CodeCapsules was easier. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Through this process, I found that CodeCapsules was easier. CodeCapsules follows a direct pipeline - make a team, space, then a Capsule. There is less to click on and less clutter to get to production - and doesn't require a credit card.
