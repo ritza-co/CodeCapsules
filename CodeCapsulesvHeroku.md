@@ -264,7 +264,7 @@ Digital Oceans redirects you to a new set of steps. Follow the remaining instruc
   - This is **important**. Without performing this step, your application will not deploy.
   - Change "file" to the name of your Python file (mine was "helloFlask").
 
-![DO2](Images/DigitalOceans2.png)
+![DO2](Images/DigitalOceans2.png.png)
 
 4. Select the Basic plan. 
 5. Press "Launch Basic App" and your application will now be built. 
