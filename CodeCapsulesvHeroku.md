@@ -140,7 +140,11 @@ With our application on GitHub, we will be able to link it to each platform we w
 
 ## Benchmarks
 
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. The rest of this article contains information on how to deploy our "Hello, world!" web application on each platform. Below I've included information my personal experience with how easy to use each platform was. 
+Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to deploy our "Hello, world!" application on each platform, we will look at:
+
+- How quickly I was able to deploy our web application to production for each platform
+- How complicated each platforms user interface is
+- How easy the platforms were to use overall
 
 To test how simple these platforms make this process, I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
 
