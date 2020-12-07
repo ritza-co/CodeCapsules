@@ -14,7 +14,7 @@ This guide will help you decide which platform will get your web application to 
 
 ## Benchmarks
 
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before getting to how to creeate and deploy our "Hello, world!" application on each platform, we will look at:
+Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before creating and deploying our "Hello, world!" application to each platform, we will look at:
 
 - How quickly I was able to deploy the web application to production on each platform
 - How complicated each platforms user interface is
