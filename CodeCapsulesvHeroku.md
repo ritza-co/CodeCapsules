@@ -130,7 +130,6 @@ ProjectDirectory
 +   helloFlask.py
 +   requirements.txt
 +   Procfile
-
 ```
 
 ### Uploading to Github
