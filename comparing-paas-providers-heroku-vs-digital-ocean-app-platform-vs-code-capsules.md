@@ -1,81 +1,89 @@
-# The Easiest Serverless Platform? DigitalOcean vs Heroku vs Code Capsules - You Decide
+# Comparing PaaS providers: Heroku vs Digital Ocean vs Code Capsules
 
-Producing a web application which the entire world can use is complicated. You must set up a physical server,
-choose the operating system, configure the server, and monitor the server. I tested three "Cloud platform as a Service" (PaaS) providers which perform all the above for you at a fraction of the time, and accept code from Github - the moment you push your code to your repositories' main branch on GitHub, the changes will be visible on your domain.
+Deploying a web application to a production environment is complicated. Traditionally, you need to set up a web server including the operating system and supporting software and libraries. Then you need to deploy your code, configure it, and monitor it to ensure it keeps running.
 
-For the following platforms, I tracked two metrics detailed in the [next](#benchmarks) section reflecting ease of use for each:
+Because most developers do not want to be so deeply involved in "operations", an alternative is to use a Platform-as-a-Service (PaaS) offering. These platforms need only minimal configuration and offer an integration with GitHub or similar so that you, as a developer, can simply push new code to your repository and have it deployed to a production environment automatically.
 
-- [Code Capsules](https://codecapsules.io/)
-- [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
+We deployed a basic Python (Flask) web application to three PaaS providers: Heroku, Digital Ocean App Platform, and Code Capsules. In this article, we compare these for ease-of-use and show step-by-step instructions on how to get started with each.
+
+The platforms we tested are:
+
 - [Heroku](https://www.heroku.com/)
+- [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
+- [Code Capsules](https://codecapsules.io/)
 
+This guide will help you decide which platform to choose. We'll start with an overview of the metrics showing how long and how many clicks it took to deploy our simple "Hello, world!" application to each provider. 
 
-This guide will help you decide which platform will get your web application to production the quickest and easiest. We will first look at the ease of use metrics I tracked for each platform, then learn how to work with each platform. We will create and deploy a simple "Hello, world!" application written in Python with Flask to each platform provider. 
+## Ease of use benchmarks
 
-## Benchmarks
+We compared each platform on:
 
-Code Capsules, DigitalOcean, and Heroku aim to make the process of taking and deploying code to a production environment as simple as possible. Before creating and deploying our "Hello, world!" application to each platform, we will look at:
+- The time it took to deploy the web application to production on each platform
+- How complicated each platform's user interface is
+- How intuitive the platforms were to use overall
 
-- How quickly I was able to deploy the web application to production on each platform
-- How complicated each platforms user interface is
-- How easy the platforms were to use overall
+These measurements are necessarily somewhat subjective, but by following the steps or taking a look at them below, you should be able to form your own opinion too.
 
-To test how simple these platforms make this process, I performed the platform-specific instructions found in the coming sections twice. Each attempt I recorded how long it took me to get from GitHub to production. Below are the results in minutes and seconds.
+### Timing results
+
+To test the simplicity of each platform, we performed the platform-specific steps (as detailed later in this article) twice. Each attempt we recorded how long it took to get from GitHub to production. 
 
 |    Attempt #| Code Capsules| Heroku | DigitalOcean|
 | ----------- |-------------|--------|---------------|
 | 1           | 7 min 30 sec|   10 min 5 sec  |12 mins 11 sec|
 | 2           | 4 min 45 sec       |      5  min 2 sec| 6 min 1 sec|
 
-My first attempt represents the first time I've ever used these platforms. I found that Heroku has more UI clutter than the rest - mostly having to do with various options for increasing the price of the platform. I found the UI wasn't as intuitive for my goal - to deploy a Flask "Hello, world!" application to a website.
+Code capsules was the fastest in both runs, and also had the least difference in timing between runs, indicating that is simpler than the other two, with a smaller learning curve.
 
-DigitalOcean and Code Capsules have a much more intuitive UI. However, DigitalOcean requires you to enter payment information upon account creation. DigitalOcean also took the longest time to deploy the application, which is reflected by its higher time-to-production for each attempt.
+### Number of clicks 
 
-Because Heroku is more mature, it is hard to find an unused domain name. I attempted multiple names - Code Capsules accepted my first Capsule name immediately. DigitalOcean doesn't let you enter your own domain name unless you tinker in the settings.
-
-I also counted the total number of UI clicks, that is, the number of clicks after creating an account to reach a deployed product.
+We also counted the total number of UI clicks: that is, the number of clicks after creating an account to reach a deployed web application.
 
 | Code Capsules| Heroku |DigitalOcean|
 | ----------- |--------|-------|
 | 8 clicks    | 9 clicks|   11 clicks |
 
+### General impressions
 
-Through this process, I found that Code Capsules was easier. Detailed in the [Code Capsules](#code-capsules) section, Code Capsules follows a direct pipeline to deploy the web application. There is less to click on and less clutter to get to production - and doesn't require a credit card.
+Heroku's interface was the most complicated, providing many pricing and other options. As the most mature platform of the three, it has acquired more features over time, but these are generally a hinderance if you just want to deploy a basic application.
 
-Let's take a look at how to create the web application I tested these platforms with, and how to deploy them to the platforms tested. 
+DigitalOcean provided a simpler platform, but requires payment details up front which slows down the initial process. 
+
+Code Capsules was the simplest for a first-time user. It follows a simple pipeline of three steps to get from GitHub to production.
+
+Finally, each platform offers a custom domain name to host your application. DigitalOcean generates a fully random name which can't be changed during the deployment process (though can be customized later in their settings page.) Heroku allows a customized domain, but as it is the most popular platform it is hard to find an available domain. The first name we chose on Code Capsules was accepted.
+
+## Step-by-step guide to deploy to each provider
+
+Let's take a look at how to create the web application we tested these platforms with, and how to deploy them to the platforms tested. 
 
 ## Prerequisites
 
-To follow this tutorial, you must have general programming knowledge and be able to use GitHub. This means you can send code from a local repository to a remote repository. You must also have:
+To follow along you should have general programming knowledge and be able to use GitHub. This means you can send code from a local repository to a remote repository. You hould also have (instructions at each link):
   - [Python](https://www.python.org/downloads/) version 3.5 or above installed.
   - A [GitHub account](https://github.com/) and [Git](
     https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
-  - Pythons [virtualenv](https://pypi.org/project/virtualenv/) [installed](#installing-virtualenv).
+  - Python's [virtualenv](https://pypi.org/project/virtualenv/) [installed](#installing-virtualenv).
   - A working credit card to test out DigitalOcean (free of charge).
 
-The above links contain instructions on how to:
-  - Install Python
-  - Create a GitHub account
-  - Install Git
+## General steps for building the web application
+
+The following steps need to be carried out only once for all three providers. They will show you how to install local dependencies and create the hello world app.
 
 ### Installing virtualenv
 
 If you already have virtualenv and know what it does, [skip](#creating-the-python-application) to the next section.
 
-
 Using virtualenv, you can create a virtual Python environment. This virtual environment will contain only the essential modules for your web-application.
 
-To install virtualenv, open
-up your terminal and type:
+To install virtualenv, open up your terminal and type:
 
-`
+```bash
 pip3 install virtualenv
-`
+```
 
 Now that you have a current version of Python, Git, a GitHub account, and virtualenv
 installed, you can create the "Hello, world!" application.
-
-## Creating the Python application
 
 ### Setting up the virtual environment
 
@@ -98,18 +106,12 @@ Your terminal should now look something like this:
 
 ![VirtualEnv](Images/VirtualEnvSETUP.png)
 
-As in the image above, ensure that to the left of your username you see **(env)** or similar.
-This means you have entered the virtual environment.
-
 ### Installing Flask and Gunicorn
 
-For this web application we will be using two popular Python tools for web development; [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Gunicorn](https://gunicorn.org/):
+For our web application we'll use two popular Python tools for web development: [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [Gunicorn](https://gunicorn.org/):
 
-  - Flask is a light-weight web-development framework for Python. It provides a number
-of easy to use resources and tools for building and maintaining web applications,
-websites, and similar services.
-
-  - Gunicorn is our WSGI server of choice for sending our code to the production environment. Check out this link to read more about [WSGI servers](https://www.fullstackpython.com/wsgi-servers.html).
+  - Flask is a light-weight web-development framework for Python. It provides a number of easy to use resources and tools for building and maintaining web applications, websites, and similar services.
+  - Gunicorn is a WSGI server for sending our code to the production environment. Check out this link to read more about [WSGI servers](https://www.fullstackpython.com/wsgi-servers.html).
 
 Install these tools with the following pip command. Ensure you are in your
 virtual environment before running this command.
@@ -118,7 +120,7 @@ virtual environment before running this command.
 
 ### Coding the application
 
-Now that we have set up our requirements, we can program our application. Create a
+Now that we have set up our requirements, we can write the code for our application. Create a
 new Python file within the current directory and name it anything. I named mine
 "helloFlask". Next, enter the following code.
 
@@ -164,17 +166,21 @@ ProjectDirectory
 +   Procfile
 ```
 
-### Uploading to Github
+### Uploading to GitHub
 
 Send the Procfile, requirements.txt, and Python files to a remote repository on GitHub. If you are unfamiliar with how to do this, read [this](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) article for further information.
 
 With our application on GitHub, we will be able to link the repository to each platform we test and deploy our web application.
 
+## Provider specific steps
+
+Each of the following steps are specific to one of the providers. If you only want to test one of them, skip to that section.
+
 ## Code Capsules
 
-Code Capsules is the newest of the three platforms. Code Capsules is a PaaS alternative and advertises ease of use and time saved as their main advantages.
+Code Capsules is the newest of the three providers and they advertise ease of use as their unique selling point.
 
-### Creating an account with Code Capsules and connecting to Github
+### Creating an account with Code Capsules and connecting to GitHub
 
 First, we need to create an account with Code Capsules. Follow these instructions to get started:
 
@@ -193,7 +199,7 @@ Now that we have created a Code Capsules account, we can connect Code Capsules t
   2. Under "GitHub" details, click the GitHub button.
   3. Under repository access, give Code Capsules access to our recently created repository.
 
-We are now connected to GitHub! Only a few more steps to go. Navigate back to the main screen.
+We are now connected to GitHub. Navigate back to the main screen.
 
 ### Creating a team, space, and a capsule
 
@@ -203,19 +209,21 @@ Code Capsules organizes your code into three distinct containers:
 - Spaces
 - Capsules
 
-For this project, Capsules are the most important. To create a Capsule, we must create a team and space. A team allows you to invite multiple people to collaborate with you. You may assign team members to different spaces, which can contain different Capsules. Capsules provide cloud resources such as databases, API's, and servers.
+These are different levels of organization to manage larger projects. For our purposes, we will only need one of each. 
+
+To create a Capsule, we must create a team and space. A team allows you to invite multiple people to collaborate with you. You may assign team members to different spaces, which can contain different Capsules. Capsules provide cloud resources such as databases, APIs, and servers.
 
 Take these steps to get your code into production:
 
 1. Click "Create a New Team" and name it anything.
 2. Choose "Create a New Space For Your Apps".
-3. Select your region (I chose the Netherlands for this tutorial).
+3. Select your region (I chose the Netherlands)
 4. Choose your name for the space.
 5. Your space is now created! Click on your newly created space.
 6. Click "Create a New capsule".
 7. Choose the "Backend" Capsule.
-8.  Select Sandbox.
-9. Select the correct repository under "select your GitHub repository". Ensure the branch is set to main. Click next.
+8. Select Sandbox.
+9. Select the correct repository under "select your GitHub repository". Click next.
 10. Because we have a Procfile in our repository, we do not need to use a run command. Instead, click "Create Capsule".
 
 ![CapCreate](Images/CreateCapsuleCC.png)
@@ -255,7 +263,7 @@ Now that we have created a Heroku account, we can create an application. An appl
 
 ### Connecting to GitHub and sending to production
 
-After creating your app, Heroku presents several options to you. Under Deployment method, click "Github", and follow these steps:
+After creating your app, Heroku presents several options to you. Under Deployment method, click "GitHub", and follow these steps:
 
 1. Click the connect to GitHub option, and perform the required tasks.
 2. Now that you are connected to GitHub, type your repositories name under "Search for a repository to connect to". I've named mine "flask-hello".
@@ -269,7 +277,7 @@ After connecting, click "Deploy Branch" in the "Manual Deploy" section at the bo
 
 The DigitalOcean App Platform is another PaaS alternative. It contains the same key features as Code Capsules and Heroku.
 
-### Account creation and repository linking
+### Creating an account and linking your repository 
 
 DigitalOcean is the only platform here which requires a credit card. At the time of writing, DigitalOcean offers a free trial worth a $100 credit on their platform, so you will **not** be charged until the $100 is spent. Ensure that you have canceled your billing account so that you will not be charged in the future.
 
@@ -278,7 +286,7 @@ Create a new account by:
 1. Visiting https://www.digitalocean.com/products/app-platform/.
 2. Click the "Get Started" button, and sign up via email.
 3. You will now need to enter your payment information - I chose a credit card.
-4. Click "Deploy a Github Repo".
+4. Click "Deploy a GitHub Repo".
 5. Click "Launch Your App".
 6. Choose "Link your GitHub account".
 7. Login to your GitHub account and press the "Only select repositories" button.
@@ -288,7 +296,7 @@ Create a new account by:
 
 ![DO1](Images/DigitalOceans1.png)
 
-### Finishing steps and deploying your code
+### Finishing up and deploying your code
 
 DigitalOcean redirects you to a new set of steps. Follow the remaining instructions carefully:
 
@@ -303,4 +311,8 @@ DigitalOcean redirects you to a new set of steps. Follow the remaining instructi
 4. Select the Basic plan.
 5. Press "Launch Basic App" and your application will now be built.
 
-View the application by entering the link under the application's name.
+View the application by entering the link under the application's name in your web browser.
+
+## Conclusion
+
+All three providers provide similar features but some of them are easier to use, especially for new users. They each provide auto-deploy functionality, meaning that you can largely forget about them after set up and simply push any changes to your GitHub repository. The integration with GitHub means that the provider will get a notification about the code changes and pull these changes into the production environment.
