@@ -1,6 +1,6 @@
 # Hosting your portfolio online the easy way: an introduction to CodeCapsules.io
 
-Deploying a web application to a production environment is complex. Traditionally one must set up and micromanage the tasks associated with hosting a server: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
+Deploying a web application to a production environment is complex. Traditionally one must configure and micromanage the tasks associated with hosting a server: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
 
 This time-consuming process is no longer necessary. In this lesson, you'll learn how to create a portfolio and host it on [CodeCapsules](https://codecapsules.io/), a Platform as a Service (PaaS), which:
 
