@@ -1,6 +1,6 @@
 # Hosting your portfolio online the easy way: an introduction to CodeCapsules.io
 
-Deploying a web application to a production environment is complex. Traditionally you must set up a server and micromanage the tasks associated with hosting one: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
+Deploying a web application to a production environment is complex. Traditionally one must set up and micromanage the tasks associated with hosting a server: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
 
 This time-consuming process is no longer necessary. In this lesson, you'll learn how to create a portfolio and host it on [CodeCapsules](https://codecapsules.io/), a Platform as a Service (PaaS), which:
 
@@ -35,7 +35,7 @@ MyPortfolio  <-- Top level directory
         + elements.html
         + index.html
 ```
-Don't worry about anything except for the `index.html` file. The `index.html` file contains all of the HTML code for the main page of your template. 
+Don't worry about any files except for the `index.html` file. The `index.html` file contains all of the HTML code for the main page of your template. 
 
 ### Personalizing the template
 
@@ -143,7 +143,7 @@ The portfolio is almost complete! You just need to customize the images in your 
 
 Link buttons to your work by finding each section starting with an `<article>` tag. You will see a line that contains `class="button"`. On that line, find `href="#"` and replace the "#" with your link. 
 
-Ensure you provide a full link, such as "https://www.yourwebsitehere.com" (where you change the name of the website appropriately). 
+Ensure you provide a full link, for example: https://www.yourwebsitehere.com (where you change the name of the website appropriately). 
 
 An example section for Abraham Lincoln looks like this:
 
