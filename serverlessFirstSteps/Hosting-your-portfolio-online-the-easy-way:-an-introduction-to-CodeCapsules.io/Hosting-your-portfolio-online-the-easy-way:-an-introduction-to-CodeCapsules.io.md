@@ -216,8 +216,6 @@ You are redirected to GitHub to install CodeCapsules.
 3. From the drop-down menu, choose the name of the repository containing your portfolio.
 4. Press "Install & Authorize"
 
-![image14](images/image14.png)
-
 With CodeCaspsules connected to your portfolio, you can now deploy it!
 
 ### Creating a Capsule and viewing the portfolio
