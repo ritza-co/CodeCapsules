@@ -1,11 +1,11 @@
-# Hosting your portfolio online the easy way: an introduction to CodeCapsules.io
+# Easily hosting your portfolio online: an introduction to CodeCapsules.io
 
-Deploying a web application to a production environment is complex. Traditionally you must set up a server and micromanage the tasks associated with hosting one: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
+Deploying a web application to a production environment is complex. Traditionally you set up a server and micromanage the tasks associated with hosting one: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
 
-This time-consuming process is no longer necessary. In this lesson, you'll learn how to create a portfolio and host it on [CodeCapsules](https://codecapsules.io/), a Platform as a Service (PaaS), which:
+This time-consuming process is no longer necessary. In this lesson, you'll learn how to create a portfolio and host it on [CodeCapsules](https://codecapsules.io/), a _Platform as a Service_, which:
 
-- Manages a server and hosts your application for you.
-- Integrates with GitHub to deploy your web application. 
+- Manages servers hosting your web-applications
+- Integrates with GitHub to deploy your web-applications
 
 All in a few clicks.
 
@@ -13,53 +13,53 @@ The first half of this guide covers choosing and personalizing a portfolio templ
 
 ## Requirements & Prerequisite knowledge
 
-Hosting your portfolio on CodeCapsules is the easy part - so no further knowledge about servers is necessary. To personalize and deploy your portfolio to CodeCapsules, you will need:
+Hosting your portfolio on CodeCapsules is the easy part - so no knowledge about servers is necessary. To personalize and deploy your portfolio to CodeCapsules, you will need:
 
--  A text editor (I use [Sublime Text](https://www.sublimetext.com/)). 
+- A text editor (I use [Sublime Text](https://www.sublimetext.com/)). 
 - A [GitHub](https://www.github.com) account and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. 
 
-It will also be helpful (though not necessary) to have some HTML knowledge to edit the portfolio template we will use.
+It will also be helpful (though not necessary) to have some HTML knowledge to edit a portfolio template we will use.
 
 ## Creating a portfolio
 
-[HTML5 UP](https/www.html5up.net) provides HTML5 site templates for free. This guide will cover editing the [Massively](https://html5up.net/massively) template. The Massively template is elegant and easy to edit. 
+[HTML5 UP](https/www.html5up.net) provides HTML5 site templates for free. We will use [Massively](https://html5up.net/massively) template. The Massively template is elegant and is easily edited.
 
-Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and transfer the template files into it**. The names of both directories are irrelevant. The file structure should look something like this:
+Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and transfer the template files into it**. This step is necessary for hosting a web-page on CodeCapsules.
+
+The names of both directories are irrelevant. The file structure should look something like this:
 
 ```
-MyPortfolio  <-- Top level directory
-    PortfolioFiles <-- Subdirectory
+MyPortfolio  
+    PortfolioFiles 
         + assets
         + images
         + generic.html
         + elements.html
         + index.html
 ```
-Don't worry about anything except for the `index.html` file. The `index.html` file contains all of the HTML code for the main page of your template. 
+We only need to worry about the `index.html` file. The `index.html` file contains all of the HTML code for the main page of your template. 
 
 ### Personalizing the template
 
-Let's start editing the template. Opening the `index.html` file, you will see the template and notice many things we probably don't need for a portfolio. 
-
-I will demonstrate how to edit the Massively template by creating a portfolio for Abraham Lincoln - the 16th president of the U.S.A. Some things that Abraham Lincoln (and probably you) wouldn't need in this template are:
+I will demonstrate how to edit the Massively template by creating a portfolio for Abraham Lincoln - the 16th president of the U.S.A. Looking at the template, you may have noticed some things we don't need for a portfolio. Things Abraham Lincoln (and probably you) wont need in a portfolio include:
 
 - Social Media Accounts
 - Extra tabs
 - Date Entries 
-- Text in Latin
+- Irrelevant text
 - Pagination
 - Email contact form
 - Your address
 
-To start editing, open the `index.html` file with your text editor. The following steps briefly outline what to change:
+Let's start with the title and subheading of To start editing, open the `index.html` file with your text editor. The following steps outline where to start:
 
 1. At the top of the file, change the text located within the `<title>` tags to whatever you like - I wrote: "Abraham Lincoln".
 
 2. Customize the words wrapped in the `<h1>` tags.
 
-3. Directly below the previously edited `<h1>` tags, edit the text within the `<p>` tags.  
+3. Below the previously edited `<h1>` tags, edit the text within the `<p>` tags.  
 
-4. Scroll down until you see text that looks like: `<!-- Header -->`, delete the `<header id="header">` down to and including the `</header>` tag.
+4. Scroll down until you see text that looks like: `<!-- Header -->`, delete all text from `<header id="header">` down to and including the `</header>` tag.
 
 Your portfolio should now look something like this: 
 
@@ -75,7 +75,7 @@ To delete the unnecessary tabs, find these lines:
 <li><a href="generic.html">Generic Page</a></li>
 <li><a href="elements.html">Elements Reference</a></li>
 ```
-Personalize the "This is Massively" text, and delete the two lines below that line.
+Personalize the "This is Massively" text, and delete the two lines below containing the "Generic Page" and "Elements Reference" text.
 
 The code for social media accounts is located at the top and bottom of the index.html file. Starting at the top, find and delete:
 
@@ -88,29 +88,32 @@ The code for social media accounts is located at the top and bottom of the index
 </ul>
 ```
 
-At the bottom, find and delete this text:
+At the bottom, find and delete this code-block:
 
-![image4](images/Image4.png)
+```html
+<section>
+  <h3>Social</h3>
+    <ul class="icons alt">
+        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+    </ul>
+</section>
+```
 
-
-Finally, find and delete all lines that begin with `<span class="date"...>`.
-
-This will delete all the date entries from your portfolio.
-
-Your website will appear similar to this:
-
-![image5](images/Image5.png)
+Finally, find and delete all lines that begin with `<span class="date"...>`. This will delete all the date entries in your portfolio.
 
 ### Personalizing text and removing the excess
 
-To complete Lincolns' portfolio we must: 
+To complete the portfolio we must: 
 
-- Personalize the default text.
-- Change the "Full Story" buttons to an appropriate text.
+- Personalize default text.
+- Change the "Full Story" button's text.
 - Replace images with personal images.
-- Remove the email feature at the bottom.
+- Remove the contact form.
 - Update or remove the contact information.
-- Delete the multi-page (next button) functionality. 
+- Delete the "next" button. 
 
 Personalizing the default text is simple. View the HTML document in a text editor while also viewing the document in a web browser (by opening the index.html document). Find the corresponding text and tailor it to yourself. Next:
 
@@ -128,7 +131,7 @@ For contact information, we have two options:
 
 - To delete all contact information, navigate to the bottom of the file and delete the `<section class="split contact">` tag and all lines below it, up to the `</footer>` tag. 
 
-- To delete specific sections, delete the `<section>` tag, the information you want to delete, and the corresponding `</section>` tag. 
+- To delete specific sections (an example section is shown below), delete the `<section>` tag, the information you want to delete, and the corresponding `</section>` tag.
 
   ![image8](images/image8.png)
 
@@ -141,10 +144,9 @@ The portfolio is almost complete! You just need to customize the images in your 
 3. Find lines with `class="image main"` or `class="image fit"` - to the right, you will see `src="images/pichere.jpg"` - change the name of the image with your image name and file extension.
 
 
-Link buttons to your work by finding each section starting with an `<article>` tag. You will see a line that contains `class="button"`. On that line, find `href="#"` and replace the "#" with your link. 
+Link buttons to your work by locating `<article>` tags. Below each `<article>` tag, you will see a line that contains `class="button"`. On that line, find `href="#"` and replace the "#" with your link. 
 
-Ensure you provide a full link, such as "https://www.yourwebsitehere.com" (where you change the name of the website appropriately). 
-
+Ensure you provide a full link, including `https://`.
 An example section for Abraham Lincoln looks like this:
 
 ![image9](images/image9.png)
@@ -243,4 +245,4 @@ Your Capsule is now building. This process will make your portfolio visible onli
 
 By using CodeCapsules, the hardest part is creating your web-application. Hosting your web-application is made dramatically easier with CodeCapsules. CodeCapsules follows a simple process, guiding you from start to finish without having to mess around with any servers. 
 
-In little time, you can have a portfolio ready for the entire world to see - and with CodeCapsules, the moment you update you update your portfolio on GitHub, the changes will be visible to all.
+In little time, you can have a portfolio ready for the entire world to see - and with CodeCapsules, the moment you update you update your portfolio on GitHub, the changes will be visible to all. 
