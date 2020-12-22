@@ -49,7 +49,7 @@ If Gandi has processed your domain, find it under the "Active" tab - if it is st
 
 Before routing your domain to your web application, we have one final step to complete. 
 
-## Setting up HTTPS for your domain.
+## Setting up HTTPS for your domain
 
 HTTP stands for Hypertext Transfer Protocol. When you see HTTP before a web address such as http://www.google.com, you know that the information retrieved from entering this address is returned in [clear text](https://www.pcmag.com/encyclopedia/term/cleartext). This means your data is vulnerable when interacting with this website.
 
