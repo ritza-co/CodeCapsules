@@ -8,7 +8,7 @@ The web-address www.google.com is a placeholder to help us remember the website.
 
 When phone books were still widely used, one found a person's phone number by searching for their name and corresponding phone number in the book. Requesting a domain from the DNS behaves similarly. If your computer doesn't already have the IP address saved (or "cached"), your computer sends a request to the DNS with the domain you are searching for. The DNS then returns the corresponding IP address, and you connect to the website.
 
-Although CodeCapsules provides a default domain, the domain is generic and probably doesn't look as appropriate as a personal domain would. Let's change that. This tutorial will guide you through buying a domain name and associating it with your CodeCapsules hosted web-application. You'll also learn a bit more about the DNS and related topics along the way.
+Although CodeCapsules provides a default domain, the domain probably doesn't look as appropriate as a personal domain would. Let's change that. This tutorial will guide you through buying a domain name and routing it to your CodeCapsules hosted web-application. You'll also learn a bit more about the DNS and related topics along the way.
 
 ## Prerequisites
 
