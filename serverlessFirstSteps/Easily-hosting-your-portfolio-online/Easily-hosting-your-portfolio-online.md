@@ -146,7 +146,7 @@ Personalizing the default text is simple. View the HTML document in a text edito
 
 3. Remove pagination by deleting lines:
 
-```hmtl
+```html
 <footer>
     <div class="pagination">
         <!--<a href="#" class="previous">Prev</a>-->
