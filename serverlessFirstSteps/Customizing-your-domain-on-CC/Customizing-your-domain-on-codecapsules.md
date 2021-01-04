@@ -17,11 +17,11 @@ To complete this tutorial, you need:
 - A web-application hosted on [CodeCapsules](www.codecapsules.io).
 - A valid payment method (credit card, PayPal, cryptocurrency, bank transfer) to purchase a custom domain.
 
-Let's get started!
+Let's get started. 
 
 ## Where to buy domain
 
-Accredited businesses that sell domains are called domain registrars. We will purchase a domain from www.gandi.net. Domains that aren't extremely desired usually aren't too expensive - I purchased mine for $8.97. 
+Accredited businesses that sell domains are called domain registrars. We will purchase a domain from the registrar www.gandi.net. Domains that aren't very desired are usually inexpensive - we purchased ours for $8.97. 
 
 ### Purchasing a domain from Gandi
 
@@ -29,13 +29,13 @@ To purchase a domain on Gandi:
 
 1. Navigate to www.gandi.net.
 
-2. Enter the domain you want in the domain search box - I searched for "lincolnportfolio.co.za".
+2. Enter the domain you want in the domain search box - we searched for "lincolnportfolio.co.za".
 
 3. Add the domain to your shopping cart.
 
 4. Checkout by clicking the shopping cart at the top right of the screen.
 
-5. Pick how many years you would like to host the domain, and press the Checkout button.
+5. Decide how many years you would like to host the domain, and press the Checkout button.
 
 Gandi will prompt you to log in or create a new account. Create an account and follow the payment process to purchase your domain. After purchasing, you can view your domain. Do so by:
 
@@ -45,7 +45,7 @@ Gandi will prompt you to log in or create a new account. Create an account and f
 
 	![image3](images/image3.png)
 
-If Gandi has processed your domain, find it under the "Active" tab - if it is still processing, you can view it under the "Pending" tab (mine took 20 minutes to process).
+If Gandi has processed your domain, find it under the "Active" tab - if it is still processing, you can view it under the "Pending" tab (ours took 20 minutes to process).
 
 Before routing your domain to your web application, we have one final step to complete. 
 
@@ -94,7 +94,7 @@ DNS records contain information about your domain. When a user enters your domai
 
 An A record stores the IP address of the server where your web-application is hosted (in this case, CodeCapsules). When you type in your domain name, your computer requests the A record associated with your domain from the DNS server. The DNS returns the A record containing the IP address, and you connect to your web-application. To change the default A record to route to your web-application:
 
-1. On [CodeCapsules](www.codecapsules.io), navigate to the Capsule you wish to route to your new domain on.
+1. On [CodeCapsules](www.codecapsules.io), navigate to the Capsule you wish to route to your new domain to.
 
 2. Click Overview.
 
@@ -131,7 +131,7 @@ To allow users to enter in "www." before your domain name:
 
 7. Click create.
 
-You can now view your web-application by entering either `https://yourdomainname.extension` or `https://www.yourdomainname.extension`!
+You can now view your web-application by entering either `https://yourdomainname.extension` or `https://www.yourdomainname.extension`. 
 
 ## What next?
 

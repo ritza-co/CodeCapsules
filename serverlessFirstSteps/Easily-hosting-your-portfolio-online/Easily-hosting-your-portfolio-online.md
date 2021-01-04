@@ -7,18 +7,16 @@ This time-consuming process is no longer necessary. In this lesson, you'll learn
 - Manages servers hosting your web-applications
 - Integrates with GitHub to deploy your web-applications
 
-All in a few clicks.
-
 The first half of this guide covers choosing and personalizing a portfolio template. After, we will push it to a GitHub repository and see how CodeCapsules interfaces with GitHub to make your portfolio public.
 
 ## Requirements & Prerequisite knowledge
 
-Hosting your portfolio on CodeCapsules is the easy part - so no knowledge about servers is necessary. To personalize and deploy your portfolio to CodeCapsules, you will need:
+Hosting your portfolio on CodeCapsules requires no previous knowledge about servers. To personalize and deploy your portfolio to CodeCapsules, you will need:
 
 - A text editor (I use [Sublime Text](https://www.sublimetext.com/)). 
 - A [GitHub](https://www.github.com) account and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. 
 
-It will also be helpful (though not necessary) to have some HTML knowledge to edit a portfolio template we will use.
+It will also be helpful (though not necessary) to have know some HTML, so you can easily edit a portfolio template we will use.
 
 ## Creating a portfolio
 
@@ -42,7 +40,7 @@ We only need to worry about the `index.html` file. The `index.html` file contain
 
 ### Personalizing the template
 
-I will demonstrate how to edit the Massively template by creating a portfolio for Abraham Lincoln - the 16th president of the U.S.A. Looking at the template, you may have noticed some things we don't need for a portfolio. Things Abraham Lincoln (and probably you) wont need in a portfolio include:
+We will demonstrate how to edit the Massively template by creating a portfolio for Abraham Lincoln - the 16th president of the U.S.A. Looking at the template, you may have noticed some things we don't need for a portfolio. Things Abraham Lincoln (and probably you) won't need include:
 
 - Social Media Accounts
 - Extra tabs
@@ -52,9 +50,9 @@ I will demonstrate how to edit the Massively template by creating a portfolio fo
 - Email contact form
 - Your address
 
-Let's start with the title and subheading of To start editing, open the `index.html` file with your text editor. The following steps outline where to start:
+Let's start with the title and subheading of the portfolio. To start editing, open the `index.html` file with your text editor. The following steps outline where to start:
 
-1. At the top of the file, change the text located within the `<title>` tags to whatever you like - I wrote: "Abraham Lincoln".
+1. At the top of the file, change the text located within the `<title>` tags to whatever you like - we wrote: "Abraham Lincoln".
 
 2. Customize the words wrapped in the `<h1>` tags.
 
@@ -122,11 +120,47 @@ Personalizing the default text is simple. View the HTML document in a text edito
  
 2. Remove the email feature by deleting lines:
 
-    ![image6](images/image6.png)
+```html
+<section>
+    <form method="post" action="#">
+        <div class="fields">
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" />
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="3"></textarea>
+            </div>
+        </div>
+        <ul class="actions">
+            <li><input type="submit" value="Send Message" /></li>
+        </ul>
+    </form>
+ </section>
+```
 
 3. Remove pagination by deleting lines:
 
-    ![image7](images/image7.png)
+```hmtl
+<footer>
+    <div class="pagination">
+        <!--<a href="#" class="previous">Prev</a>-->
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <span class="extra">&hellip;</span>
+        <a href="#" class="page">8</a>
+        <a href="#" class="page">9</a>
+        <a href="#" class="page">10</a>
+        <a href="#" class="next">Next</a>
+    </div>
+</footer>
+```
 
 For contact information, we have two options:
 
@@ -134,11 +168,17 @@ For contact information, we have two options:
 
 - To delete specific sections (an example section is shown below), delete the `<section>` tag, the information you want to delete, and the corresponding `</section>` tag.
 
-  ![image8](images/image8.png)
+```html
+<section class="alt">
+    <h3>Address</h3>
+    <p>1234 Somewhere Road #87257<br />
+    Nashville, TN 00000-0000</p>
+</section>
+```
 
 ### Custom images and button linking
 
-The portfolio is almost complete! You just need to customize the images in your portfolio and link the buttons to your work. First, let's customize the images: 
+The portfolio is almost complete - you just need to customize the images in your portfolio and link the buttons to your work. First, let's customize the images: 
 
 1. Find the images directory in the directory where the `index.html` file is located.
 2. Place your image in the images directory - remember the images' name and file extension.
@@ -148,15 +188,27 @@ Link buttons to your work by locating `<article>` tags. Below each `<article>` t
 
 Ensure you provide a full link, including `https://`. An example section for Abraham Lincoln looks like this:
 
-![image9](images/image9.png)
+```html
+<article>
+    <header>
+        <h2><a href="#">The Gettysburg<br />
+        address</a></h2>
+    </header>
+    <a href="#" class="image fit"><img src="images/gettysburg.jpg" alt="" /></a>
+    <p>One of my greatest qualities is my ability to deliver compelling speeches.</p>
+    <ul class="actions special">
+    <li><a href="https://en.wikipedia.org/wiki/Gettysburg_Address" class="button">Read More</a></li>
+    /ul>
+</article>
+```
 
-We can now send our portfolio to GitHub!
+We can now send our portfolio to GitHub.
 
 ## Uploading to GitHub
 
 ### Creating the remote repository
 
-CodeCapsules will interface with your GitHub repository and use it to create a web-application. What's better - every time you update your repository, CodeCapsules will automatically detect the changes made and update your CodeCapsules hosted web-application.
+CodeCapsules will interface with your GitHub repository and use it to create a web-application. Further, every time you update your repository, CodeCapsules will automatically detect the changes made and update your CodeCapsules hosted web-application.
 
 If you already know how to send code from a local repository to a remote repository on GitHub, send the sub-directory containing the portfolio to GitHub and [skip](#deploying-to-codecapsules) to the next section. 
 
@@ -164,7 +216,7 @@ Otherwise, follow these steps:
 
 - Go to www.github.com and log in.
 - Find the "Create new repository" button and click it.
-- Name your repository anything. I named mine "AbesPortfolio".
+- Name your repository anything. We named ours "AbesPortfolio".
 - Copy the URL given to you under "Quick setup".
 
 ![image10](images/image10.png)
@@ -188,13 +240,11 @@ Now, you can see your code in your GitHub repository. Your repository should loo
 
 ![image11](images/image11.png)
 
-We are ready to host our portfolio on CodeCapsules!
+We are ready to host our portfolio on CodeCapsules.
 
 ## Deploying to CodeCapsules 
 
-Now that all of the hard work is done, we can move on to the easy part; deploying our portfolio on CodeCapsules.
-
-To deploy your portfolio on CodeCapsules, go to https://codecapsules.io/, and create an account. After creating your account, log in. 
+To deploy your portfolio to CodeCapsules, navigate to https://codecapsules.io/, and create an account. After creating your account, log in. 
 
 When you log in, you will be prompted to create a team. CodeCapsules provide teams for collaborative development - you can invite other people to view and edit your web-applications by adding them to your team. 
 
@@ -217,7 +267,7 @@ You are redirected to GitHub to install CodeCapsules.
 3. From the drop-down menu, choose the name of the repository containing your portfolio.
 4. Press "Install & Authorize"
 
-With CodeCaspsules connected to your portfolio, you can now deploy it!
+With CodeCaspsules connected to your portfolio, you can now deploy it. 
 
 ### Creating a Capsule and viewing the portfolio
 
@@ -240,6 +290,6 @@ Your Capsule is now building. This process will make your portfolio visible onli
 
 ## Conclusion
 
-By using CodeCapsules, the hardest part is creating your web-application. Hosting your web-application is made dramatically easier with CodeCapsules. CodeCapsules follows a simple process, guiding you from start to finish without having to mess around with any servers. 
+By using CodeCapsules to host your web-applications (or portfolio), the hardest part is _creating_ your web-application. CodeCapsules follows a simple process, guiding you from start to finish without having to mess around with any servers. 
 
 In little time, you can have a portfolio ready for the entire world to see - and with CodeCapsules, the moment you update you update your portfolio on GitHub, the changes will be visible to all. 
