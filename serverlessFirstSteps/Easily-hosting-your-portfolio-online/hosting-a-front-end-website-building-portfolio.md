@@ -1,4 +1,4 @@
-# Easily hosting your portfolio online: an introduction to CodeCapsules.io
+# Hosting a front-end website: building and hosting your professional portfolio
 
 Deploying a web application to a production environment is complex. Traditionally you set up a server and micromanage the tasks associated with hosting one: choosing the servers' operating system, editing its configurations, and monitoring the server to ensure it is running.
 
