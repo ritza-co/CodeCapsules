@@ -1,65 +1,63 @@
 # Customizing Your Domain on CodeCapsules
 
-## Why a custom domain
+## How domains work
 
-Custom domains garner name recognition for your web-application. Take Google. The URL "www.google.com" is instantly recognizable. Typing in the address, you are taken to Google's search engine. Without a domain, you would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for www.google.com
+Custom domains garner name recognition for your web-application (or website). Take Google: the URL "www.google.com" is instantly recognizable. Typing in the address, you're taken to Google's search engine. Without a domain, one would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for www.google.com
 
-The web-address www.google.com is a placeholder to help us remember the website. When typing a URL in your search bar, your computer sends a request to the Domain Name System (DNS) - a series of servers located worldwide containing domain names and corresponding IP addresses.
+The web-address www.google.com is a placeholder to help us remember the website. When one types a URL in a search bar, the computer sends a request to the Domain Name System (DNS) - a series of servers located worldwide containing domain names and corresponding IP addresses.
 
-When phone books were still widely used, one found a person's phone number by searching for their name and corresponding phone number in the book. Requesting a domain from the DNS behaves similarly. If your computer doesn't already have the IP address saved (or "cached"), your computer sends a request to the DNS with the domain you are searching for. The DNS then returns the corresponding IP address, and you connect to the website.
+When phone books were still widely used, one found a person's phone number by searching for their name and corresponding phone number in the book. Requesting a domain from the DNS behaves similarly. If the computer doesn't already have the IP address saved (or "cached"), the computer sends a request to the DNS with the domain being  searching for. The DNS then returns the corresponding IP address, and one connects to the website.
 
-Although CodeCapsules provides a default domain, the domain probably doesn't look as appropriate as a personal domain would. Let's change that. This tutorial will guide you through buying a domain name and routing it to your CodeCapsules hosted web-application. You'll also learn more about the DNS and related topics along the way.
+In this lesson we'll learn how to buy a domain and route it to a CodeCapsules hosted web-application. Along the way we'll learn more about the DNS and related topics.
 
 ## Prerequisites
 
-To complete this tutorial, you need:
+To complete this tutorial, we'll need:
 
 - A web-application hosted on [CodeCapsules](www.codecapsules.io).
 - A valid payment method (credit card, PayPal, cryptocurrency, bank transfer) to purchase a custom domain.
 
-Let's get started. 
-
 ## Where to buy domain
 
-Accredited businesses that sell domains are called domain registrars. We will purchase a domain from the registrar www.gandi.net. Domains that aren't very desired are usually inexpensive - we purchased ours for $8.97. 
+Accredited businesses that sell domains are called domain registrars. We'll purchase a domain from the registrar www.gandi.net. Domains that aren't very desired are usually inexpensive. 
 
 ### Purchasing a domain from Gandi
 
-To purchase a domain on Gandi:
+To purchase a domain on [Gandi](www.gandi.net):
 
 1. Navigate to www.gandi.net.
 
-2. Enter the domain you want in the domain search box - we searched for "lincolnportfolio.co.za".
+2. Enter the domain you want in the domain search box (ex: https://www.lincolnportfolio.co.za)
 
-3. Add the domain to your shopping cart.
+3. Add the domain to the shopping cart.
 
 4. Checkout by clicking the shopping cart at the top right of the screen.
 
 5. Decide how many years you would like to host the domain, and press the Checkout button.
 
-Gandi will prompt you to log in or create a new account. Create an account and follow the payment process to purchase your domain. After purchasing, you can view your domain. Do so by:
+Follow the prompts to create an account and purchase your domain. After purchasing, view the domain by:
 
 1. Logging in to www.gandi.net.
 
-2. Press the "Domain" button on the dashboard.
+2. Pressing the "Domain" button on the dashboard.
 
 	![image3](images/image3.png)
 
-If Gandi has processed your domain, find it under the "Active" tab - if it is still processing, you can view it under the "Pending" tab (ours took 20 minutes to process).
+If Gandi has processed the domain, find it under the "Active" tab - if it is still processing, view it under the "Pending" tab (this can take some time).
 
-Before routing your domain to your web application, we have one final step to complete. 
+Before routing we route the domain to a web application, we have one more step to complete. 
 
-## Setting up HTTPS for your domain
+## Setting up HTTPS for the domain
 
-HTTP stands for Hypertext Transfer Protocol. When you see HTTP before a web address such as http://www.google.com, you know that the information retrieved from entering this address is returned in [clear text](https://www.pcmag.com/encyclopedia/term/cleartext). This means your data is vulnerable when interacting with this website.
+HTTP stands for Hypertext Transfer Protocol. When you see HTTP before a web address such as http://www.google.com, you know that the information retrieved from entering this address is returned in [clear text](https://www.pcmag.com/encyclopedia/term/cleartext). This means data is vulnerable when interacting with this website.
 
 HTTPS is HTTP with S - secure. HTTPS encrypts data that is sent between you and the server you are connected to. Setting up HTTPS is quick with Gandi and is good practice regardless of the information your web-application is exchanging with its users.
 
-To set up HTTPS with your domain you need to register a free SSL (Secure Sockets Layer) certificate. In short, an SSL certificate helps encrypt the data sent when connected via HTTPS.
+To set up HTTPS with the domain, we need to register a free SSL (Secure Sockets Layer) certificate. In short, an SSL certificate helps encrypt the data sent when connected via HTTPS.
 
-To register an SSL certificate for your domain:
+To register an SSL certificate for our domain we must:
 
-1. Click on your new domain under the active tab.
+1. Click on the domain under the active tab.
 
 2. Navigate to the "Web Forwarding" tab.
 
@@ -71,7 +69,7 @@ To register an SSL certificate for your domain:
 
 6. From the "Address to forward to" drop-down menu, choose "HTTPS://"
 
-7. Type in the name of your domain. 
+7. Type in the name of the domain. 
 
 8. Choose "Permanent" under "Type of web forwarding"
 
@@ -82,17 +80,17 @@ To register an SSL certificate for your domain:
 10. Repeat this process, this time choosing "HTTP://" for step four and typing "*" for step five.
 
 
-This will forward any users connecting to your domain with `http://www.yourdomainhere.extension` or `http://yourdomainhere.extension` to `https://yourdomainhere.extension` - it forces your users to use HTTPS. By creating this forwarding address, Gandi also automatically creates an SSL certificate. This can take some time to process. 
+This will forward any users connecting to the domain with `http://www.yourdomainhere.extension` or `http://yourdomainhere.extension` to `https://yourdomainhere.extension` - it forces users to utilize HTTPS. By creating this forwarding address, Gandi also automatically creates an SSL certificate. This can take some time to process. 
 
 To view this verification process, navigate to "SSL Certificates" on the Gandi dashboard. Soon you will receive an email from Gandi with a link asking you to verify your account before receiving the SSL certificate. Click the link you receive. 
 
-Now that your domain has an SSL certificate, you can route your CodeCapsules web-application to your domain. Navigate to the "Domain" tab on the Gandi dashboard, and click on your domain name. Click the "DNS Records" tab at the top of the page and continue to the next section.
+Now that the domain has an SSL certificate, we'll route your CodeCapsules web-application to the domain. Navigate to your domain on the Gandi Dashboard. Click the "DNS Records" tab at the top of the page and continue to the next section.
 
 ## Routing your web-application to your new domain
 
-DNS records contain information about your domain. When a user enters your domain in their search bar, their computer will receive these records. When creating a new domain with Gandi, various DNS records are supplied with default values. For this tutorial, only the entries with type "A" and "CNAME" are important.
+DNS records contain information about a domain. When a user enters a domain in their search bar, their computer will receive these records. When creating a new domain with Gandi, various DNS records are supplied with default values. For this tutorial, only the entries with type "A" and "CNAME" are important.
 
-An A record stores the IP address of the server where your web-application is hosted (in this case, CodeCapsules). When you type in your domain name, your computer requests the A record associated with your domain from the DNS server. The DNS returns the A record containing the IP address, and you connect to your web-application. To change the default A record to route to your web-application:
+An A record stores the IP address of the server where your web-application is hosted (in this case, CodeCapsules). When you type in a domain name, your computer requests the A record associated with the domain from the DNS. The DNS returns the A record containing the IP address, and you connect to what you were requesting. Let's modify the default A record to route to your web-application:
 
 1. On [CodeCapsules](www.codecapsules.io), navigate to the Capsule you wish to route to your new domain to.
 
@@ -100,7 +98,7 @@ An A record stores the IP address of the server where your web-application is ho
 
 3. Press "Add A Custom Domain".
 
-4. Copy the supplied IP address and type in the name of the web-address you purchased (mine was lincolnportfolio.co.za)
+4. Copy the supplied IP address and type in the name of the web-address purchased.
 
 5. Click "Create Domain".
 
@@ -112,7 +110,7 @@ An A record stores the IP address of the server where your web-application is ho
 
 View your web-application by typing `https://yourdomainname.extension`, replacing your domain name with "yourdomainname" and your extension (such as .com) with ".extension".
 
-Notice that if you type `https://www.yourdomainhere.com`, you will receive a 404 error. To fix this, we will need to add a new "CNAME" record. A CNAME is like an alias for your domain. The best way to understand how CNAME records work is by creating one.
+Notice that if you type `https://www.yourdomainhere.com`, you will receive a 404 error. To fix this, we'll add a new "CNAME" record. A CNAME is like an alias for a domain. The best way to understand how CNAME records work is by creating one.
 
 To allow users to enter in "www." before your domain name:
 
@@ -135,7 +133,7 @@ You can now view your web-application by entering either `https://yourdomainname
 
 ## What next?
 
-You've learned how to purchase, secure, and configure a domain, route a domain to your CodeCapsules application, and even a little bit about DNS. 
+We've learned how to purchase, secure, and configure a domain, route a domain to your CodeCapsules application, and even a little bit about DNS. 
 
 If you are interested, there is still a lot to learn about DNS. A fine place to start is by following this link: https://aws.amazon.com/route53/what-is-dns/
 
