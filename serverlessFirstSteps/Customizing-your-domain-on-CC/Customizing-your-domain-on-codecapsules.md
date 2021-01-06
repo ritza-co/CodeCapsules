@@ -1,6 +1,6 @@
 # Customizing Your Domain on CodeCapsules
 
-## How domains work
+## How domains work, and why have your own
 
 Custom domains garner name recognition for your web-application (or website). Take Google: the URL "www.google.com" is instantly recognizable. Typing in the address, you're taken to Google's search engine. Without a domain, one would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for www.google.com
 
@@ -86,7 +86,7 @@ To view this verification process, navigate to "SSL Certificates" on the Gandi d
 
 Now that the domain has an SSL certificate, we'll route your CodeCapsules web-application to the domain. Navigate to your domain on the Gandi Dashboard. Click the "DNS Records" tab at the top of the page and continue to the next section.
 
-## Routing your web-application to your new domain
+## Routing your web-application to the domain
 
 DNS records contain information about a domain. When a user enters a domain in their search bar, their computer will receive these records. When creating a new domain with Gandi, various DNS records are supplied with default values. For this tutorial, only the entries with type "A" and "CNAME" are important.
 
@@ -135,7 +135,7 @@ You can now view your web-application by entering either `https://yourdomainname
 
 We've learned how to purchase, secure, and configure a domain, route a domain to your CodeCapsules application, and even a little bit about DNS. 
 
-If you are interested, there is still a lot to learn about DNS. A fine place to start is by following this link: https://aws.amazon.com/route53/what-is-dns/
+If you're interested, there is still a lot to learn about DNS. A fine place to start is by following this link: https://aws.amazon.com/route53/what-is-dns/
 
 If you'd like to know about the rest of the DNS records associated with your new domain, I recommend reading through this Google support ticket: https://support.google.com/a/answer/48090?hl=en 
 
