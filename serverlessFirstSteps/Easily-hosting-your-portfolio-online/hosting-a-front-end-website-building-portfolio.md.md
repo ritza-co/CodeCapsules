@@ -7,11 +7,11 @@ As well as providing a server for us, CodeCapsules:
 - Manages the server - you don't need to "babysit" it
 - Integrates with GitHub to deploy your code with a single `git push`
 
-The first half of this guide covers choosing and personalizing a portfolio template. After, we will push the portfolio to a GitHub repository and see how CodeCapsules interfaces with GitHub to make your portfolio public ([here](https://abesportfolio-wzfg.codecapsules.space/#) is an example).
+The first half of this guide covers choosing and personalizing a portfolio template. After, we'll push the portfolio to a GitHub repository and see how CodeCapsules interfaces with GitHub to make your portfolio public ([here](https://abesportfolio-wzfg.codecapsules.space/#) is an example).
 
 ## Requirements & Prerequisite knowledge
 
-Hosting a portfolio on CodeCapsules requires no previous knowledge about servers. To personalize and deploy a portfolio to CodeCapsules, we'll need:
+Hosting a portfolio on CodeCapsules requires no previous knowledge about servers. To personalize a portfolio and deploy it to CodeCapsules, we'll need:
 
 - A text editor, such as [Sublime Text](https://www.sublimetext.com/), or [VSCode](https://code.visualstudio.com/). 
 - A [GitHub](https://www.github.com) account and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. 
@@ -19,7 +19,7 @@ Hosting a portfolio on CodeCapsules requires no previous knowledge about servers
 
 ## Creating a portfolio
 
-[HTML5 UP](https/www.html5up.net) provides HTML5 site templates for free. We will use the [Massively](https://html5up.net/massively) template. The Massively template is elegant and easy to edit.
+[HTML5 UP](https/www.html5up.net) provides HTML5 site templates for free. We'll use the [Massively](https://html5up.net/massively) template. The Massively template is elegant and easy to edit.
 
 Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and transfer the template files into it**. This step is necessary for hosting a web-page on CodeCapsules.
 
@@ -47,7 +47,7 @@ As an example, let's create a portfolio for Abraham Lincoln - the 16th president
 - Irrelevant text
 - Pagination
 - Email contact form
-- Your address
+- An address
 
 Let's start with the title and subheading of the portfolio. To start editing, open the `index.html` file with a text editor. 
 
@@ -116,7 +116,7 @@ To complete the portfolio we'll
 - Delete the "next" button
 
 
-1. To alter the "Full Story" button's text, find lines similar to the below and change "Full Story":
+1. To alter the "Full Story" button's text, find lines similar to the below and change "Full Story"
 
   ```html
   <li><a href="#" class="button">Full Story</a></li>
@@ -223,8 +223,8 @@ Follow the steps below to create a remote repository on GitHub:
 - Name your repository anything (in this image it was named "myPortfolio").
 - Copy the URL given to you under "Quick setup".
 
-![image10](images/image10.png)
-_The link to your repository is located under Quick setup_
+    ![image10](images/image10.png)
+    _The link to your repository is located under Quick setup_
 
 ### Sending files to the GitHub repository 
 
@@ -241,7 +241,7 @@ git push -u origin main
 
 Replace the URL above with the URL you copied in the previous section. 
 
-Now, you can see the portfolio code in your GitHub repository. Your repository should look similar to this, where all of your portfolio code is contained in a sub-directory (in this image the sub-directory is "portFolder"):
+Now you can see the portfolio code in your GitHub repository. Your repository should look similar to this, where all of your portfolio code is contained in a sub-directory (in this image the sub-directory is "portFolder"):
 
 ![image11](images/image11.png)
 
@@ -275,9 +275,11 @@ You are redirected to GitHub to install CodeCapsules.
 
 With CodeCaspsules connected to our portfolio, we can deploy it. 
 
-### Creating a Capsule and viewing the portfolio
+### Creating a Space, Capsule, and viewing the portfolio
 
-The final step to deploying the portfolio is to press "Create A New Capsule For Your Space". A space may contain many capsules - this can be front-end or back-end data, or a database. Let's create a capsule, and get our portfolio online. 
+Next, we need to create a space. A space contains capsules - more on capsules soon. Click "Create a New Space For Your Apps" and follow the prompts. After creating a space, click on it.
+
+Now we can create a capsule. Capsules contain code - this can be front-end or back-end data, or a database. Click "Create A New Capsule For Your Space".
 
 You'll be prompted to choose a capsule type. Our portfolio contains only front-end code, so choose a "Frontend" capsule and:
 
