@@ -1,4 +1,4 @@
-# Creating and Hosting a Personal API with Flask and CodeCapsules
+# Creating and Hosting a Personal API with Flask and Code Capsules
 
 ## What is an API and why care? 
 
@@ -8,7 +8,7 @@ Without a doubt, they used an API. APIs are hosted on a server and act as an acc
 
 As part of this lesson we will be taking a look at the [WeatherStack](https://weatherstack.com/) API - an API that provides weather data. For the weather website to retrieve your location's temperature, they likely sent a request to an API like WeatherStack with information about your computer's location. WeatherStacks API would then return the data related to your locale - the temperature and other weather information. The weather website then would display this data. 
 
-Following this tutorial, we'll learn how to create a personal API with Python (using [Flask](https://palletsprojects.com/p/flask/)) and host it on [CodeCapsules](https://codecapsules.io/), so you can request information from your API regardless of your location. Our API will give us access to USD exchange rates, and the temperature of a given city. 
+Following this tutorial, we'll learn how to create a personal API with Python (using [Flask](https://palletsprojects.com/p/flask/)) and host it on [Code Capsules](https://codecapsules.io/), so you can request information from your API regardless of your location. Our API will give us access to USD exchange rates, and the temperature of a given city. 
 
 ## Prerequisites
 Before starting, we'll need a [GitHub](www.github.com) account and the following installed:
@@ -167,7 +167,7 @@ def index():
 	return "Welcome to my API!"
 ```
 
-creates the homepage for your API. After hosting it on CodeCapsules, "Welcome to my API!" will greet you upon connecting to the API. 
+creates the homepage for your API. After hosting it on Code Capsules, "Welcome to my API!" will greet you upon connecting to the API. 
 
 
 ### Combining the APIS
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 	app.run()
 ``` 
 
-Let's break this down. The line `@app.route('/get', methods=['GET'])` adds an endpoint to access and retrieve data from the API. This will become clearer when we host our API on CodeCapsules. For now, imagine entering "myAPI.123-codecapsules.space". 
+Let's break this down. The line `@app.route('/get', methods=['GET'])` adds an endpoint to access and retrieve data from the API. This will become clearer when we host our API on Code Capsules. For now, imagine entering "myAPI.123-codecapsules.space". 
 
 `@app.route('/')` would point to "myAPI.123-codecapsules.space" and display "Welcome to my API!". 
 
@@ -220,10 +220,10 @@ The API is completed. Now to host it.
 
 ## Freezing Requirements and Creating the Procfile
 
-Before sending our API to GitHub (so CodeCapsules can host it) we need to create a list of requirements and a "Procfile".
+Before sending our API to GitHub (so Code Capsules can host it) we need to create a list of requirements and a "Procfile".
 
 #### Creating a list of requirements
-To create a list of requirements, ensure your terminal is still in the virtual environment. In the same directory as our `app.py` file, Enter `pip3 freeze > requirements.txt`. A `requirements.txt` file will be created. When we host our API, CodeCapsules will know what to install on its server.
+To create a list of requirements, ensure your terminal is still in the virtual environment. In the same directory as our `app.py` file, Enter `pip3 freeze > requirements.txt`. A `requirements.txt` file will be created. When we host our API, Code Capsules will know what to install on its server.
 
 
 #### Creating the Procfile
@@ -231,16 +231,16 @@ Create a new file named `Procfile` within the same directory. Open it and enter 
 
 `web: gunicorn app.py:app`
 
-This tells CodeCapsules to use the gunicorn web-framework.
+This tells Code Capsules to use the gunicorn web-framework.
 
-## Hosting the API on CodeCapsules
+## Hosting the API on Code Capsules
 
 Before hosting the API, perform the following:
 
 1. Create a remote repository on Github.
 2. Push the `Procfile`, `requirements.txt`, and `app.py` files to the repository.
-3. Link the repository to your CodeCapsules account.
-4. Create a new CodeCapsules Team and Space (as necessary).
+3. Link the repository to your Code Capsules account.
+4. Create a new Code Capsules Team and Space (as necessary).
 
 To create a Capsule that will host the API:
 
@@ -259,7 +259,7 @@ Depending on your browser (Google Chrome was used below), you'll see something l
 
 ![image4](images/image4.png)
 
-We've created an API. You can also interact with it through code. In a new file, try out the following, replacing the URL with your CodeCapsules URL (ensure `/get` is at the end of the URL):
+We've created an API. You can also interact with it through code. In a new file, try out the following, replacing the URL with your Code Capsules URL (ensure `/get` is at the end of the URL):
 
 ```python
 import requests
@@ -272,7 +272,7 @@ print(api_data.json())
 ```
 ## Conclusions 
 
-We've learned about APIs - what they are, how to interact with them, and how to create and host our API with Flask and CodeCapsules. 
+We've learned about APIs - what they are, how to interact with them, and how to create and host our API with Flask and Code Capsules. 
 
 For a more in-depth look at APIs, read [this](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
 
