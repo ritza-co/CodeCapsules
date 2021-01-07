@@ -1,4 +1,4 @@
-# Customizing Your Domain on CodeCapsules
+# Customizing Your Domain on Code Capsules
 
 ## How domains work, and why have your own
 
@@ -8,13 +8,13 @@ The web-address www.google.com is a placeholder to help us remember the website.
 
 When phone books were still widely used, one found a person's phone number by searching for their name and corresponding phone number in the book. Requesting a domain from the DNS behaves similarly. If the computer doesn't already have the IP address saved (or "cached"), the computer sends a request to the DNS with the domain being  searching for. The DNS then returns the corresponding IP address, and one connects to the website.
 
-In this lesson we'll learn how to buy a domain and route it to a CodeCapsules hosted web-application. Along the way we'll learn more about the DNS and related topics.
+In this lesson we'll learn how to buy a domain and route it to a Code Capsules hosted web-application. Along the way we'll learn more about the DNS and related topics.
 
 ## Prerequisites
 
 To complete this tutorial, we'll need:
 
-- A web-application hosted on [CodeCapsules](www.codecapsules.io).
+- A web-application hosted on [Code Capsules](www.codecapsules.io).
 - A valid payment method (credit card, PayPal, cryptocurrency, bank transfer) to purchase a custom domain.
 
 ## Where to buy domain
@@ -84,15 +84,15 @@ This will forward any users connecting to the domain with `http://www.yourdomain
 
 To view this verification process, navigate to "SSL Certificates" on the Gandi dashboard. Soon you will receive an email from Gandi with a link asking you to verify your account before receiving the SSL certificate. Click the link you receive. 
 
-Now that the domain has an SSL certificate, we'll route your CodeCapsules web-application to the domain. Navigate to your domain on the Gandi Dashboard. Click the "DNS Records" tab at the top of the page and continue to the next section.
+Now that the domain has an SSL certificate, we'll route your Code Capsules web-application to the domain. Navigate to your domain on the Gandi Dashboard. Click the "DNS Records" tab at the top of the page and continue to the next section.
 
 ## Routing your web-application to the domain
 
 DNS records contain information about a domain. When a user enters a domain in their search bar, their computer will receive these records. When creating a new domain with Gandi, various DNS records are supplied with default values. For this tutorial, only the entries with type "A" and "CNAME" are important.
 
-An A record stores the IP address of the server where your web-application is hosted (in this case, CodeCapsules). When you type in a domain name, your computer requests the A record associated with the domain from the DNS. The DNS returns the A record containing the IP address, and you connect to what you were requesting. Let's modify the default A record to route to your web-application:
+An A record stores the IP address of the server where your web-application is hosted (in this case, Code Capsules). When you type in a domain name, your computer requests the A record associated with the domain from the DNS. The DNS returns the A record containing the IP address, and you connect to what you were requesting. Let's modify the default A record to route to your web-application:
 
-1. On [CodeCapsules](www.codecapsules.io), navigate to the Capsule you wish to route to your new domain to.
+1. On [Code Capsules](www.codecapsules.io), navigate to the Capsule you wish to route to your new domain to.
 
 2. Click Overview.
 
@@ -104,7 +104,7 @@ An A record stores the IP address of the server where your web-application is ho
 
 6. At the DNS record tab in domain view on Gandi, edit the entry with "A" as the type.
 
-7. Enter "@" for its name and paste the CodeCapsules supplied IP address in the IPv4 address text box.
+7. Enter "@" for its name and paste the Code Capsules supplied IP address in the IPv4 address text box.
 
 8. Click create.
 
@@ -114,7 +114,7 @@ Notice that if you type `https://www.yourdomainhere.com`, you will receive a 404
 
 To allow users to enter in "www." before your domain name:
 
-1. Return to CodeCapsules and press the "Add A Custom Domain" button again.
+1. Return to Code Capsules and press the "Add A Custom Domain" button again.
 
 2. Under domain name, enter `www.yourdomainname.extension`, replacing your name and extension appropriately.
 
@@ -124,7 +124,7 @@ To allow users to enter in "www." before your domain name:
 
 5. Enter "www" in the name text-box.
 
-6. Type your default CodeCapsules web-application URL under "Hostname" (you can find this in the "Overview" tab in your web-applications Capsule).
+6. Type your default Code Capsules web-application URL under "Hostname" (you can find this in the "Overview" tab in your web-applications Capsule).
 	![image2](images/image2.png)
 
 7. Click create.
@@ -133,7 +133,7 @@ You can now view your web-application by entering either `https://yourdomainname
 
 ## What next?
 
-We've learned how to purchase, secure, and configure a domain, route a domain to your CodeCapsules application, and even a little bit about DNS. 
+We've learned how to purchase, secure, and configure a domain, route a domain to your Code Capsules application, and even a little bit about DNS. 
 
 If you're interested, there is still a lot to learn about DNS. A fine place to start is by following this link: https://aws.amazon.com/route53/what-is-dns/
 

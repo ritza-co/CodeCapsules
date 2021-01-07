@@ -1,17 +1,17 @@
 # Hosting a front-end website: building and hosting your professional portfolio
 
-Deploying front-end data to a production environment is time-consuming and requires a decent knowledge of servers. In this tutorial, we'll learn how to build and view a portfolio locally, and make it public using [CodeCapsules](https://codecapsules.io/) and a few commands.
+Deploying front-end data to a production environment is time-consuming and requires a decent knowledge of servers. In this tutorial, we'll learn how to build and view a portfolio locally, and make it public using [Code Capsules](https://codecapsules.io/) and a few commands.
 
-As well as providing a server for us, CodeCapsules: 
+As well as providing a server for us, Code Capsules: 
 
 - Manages the server - you don't need to "babysit" it
 - Integrates with GitHub to deploy your code with a single `git push`
 
-The first half of this guide covers choosing and personalizing a portfolio template. After, we'll push the portfolio to a GitHub repository and see how CodeCapsules interfaces with GitHub to make your portfolio public ([here](https://abesportfolio-wzfg.codecapsules.space/#) is an example).
+The first half of this guide covers choosing and personalizing a portfolio template. After, we'll push the portfolio to a GitHub repository and see how Code Capsules interfaces with GitHub to make your portfolio public ([here](https://abesportfolio-wzfg.codecapsules.space/#) is an example).
 
 ## Requirements & Prerequisite knowledge
 
-Hosting a portfolio on CodeCapsules requires no previous knowledge about servers. To personalize a portfolio and deploy it to CodeCapsules, we'll need:
+Hosting a portfolio on Code Capsules requires no previous knowledge about servers. To personalize a portfolio and deploy it to Code Capsules, we'll need:
 
 - A text editor, such as [Sublime Text](https://www.sublimetext.com/), or [VSCode](https://code.visualstudio.com/). 
 - A [GitHub](https://www.github.com) account and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. 
@@ -21,7 +21,7 @@ Hosting a portfolio on CodeCapsules requires no previous knowledge about servers
 
 [HTML5 UP](https/www.html5up.net) provides HTML5 site templates for free. We'll use the [Massively](https://html5up.net/massively) template. The Massively template is elegant and easy to edit.
 
-Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and transfer the template files into it**. This step is necessary for hosting a web-page on CodeCapsules.
+Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and transfer the template files into it**. This step is necessary for hosting a web-page on Code Capsules.
 
 The names of both directories are irrelevant. The file structure should look something like this:
 
@@ -204,13 +204,13 @@ Ensure to provide a full link, including `https://`. An example section for Abra
 </article>
 ```
 
-Once we're happy with the portfolio, we need to push it to GitHub so that it can be deployed to CodeCapsules.
+Once we're happy with the portfolio, we need to push it to GitHub so that it can be deployed to Code Capsules.
 
 ## Uploading to GitHub
 
-Next, we'll push code from a local repository to a remote repository on GitHub. By doing this, we can connect our CodeCapsules account to our GitHub repository so CodeCapsules can automatically detect and deploy changes.
+Next, we'll push code from a local repository to a remote repository on GitHub. By doing this, we can connect our Code Capsules account to our GitHub repository so Code Capsules can automatically detect and deploy changes.
 
-If you already know how to push code from a local repository to a remote repository on GitHub, push the sub-directory containing the portfolio to GitHub and [skip](#deploying-to-codecapsules) to the next section. 
+If you already know how to push code from a local repository to a remote repository on GitHub, push the sub-directory containing the portfolio to GitHub and [skip](#deploying-to-code-capsules) to the next section. 
 
 Otherwise, read the following. 
 
@@ -228,7 +228,7 @@ Follow the steps below to create a remote repository on GitHub:
 
 ### Sending files to the GitHub repository 
 
-The final step before deploying our portfolio to CodeCapsules is to send the files located in our local portfolio folder to GitHub. Open your terminal and navigate to the top-level directory you created. This directory should contain the sub-directory that has the portfolio files. Enter each command in order:
+The final step before deploying our portfolio to Code Capsules is to send the files located in our local portfolio folder to GitHub. Open your terminal and navigate to the top-level directory you created. This directory should contain the sub-directory that has the portfolio files. Enter each command in order:
 
 ```
 git init
@@ -245,13 +245,13 @@ Now you can see the portfolio code in your GitHub repository. Your repository sh
 
 ![image11](images/image11.png)
 
-We are ready to host our portfolio on CodeCapsules.
+We are ready to host our portfolio on Code Capsules.
 
-## Deploying to CodeCapsules 
+## Deploying to Code Capsules 
 
-To deploy the portfolio to CodeCapsules, navigate to https://codecapsules.io/, and create an account. After creating your account, log in. 
+To deploy the portfolio to Code Capsules, navigate to https://codecapsules.io/, and create an account. After creating your account, log in. 
 
-Follow the prompt to create a team. CodeCapsules provide teams for collaborative development - you can invite other people to view and edit your web-applications by adding them to your team. 
+Follow the prompt to create a team. Code Capsules provide teams for collaborative development - you can invite other people to view and edit your web-applications by adding them to your team. 
 Even if you're working alone, you'll still need a team (containing only yourself).
 
 ![image12](images/image12.png)
@@ -260,11 +260,11 @@ After creating a team, skip the prompt to add your team's billing information an
 
 ### Linking the repository
 
-We need to give CodeCapsules permission to connect to our portfolio on GitHub. Click "Get Started By Installing The GitHub App".
+We need to give Code Capsules permission to connect to our portfolio on GitHub. Click "Get Started By Installing The GitHub App".
 
 ![image13](images/image13.png)
 
-You are redirected to GitHub to install CodeCapsules.
+You are redirected to GitHub to install Code Capsules.
 
 1. Click your username.
 2. Press "Only select repositories".
@@ -300,4 +300,4 @@ Your Capsule is now building. This process will make your portfolio visible onli
 
 ![finished_port](images/finished_port.png)
 
-We've learned how to create a basic portfolio and push it to GitHub, and we've learned how to connect CodeCapsules to Github to deploy our portfolio. Because we don't have a backend, we couldn't implement certain things like the contact form (which we removed). In the future, we'll look at "Backend" capsules - these will allow us to add more functionality to our portfolio. 
+We've learned how to create a basic portfolio and push it to GitHub, and we've learned how to connect Code Capsules to Github to deploy our portfolio. Because we don't have a backend, we couldn't implement certain things like the contact form (which we removed). In the future, we'll look at "Backend" capsules - these will allow us to add more functionality to our portfolio. 
