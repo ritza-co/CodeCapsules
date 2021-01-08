@@ -14,7 +14,7 @@ Following this tutorial, we'll learn how to create a personal API with Python (u
 Before starting, we'll need a [GitHub](www.github.com) account and the following installed:
 
 - [Git](https://git-scm.com/downloads)
-- [Python](https://www.python.org/downloads/) 3.xx+ 
+- [Python](https://www.python.org/downloads/) 3.xx
 - [Virtualenv](https://virtualenv.pypa.io/en/latest/installation.html) 
 
 ## Setting up our environment
