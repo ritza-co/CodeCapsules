@@ -1,6 +1,6 @@
 # Customizing Your Domain on Code Capsules
 
-## How domains work, and why have your own
+## Why custom domains and how do they work?
 
 Custom domains garner name recognition for your web-application (or website). Take Google: the URL "www.google.com" is instantly recognizable. Typing in the address, you're taken to Google's search engine. Without a domain, one would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for www.google.com
 
@@ -19,7 +19,7 @@ To complete this tutorial, we'll need:
 
 ## Where to buy domain
 
-Accredited businesses that sell domains are called domain registrars. We'll purchase a domain from the registrar www.gandi.net. Domains that aren't very desired are usually inexpensive. 
+Accredited businesses that sell domains are called domain registrars. We'll purchase a domain from the registrar www.gandi.net. Domains that aren't highly sought after are are usually inexpensive. 
 
 ### Purchasing a domain from Gandi
 
@@ -33,7 +33,7 @@ To purchase a domain on [Gandi](www.gandi.net):
 
 4. Checkout by clicking the shopping cart at the top right of the screen.
 
-5. Decide how many years you would like to host the domain, and press the Checkout button.
+5. Decide how many years you'd like to host the domain, and press the Checkout button.
 
 Follow the prompts to create an account and purchase your domain. After purchasing, view the domain by:
 
@@ -45,7 +45,7 @@ Follow the prompts to create an account and purchase your domain. After purchasi
 
 If Gandi has processed the domain, find it under the "Active" tab - if it is still processing, view it under the "Pending" tab (this can take some time).
 
-Before routing we route the domain to a web application, we have one more step to complete. 
+Before we route the domain to a web application, we have one more step to complete. 
 
 ## Setting up HTTPS for the domain
 
