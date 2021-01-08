@@ -269,6 +269,6 @@ print(api_data.json())
 
 We've learned about what APIS are, how to interact with them, and how to create and host an API with Flask and Code Capsules. 
 
-For a more in-depth look at APIs, read [this](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
+For a more in-depth look at APIs, read [this](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/).
 
-If you're interested in learning more about Flask, start with their [tutorial](https://flask.palletsprojects.com/en/1.1.x/tutorial/) 
+If you're interested in learning more about Flask, start with their [tutorial](https://flask.palletsprojects.com/en/1.1.x/tutorial/).
