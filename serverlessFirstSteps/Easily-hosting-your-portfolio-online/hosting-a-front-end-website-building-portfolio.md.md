@@ -1,78 +1,104 @@
 # Hosting a frontend: building and deploying your portfolio to Code Capsules
 
-Deploying frontend data to a production environment (a website) is time-consuming and requires server knowledge. In this tutorial, we'll learn how to build and view a portfolio locally, and deploy it online using [Code Capsules](https://codecapsules.io/) plus a few commands.
+In the past, deploying a website to a server was a time-consuming and error-prone process. It required a large amount of knowledge about setting up and maintaining operating systems, as well as webservers, file transfer programs, and much else. And all this came after you'd already learnt how to put together your website with HTML and CSS!
 
-As well as providing a server for us, Code Capsules: 
+[Code Capsules](https://codecapsules.io/) allows developers to cut through the admin of website deployment and server maintenance and focus on what they're really interested in: developing great websites and applications. With Code Capsules, deploying a frontend website is as simple as uploading code to GitHub. And if that still sounds intimidating, don't worry, we'll show you how to do both in this tutorial, all in the process of creating a professional portfolio website.
 
-- Manages the server - you don't need to "babysit" it
-- Integrates with GitHub to deploy your code with a single `git push`
+First, we'll take a look at choosing a portfolio template and personalising it. Then we'll push the portfolio to a GitHub repository and see how to connect to Code Capsules and make it public. [Here](https://abesportfoliowzfg.codecapsules.space/#) is a sneak preview of what it will look like.
 
-First, we'll take a look at choosing a portfolio template and personalizing it. After, we'll push the portfolio to a GitHub repository and see how Code Capsules connects to GitHub and makes your portfolio public ([here](https://abesportfoliowzfg.codecapsules.space/#) is a portfolio created by following this process).
+## Requirements & prerequisite knowledge
 
-## Requirements & Prerequisite knowledge
-
-Hosting a portfolio on Code Capsules requires no previous knowledge about servers. To personalize a portfolio template and deploy it to Code Capsules, we'll need:
+Hosting a portfolio on Code Capsules requires no previous knowledge about web development or how to operating a server. To personalise a portfolio template and deploy it to Code Capsules, we'll need:
 
 - A text editor, such as [Sublime Text](https://www.sublimetext.com/), or [VSCode](https://code.visualstudio.com/). 
-- A [GitHub](https://www.github.com) account and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. 
+- The version control software [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
+- A free user account on [GitHub](https://www.github.com).
 
+You can install the above software and complete this tutorial on Windows, Mac, or Linux. 
 
 ## Creating a portfolio
 
-[HTML5 UP](https/www.html5up.net) provides HTML5 site templates for free. We'll use the [Massively](https://html5up.net/massively) template. The Massively template is elegant and easy to edit.
+[HTML5 UP](https://www.html5up.net) has a large array of beautiful HTML5 site templates that you can use free of charge, [as long as you visibly credit them for the design](https://html5up.net/license). Most of their templates already a visible design credit, so we'll be fine as long as we don't remove it. In this tutorial, we'll work with the [Massively](https://html5up.net/massively) template. Once you've got the hang of editing HTML through working with this template, feel free to [pick any other template](https://www.html5up.net) that catches your eye.
 
-Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and transfer the template files into it**. This step is necessary for hosting a web-page on Code Capsules.
+Download the Massively template and extract it to a folder on your computer. Then create a second folder inside that folder and move the template files into it (you can leave the LICENSE and README files behind). This step is necessary for hosting a web-page on Code Capsules. 
 
-The names of both directories are irrelevant. The file structure should look something like this:
+You can name the two folders whatever you want. The file structure should look something like this:
 
 ```
-myPortfolio  
-    portfolioFiles 
+html5up-massively
+    myPortfolio
         + assets
+            + css
+            + js
+            + sass
+            + webfonts
         + images
         + generic.html
         + elements.html
         + index.html
 ```
 
-We'll only edit the `index.html` file in this tutorial. The `index.html` file contains all of the HTML code for our portfolio. 
+Open the `index.html` file in your browser now and scroll through it to get an idea of what it looks like. In this tutorial, we're only going to be editing this file, but feel free to look through the rest and see what happens to the site when you change them.
 
-### Personalizing the template
+### Personalising the template
 
-As an example, let's create a portfolio for Abraham Lincoln - the 16th president of the U.S.A. Looking at the template, you may have noticed some things a portfolio for Abraham Lincoln wouldn't need:
+We've got a nice-looking website without any content. Now it's time to start putting our personal stamp on it. To illustrate the process, we'll work through creating a portfolio for Abraham Lincoln, the 16th president of the USA. You're free to follow along with the example, or use your own name and details, or even make a portfolio for a totally different president.
 
-- Social Media Accounts
-- Extra tabs
-- Date Entries 
-- Irrelevant text
-- Pagination
-- Email contact form
-- An address
+Let's start with the title and subheading of the portfolio. Open the `index.html` file in your text editor. You should see the following block of HTML near the top of the file. 
 
-Let's start with the title and subheading of the portfolio. Open the `index.html` file with a text editor. 
+```html
+<head>
+    <title>Massively by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+```
 
-1. At the top of the file, change the text located within the `<title>` tags to whatever you'd like, such as: "Abraham Lincoln". This is what will appear in search engines and browser tabs.
+The text inside the `<title>` tags is what shows up in the page's browser tab and search engine results, so let's change that first.
 
-2. Customize the words wrapped in the `<h1>` tags.
+```html
+<head>
+    <title>Abraham Lincoln</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+```
 
-3. Just below the previously edited `<h1>` tags, edit the text within the `<p>` tags.  
+If you kept the `index.html` file in your browser, you can refresh the page now, and you'll see the new tab title.
 
-4. Delete the lines
-   ```html
-<header id="header">
-    <a href="index.html" class="logo">Massively</a>
-</header>
-   ```
+Now we're going to change the text at the top of the page itself. Scroll down a bit in your text editor, until you see the below text.
 
-Save the file and open it in a web browser. Our portfolio should now look something like this: 
+```html
+<!-- Intro -->
+    <div id="intro">
+        <h1>This is<br />
+        Massively</h1>
+        <p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
+        and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+    </div>
+
+<!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Massively</a>
+    </header>
+```
+
+Change the text inside the `<h1>` and `<p>` tags to something else (don't worry about the `<br />` tag, it just splits the text across lines, and you can safely delete it). Then delete the `<header>` block. Once you've done that, your portfolio should look something like this: 
 
 ![image2](images/Image2.png)
 
-Next, we need to delete the extra tabs, social media links, and dates above each portfolio piece. 
+### Removing unnecessary content
 
-### Removing the tabs, dates, and links
+The default layout for Massively is designed for a blog or news website containing articles. To make it look more like a portfolio, we're going to delete the dates above each article entry. To do this, we will find and delete all lines that begin with `<span class="date"...>`.
 
-Find these lines:
+Next, because this is going to be a single-page portfolio, we can also delete the theme's extra tabs. Find and delete these lines:
 
 ```html
 <li class="active"><a href="index.html">This is Massively</a></li>
@@ -80,9 +106,9 @@ Find these lines:
 <li><a href="elements.html">Elements Reference</a></li>
 ```
 
-Personalize the "This is Massively" text. Delete the two lines containing the "Generic Page" and "Elements Reference" text to delete the tabs of the same names.
+Depending on who you're making a portfolio for, you may want to have a different set of social media links, or possibly none at all. In this template, social media links are shown at the top and bottom of the page, so we'll need to change them in two places.
 
-The code for social media accounts is located at the top and bottom of the index.html file. Starting at the top, delete any social media account you'd like (if I only wanted to delete Instagram, i'd delete the line `<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>`:
+First, find this block of HTML near the top of the page:
 
 ```html
 <ul class="icons">
@@ -93,107 +119,45 @@ The code for social media accounts is located at the top and bottom of the index
 </ul>
 ```
 
-At the bottom, delete the same lines you deleted previously (in the previous example, I would delete `<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>` again):
+For each social media profile you want to link to, enter its link in place of the `#` in `href="#"`. For example, to link Abraham Lincoln's Twitter account, you can do this:
 
 ```html
-<section>
-  <h3>Social</h3>
-    <ul class="icons alt">
-        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-    </ul>
-</section>
+<li><a href="https://twitter.com/Abe_Lincoln" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 ```
 
-Finally, find and delete all lines that begin with `<span class="date"...>`. This will delete all the date entries above the article entries in the template.
-
-### Personalizing text and removing extraneous components
-
-To complete the portfolio we'll
-
-- Personalize default text
-- Change the "Full Story" button's text
-- Replace images with personal images
-- Remove the contact form
-- Update or remove contact information
-- Delete the "next" button
-
-
-1. To alter the "Full Story" button's text, find all the lines identical to the below and change "Full Story" to whatever you'd like.
-
-  ```html th
-  <li><a href="#" class="button">Full Story</a></li>
-  ``` 
- 
-2. Remove the email form feature by deleting the following code:
-
-  ```html
-  <section>
-    <form method="post" action="#">
-        <div class="fields">
-            <div class="field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
-            </div>
-            <div class="field">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="3"></textarea>
-            </div>
-        </div>
-        <ul class="actions">
-            <li><input type="submit" value="Send Message" /></li>
-        </ul>
-    </form>
- </section>
- ```
-
-3. Remove pagination by deleting:
-
-  ```html
-  <footer>
-    <div class="pagination">
-        <!--<a href="#" class="previous">Prev</a>-->
-        <a href="#" class="page active">1</a>
-        <a href="#" class="page">2</a>
-        <a href="#" class="page">3</a>
-        <span class="extra">&hellip;</span>
-        <a href="#" class="page">8</a>
-        <a href="#" class="page">9</a>
-        <a href="#" class="page">10</a>
-        <a href="#" class="next">Next</a>
-    </div>
-  </footer>
-  ```
-
-To delete specific contact information sections (an example section is shown below), delete the `<section>` tag, the information you want to delete, and the corresponding `</section>` tag. 
-```html
-<section class="alt">
-    <h3>Address</h3>
-    <p>1234 Somewhere Road #87257<br />
-    Nashville, TN 00000-0000</p>
-</section>
-```
-
-We can customize contact information by editing the text within these sections. 
-
+Delete any lines you don't want to link to. If you don't like social media, you can delete all of them. Then find the second set of social media links at the bottom of the page and repeat the process. They look similar to the ones at the top of the page, so you should be able to locate them quite easily.
 
 ### Custom images and button linking
 
-Our portfolio is almost complete - we just need to customize the images in the portfolio and the button links.  Let's start with the images:
+Now we're going to replace the placeholder images with our own pictures. If you're making a portfolio for yourself, this is where you might want to include pictures of different projects you've completed. If you want to use images from the web, make sure you understand their licences and provide credit where necessary. 
 
-1. Find the images directory in the directory where the `index.html` file is located.
-2. Place your image in the images directory - remember the images' name and file extension.
-3. Find lines with `class="image main"` or `class="image fit"` - to the right, you will see `src="images/pichere.jpg"` - change the name of the image with your image name and file extension.
+Once you've chosen your pictures, navigate to your project's `images` folder and place your image there. Remember each image's name and file extension.
 
-Change where buttons link to by locating `<article>` tags. Below each `<article>` tag, find the lines that contains `class="button"`. On that line, find `href="#"` and replace the "#" with your link. 
+In HTML, images are displayed using the `<img>` tag. Find those tags in `index.html`. To start you off, the big image at the top of the page is specified by this line:
 
-Ensure to provide a full link, including `https://`. An example section for Abraham Lincoln, with a customized image and button link looks like this:
+```html
+<img src="images/pic01.jpg" alt="">
+```
+The image file to display is controlled by the `src` attribute. Change the one above from `images/pic01.jpg` to `images/YOUR-IMAGE.FILE-EXTENSION`. Do this for all the images on the page. If you don't have enough images to replace everything, you can delete the image code or even the whole content block.
+
+Now that the images are in, you can change the article headings (in `<h2>` tags) text (in `<p>` tags) and links (in `<a>` tags). For example, we can change this:
+
+```html
+<article>
+    <header>
+        <span class="date">April 24, 2017</span>
+        <h2><a href="#">Sed magna<br />
+        ipsum faucibus</a></h2>
+    </header>
+    <a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+    <ul class="actions special">
+        <li><a href="#" class="button">Full Story</a></li>
+    </ul>
+</article>
+```
+
+To this:
 
 ```html
 <article>
@@ -209,106 +173,136 @@ Ensure to provide a full link, including `https://`. An example section for Abra
 </article>
 ```
 
-Once finished with the portfolio, we need to push it to GitHub. After, the portfolio can be deployed on Code Capsules.
+Change as many articles as you have content for and delete the rest.
+
+### Cleaning up
+
+Now that most of our content is in place, to complete the portfolio we'll need to do the following:
+
+- Change the **Full Story** button's text.
+- Remove the contact form.
+- Update or remove the contact information. You probably don't want to put your address or phone number online.
+- Delete the pagination buttons at the bottom of the page.
+
+    ![](images/pagination.png)
+
+Now that you've looked around the template and edited quite a lot of it, you should be able to find and change all of the above on your own. Once you're happy, the next step is to push it to GitHub. After that, the portfolio can be deployed on Code Capsules.
 
 ## Uploading to GitHub
 
-First, we'll push code from a local repository to a remote repository on GitHub. Through this process, we can connect our Code Capsules account to our GitHub repository so Code Capsules can automatically detect and deploy changes.
-
-If you already know how to push code from a local repository to a remote repository on GitHub, push the **sub-directory**containing the portfolio to GitHub and [skip](#deploying-to-code-capsules) to the next section. 
-
-Otherwise, read the following. 
+First, we'll use Git to create a local repository in our code folder. Then we'll push that code to a remote repository on GitHub. Finally, we will connect the GitHub repository our Code Capsules account so that Code Capsules can automatically detect and deploy changes.
 
 ### Creating the remote repository
 
-Follow the steps below to create a remote repository on GitHub: 
+First, log in into [Github.com](https://github.com) and click on **Create new repository**. Name your repository anything you want (we've called it "myPortfolio" in the image below).
 
-- Go to www.github.com and log in.
-- Find the "Create new repository" button and click it.
-- Name your repository anything (in this picture it was named "myPortfolio").
-- Copy the URL given to you under "Quick setup".
+![image10](images/image10.png)
 
-    ![image10](images/image10.png)
-    _locate the link to your repository under "Quick Setup"_
-
-### Sending files to the GitHub repository 
-
-Before deploying the portfolio to Code Capsules, we need to send the portfolio to GitHub.
-
-Open a terminal and navigate to the top-level directory containing the portfolio. This directory should contain the sub-directory that has the portfolio files. Enter each command in order:
+Then open a terminal in your portfolio's top-level folder and create a repository by running the command below.
 
 ```
 git init
-git add .
-git commit -m "First commit!"
-git branch -M main
-git remote add origin https://github.com/yourusername/yourrepositoryname.git  
-git push -u origin main
 ```
 
-Replace the URL above with the URL you copied in the previous section. 
+Add all the files in your folder to the repository with this command:
 
-Now you can see the portfolio code in your GitHub repository. Your repository should look similar to this, where all of your portfolio code is contained in a sub-directory (in this image the sub-directory is "portFolder"):
+```
+git add .
+```
+
+Create a [commit](https://www.git-tower.com/learn/git/commands/git-commit/) with the command below.
+
+```
+git commit -m "First commit!"
+```
+
+Making a commit tells repository to save the files you've added as they currently are. If we make a mistake in our code later on, Git will allow us to come back to the state of this or any other commit. This ability to create incremental backups is one of the reasons developers love version control.
+
+Branches are a related Git feature, which provide a way to maintaining different versions of the same codebase simultaneously, which is useful when more than one person has to be able to work on a codebase at the same time. As this is a solo project, we don't need to worry about them, except to make one change. By default, Git calls its main [branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) `master`, but the community is making an effort to move towards the more neutral name `main`. We can rename the `master` branch to `main` with the following command: 
+
+```
+git branch -M main
+```
+
+Now we need to tell our local repository about our remote repository on GitHub, so we can upload our files there. Run this command, substituting in your GitHub username and the name of your repository:
+
+```
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git  
+```
+
+Finally, we're going to push our code up to GitHub. For this first push, we need to tell our local repository that its `main` branch has an [upstream counterpart](https://www.git-tower.com/learn/git/faq/set-upstream/) on our repository, like this:
+
+```
+git push --set-upstream origin main
+```
+
+Now you should see the portfolio code in your GitHub repository. It should look similar to this, with all of your portfolio files in a sub-directory.
 
 ![image11](images/image11.png)
 
-We are ready to host our portfolio on Code Capsules.
+If you want to make further changes to your portfolio before you publish it on Code Capsules, you can add, commit and upload with the following commands (note that we don't need to set the upstream branch a second time):
+
+```
+git add index.html
+git commit -m "Update portfolio"
+git push
+```
+
+Once you're happy with your portfolio, proceed to the next section to learn how to publish it on Code Capsules.
 
 ## Deploying to Code Capsules 
 
-To deploy the portfolio to Code Capsules, navigate to https://codecapsules.io/, and create an account. After creating an account, log in. 
+First, go to https://codecapsules.io/, create an account and log in. 
 
-Follow the prompt to create a team. Code Capsules provide teams for collaborative development - you can invite other people to view and edit your web-applications by adding them to your team. 
-Even if you're working alone, you'll still need a team (containing only yourself).
+Follow the prompts to create a team. Code Capsules provide teams for collaborative development -- you can invite other people to view and edit your web applications by adding them to your team. If you're working alone, you'll have a team of one.
 
 ![image12](images/image12.png)
 
-After creating a team, when prompted, enter your billing information. Code Capsules requires billing information to create Capsules, but will **not** charge you for hosting the portfolio. 
-
-Skip the prompt to invite team members.
+After creating a team, you will be prompted for billing information. Code Capsules requires billing information to create Capsules, but will **not** charge you for hosting the portfolio. You will also be prompted to add team members, but you can skip that for now.
 
 ### Linking the repository
 
-Code Capsules requires permission to connect to our portfolio on GitHub. Click "Get Started By Installing The GitHub App". Code Capsules will redirect you to GitHub.
+Code Capsules requires permission to connect to our portfolio on GitHub. Click **Get Started By Installing The GitHub App** and Code Capsules will redirect you to GitHub.
 
 ![image13](images/image13.png)
 
-Then: 
+On GitHub: 
 
-1. Click your username.
-2. Press "Only select repositories".
-3. From the drop-down menu, type the name of the repository containing your portfolio and click it.
-4. Press "Install & Authorize".
+1. Click on your username.
+2. Choose **Only select repositories**.
+3. Find your portfolio repository in the drop-down and select it.
+4. Click **Install & Authorize**.
     
     ![permissions_git](images/permissions_git.png)
 
-With Code Capsules connected to our portfolio, we can deploy it. 
+Now your Code Capsules account is connected to your GitHub account, and you can deploy your portfolio. 
 
 ### Creating a Space, Capsule, and viewing the portfolio
 
-Next, we need to create a Space. A Space contains Capsules - more on Capsules soon. Click "Create a New Space For Your Apps" and follow the prompts. After creating a Space, click on it.
+Next, we need to create a *space*. A space contains *capsules* -- more on those soon. Click **Create a New Space For Your Apps** and follow the prompts. After creating a Space, click on it.
 
-Now we can create a Capsule. Capsules contain code - this can be frontend or backend data, or a database. Click "Create A New Capsule For Your Space".
+Now we can create a capsule. Capsules contain code -- this can be frontend or backend data, or a database. Click **Create A New Capsule For Your Space**.
 
-You'll be prompted to choose a Capsule type. Our portfolio contains only frontend code, so choose a "Frontend" Capsule and:
+You'll be prompted to choose a capsule type. Our portfolio only contains frontend code, so choose the frontend type.
 
 1. Select the "Trial" product type.
-2. Click the repository that contains the portfolio.
-3. Press "Next".
-4. Leave the build command blank and enter the name of the sub-directory containing the portfolio files in the "Static Content Folder Path" entry box.
+2. Choose the repository that contains the portfolio and click **Next**.
+3. Leave the build command blank. Enter the name of the subfolder containing your portfolio files in the **Static Content Folder Path** entry box. This is why we needed a subfolder!
 
   ![image16](images/image16.png)
 
-5. Press "Create Capsule". 
+4. Click **Create Capsule**. 
 
-Your Capsule is now building. This process will make your portfolio visible online. After it has deployed, click the "Overview" tab, then press the link under "Domains" to view your portfolio.
+Your Capsule is now building. Once this process is finished, your portfolio will be visible online. 
 
 ![image15](images/image15.png)
 
 ## Conclusion
 
+To see your portfolio, switch to the **Overview** tab and click the link under **Domains**.
+
 ![finished_port](images/finished_port.png)
 
-We've created a portfolio and pushed it to GitHub - we've also seen how Code Capsules connects to GitHub to deploy code (like our portfolio frontend). 
+We've created a portfolio, pushed it to GitHub, and deployed it on Code Capsules. It's now public, and you can share it with your friends. 
 
-In the future, we'll take a look at "Backend" capsules. These "Backend" capsules will enable us to host backend code and provide additional functionality - like implementing the contact form we removed at the beginning of the tutorial. 
+In the future, we'll take a look at **backend** capsules. These capsules will enable us to host backend code that will enable visitors to interact with our websites. For example, we might want to implement a contact form or a guestbook. 
