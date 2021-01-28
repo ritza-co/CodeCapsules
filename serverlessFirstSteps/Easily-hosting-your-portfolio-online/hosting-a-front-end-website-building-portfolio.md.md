@@ -7,7 +7,7 @@ In this tutorial, we'll work with an alternative to the traditional method of ho
 - Manages all of the technical details – no server management required. 
 - Integrates with GitHub to deploy your code with a single `git push`.
 
-First, we'll take a look at choosing a portfolio template and personalising it. After, we'll push the portfolio to a GitHub repository and see how Code Capsules connects to GitHub and makes your portfolio visible to the world. [Here is a preview](https://abesportfoliowzfg.codecapsules.space/) of what it'll look like - let's get started. 
+First, we'll take a look at choosing a portfolio template and personalising it. After, we'll push the portfolio to a GitHub repository and see how Code Capsules connects to GitHub and makes your portfolio visible to the world. [Here is a preview](https://abesportfolio-avck.codecapsules.co.za/) of what it'll look like - let's get started. 
 
 ## Requirements & Prerequisite Knowledge
 
@@ -140,9 +140,12 @@ The social media code at the bottom of the `index.html` is nearly identical – 
 In this section we'll:
 
 - Remove the contact form
+
 - Remove pagination
     ![pagination](images/pagination.png)
+
 - Update or remove contact information
+
 
 1. Remove the contact form found at the bottom of the portfolio by deleting the following code:
 
