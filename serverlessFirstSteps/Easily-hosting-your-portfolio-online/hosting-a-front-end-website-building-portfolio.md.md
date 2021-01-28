@@ -141,8 +141,9 @@ In this section we'll:
 
 - Remove the contact form
 - Remove pagination
-        ![pagination](images/pagination.png)
 - Update or remove contact information
+    ![pagination](images/pagination.png)
+
 
 1. Remove the contact form found at the bottom of the portfolio by deleting the following code:
 
