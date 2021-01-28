@@ -1,25 +1,25 @@
-# Hosting a front-end: building and deploying your portfolio to Code Capsules
+# Hosting a front-end: Building and deploying your portfolio to Code Capsules
 
-Publishing your portfolio online requires a solid technical background - managing servers can be challenging. You need to choose a server's operating system, maintain and update the server, and figure out where to host the server itself. 
+Publishing your portfolio online requires a solid technical background – managing servers can be challenging. You need to choose a server's operating system, maintain and update the server, and figure out where to host the server itself. 
 
 In this tutorial, we'll work with an alternative to the traditional method of hosting a front-end (content that visitors see when they load your website), called [Code Capsules](www.codecapsules.io). Code Capsules is a service that hosts front-end (and back-end) code online. Furthermore, Code Capsules:
 
-- Manages all of the technical details - no server management required 
-- Integrates with GitHub to deploy your code with a single `git push`
+- Manages all of the technical details – no server management required. 
+- Integrates with GitHub to deploy your code with a single `git push`.
 
 First, we'll take a look at choosing a portfolio template and personalising it. After, we'll push the portfolio to a GitHub repository and see how Code Capsules connects to GitHub and makes your portfolio visible to the world. [Here is a preview](https://abesportfoliowzfg.codecapsules.space/) of what it'll look like - let's get started. 
 
-## Requirements & Prerequisite knowledge
+## Requirements & Prerequisite Knowledge
 
-Hosting a portfolio on Code Capsules requires no previous knowledge about servers or front-end development. To personalize a portfolio template and deploy it to Code Capsules, we'll need:
+Hosting a portfolio on Code Capsules requires no previous knowledge about servers or front-end development. To personalise a portfolio template and deploy it to Code Capsules, we'll need:
 
 - A text editor, such as [Sublime Text](https://www.sublimetext.com/), or [VSCode](https://code.visualstudio.com/). 
 - A registered [GitHub](https://www.github.com) account.
 - The [Git command-line interface](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed. 
 
-## Creating a portfolio
+## Creating a Portfolio
 
-[HTML5 UP](https/www.html5up.net) provides HTML site templates for free. We'll use the [Massively](https://html5up.net/massively) template - an easy to modify and elegent HTML template.
+[HTML5 UP](https/www.html5up.net) provides HTML site templates for free. We'll use the [Massively](https://html5up.net/massively) template – an easy to modify and elegent HTML template.
 
 Download the Massively template and extract it to a directory on your computer. **Within that directory, create _another_ directory, and extract the template files into it**. This step is necessary for hosting a web-page on Code Capsules.
 
@@ -35,17 +35,17 @@ myPortfolio
         + index.html
 ```
 
-The `index.html` file contains all of the HTML code for our portfolio - any changes to this code will result in a change to the portfolio. To view changes you make as we begin to modify the template, double click the `index.html` file to open the portfolio in a web-browser.
+The `index.html` file contains all of the HTML code for our portfolio – any changes to this code will result in a change to the portfolio. To view changes you make as we begin to modify the template, double click the `index.html` file to open the portfolio in a web-browser.
 
-## Personalizing the template
+## Personalizing the Template
 
-This tutorial will following the creation of a portfolio for Abraham Lincoln - the 16th president of the U.S.A. We'll take a closer look at some things Abraham Lincoln wouldn't want in a portfolio - and maybe you too. The next few sections will cover how to modify the following elements of the portfolio template:
+This tutorial will following the creation of a portfolio for Abraham Lincoln – the 16th president of the USA. We'll take a closer look at some things Abraham Lincoln wouldn't want in a portfolio – and maybe you too. The next few sections will cover how to modify the following elements of the portfolio template:
 
-- Unpersonalized text
-- The "Generic Page" and "Elements Reference" tabs
-- Pagination
-- The email contact form
-- Personal information (address, social media account)
+- Unpersonalised text.
+- The "Generic Page" and "Elements Reference" tabs.
+- Pagination.
+- The email contact form.
+- Personal information (address, social media account).
 
 
 Let's start with the title and subheading of the portfolio. Open the index.html file in your text editor. You'll see the following block of HTML near the top of the file:
@@ -83,9 +83,9 @@ Now we'll change the text that displays at the top of the portfolio. Scroll down
     </header>
 ```
 
-1. Customize the words wrapped in the `<h1>...</h1>` tags - this is the large text that displays at the top of the portfolio. 
+1. Customise the words wrapped in the `<h1>...</h1>` tags – this is the large text that displays at the top of the portfolio. 
 
-2. Change the text within the `<p>...</p>` tags to edit the subheading of the portfolio - the `<br />` tags and the `<a>...</a>` tags are safe to delete.
+2. Change the text within the `<p>...</p>` tags to edit the subheading of the portfolio – the `<br />` tags and the `<a>...</a>` tags are safe to delete.
 
 3. Delete the "Massively" button that appears as you scroll down the portfolio by deleting the three lines under the `<!-- Header -- >` text wrapped in `<header>...</header>` tags.
 
@@ -98,7 +98,6 @@ Next, we'll take a look at deleting the date entries above each portfolio piece,
 ### Removing the tabs, dates, and links
 
 The default layout for Massively is designed for a blog or news website containing articles. To look like a portfolio, we should delete the dates above each article entry. Do so by locating and deleting all lines beginning with `<span class="date"...>`.
-
 
 To make this a single-page portfolio, we can delete the "Generic Page" and "Elements Reference" tabs by finding:
 
@@ -121,7 +120,7 @@ The code for social media accounts is located at the top and bottom of the index
 </ul>
 ```
 
-Delete any social media account you don't need - Abraham Lincoln doesn't have Instagram, so he would delete the following line to remove the Instagram link: 
+Delete any social media account you don't need – Abraham Lincoln doesn't have Instagram, so he would delete the following line to remove the Instagram link: 
 
 ```html
 <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -133,7 +132,7 @@ If you'd like to link your social media accounts, enter the account link in plac
 <li><a href="https://twitter.com/Abe_Lincoln" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 ```
 
-The social media code at the bottom of the `index.html` is nearly identical - follow this same process to edit the code at the bottom. 
+The social media code at the bottom of the `index.html` is nearly identical – follow this same process to edit the code at the bottom. 
 
 ### Removing unnecessary content and further personalisation
 
@@ -203,7 +202,7 @@ If you'd like to personalise your contact information instead, edit the text wit
 
 ### Personalising portfolio pieces
 
-Our portfolio is almost complete - we just need to personalise the actual portfolio pieces - customizing the images, button links, and other text. Let's start with the images.
+Our portfolio is almost complete – we just need to personalise the actual portfolio pieces – customising the images, button links, and other text. Let's start with the images.
 
 Gather any images you'd like to replace with the default images. Then, place your images in the `images` directory, located in the same directory as the `index.html` file.
 
@@ -212,7 +211,7 @@ You can swap images by finding lines wrapped in `<img.../>` tags, like the below
 ```html
 <img src="images/pic01.jpg" alt="" />
 ```
-`images` is the directories name where you placed your image. To change the image, replace the text "pic01.jpg" with the **name and file extension** of your desired image.
+`images` is the name of the directory where you placed your image. To change the image, replace the text "pic01.jpg" with the **name and file extension** of your desired image.
 
 Once we've replaced the images, we should change the text for each portfolio entry. Find code blocks wrapped in `<article>...</article>` tags, such as: 
 
@@ -232,11 +231,10 @@ Once we've replaced the images, we should change the text for each portfolio ent
 ```
 You can:
 
- - Change the entries title by editing the text within the `<h2>...</h2>` tags. 
- 
+ - Change the entry's title by editing the text within the `<h2>...</h2>` tags. 
  - Personalise the entry text by editing the Latin wrapped in the `<p>...</p>2` tags.
- - Customize buttons by finding the `<li><a href="#" class="button">Full Story</a></li>` lines and replacing the "#" with a link to your portfolio piece.
-    - Replace "Full Story" text with something more appropriate.
+ - Customise buttons by finding the `<li><a href="#" class="button">Full Story</a></li>` lines and replacing the "#" with a link to your portfolio piece.
+ - Replace "Full Story" text with something more appropriate.
  
 If you would like to remove a portfolio piece, delete the `<article>...</article>` tags and all the text wrapped in the tags.
 
@@ -261,7 +259,7 @@ Follow the steps below to create a remote repository on GitHub:
 
 ### Sending files to the GitHub repository 
 
-We've created the remote repository - now we need to push the portfolio to GitHub.
+We've created the remote repository – now we need to push the portfolio to GitHub.
 
 Open a terminal and navigate to the top-level directory containing the portfolio. This directory should contain the sub-directory that has all the portfolio files. 
 
@@ -291,7 +289,7 @@ git push -u origin main
 
 Replace the URL above with the URL to your remote repository (copied in the [previous](creating-the-remote-repository) section).
 
-Now you can see the portfolio code in your GitHub repository. Your repository should look similar to the below, where all of your portfolio code is contained in a sub-directory (in this image the sub-directory is "portFolder"):
+Now you can see the portfolio code in your GitHub repository. Your repository should look similar to the below, where all of your portfolio code is contained in a sub-directory (in this image, the sub-directory is "portFolder"):
 
 ![image11](images/image11.png)
 
@@ -299,9 +297,9 @@ Now Code Capsules can host the portfolio.
 
 ## Deploying to Code Capsules 
 
-To deploy the portfolio to Code Capsules, navigate to https://codecapsules.io/, and create an account. After creating an account, log in. 
+To deploy the portfolio to Code Capsules, navigate to https://codecapsules.io/, create an account, and log in. 
 
-Follow the prompt to create a _Team_. Code Capsules provides Teams for collaborative development - you can invite other people to your Team and Team members can view and edit your web-applications.
+Follow the prompt to create a _Team_. Code Capsules provides Teams for collaborative development – you can invite other people to your Team and Team members can view and edit your web-applications.
 
 Even if you're working alone, you'll still need a Team (containing only yourself).
 
@@ -320,20 +318,20 @@ Then:
 
 1. Click your username.
 2. Press "Only select repositories".
-3. From the drop-down menu, type the repositories name containing your portfolio and select it.
+3. From the drop-down menu, type the repository's name containing your portfolio and select it.
 4. Press "Install & Authorize".
     
     ![permissions_git](images/permissions_git.png)
 
-Almost ready to deploy our portfolio.
+We are almost ready to deploy our portfolio.
 
 ### Creating a Space, Capsule, and viewing the portfolio
 
-The next step is to create a _Space_. Spaces act as a further layer of organization. Spaces can contain one or many Capsules (more on Capsules shortly) and can help organize large projects. Click "Create a new Space for your apps" and follow the prompts. Afterward, enter the Space. 
+The next step is to create a _Space_. Spaces act as a further layer of organisation. Spaces can contain one or many Capsules (more on Capsules shortly) and can help organise large projects. Click "Create a new Space for your apps" and follow the prompts. Afterward, enter the Space. 
 
-Now we can create a _Capsule_. Capsules provide the server for your application or code - in our case, we'll create a Capsule that'll host our portfolio. Click "Create a new Capsule for your Space". 
+Now we can create a _Capsule_. Capsules provide the server for your application or code – in our case, we'll create a Capsule that'll host our portfolio. Click "Create a new Capsule for your Space". 
 
-You'll be prompted to choose a Capsule type - our portfolio contains only front-end code, so choose a "Frontend" Capsule and:
+You'll be prompted to choose a Capsule type – our portfolio contains only front-end code, so choose a "Frontend" Capsule and:
 
 1. Select the "Trial" product type.
 2. Click the repository containing the portfolio.
@@ -352,10 +350,10 @@ Your Capsule is now building. This process will make your portfolio visible onli
 
 ![finished_port](images/finished_port.png)
 
-We've created a portfolio, pushed it to GitHub, and made the portfolio visible to the world. In the future, we'll take a look at "Backend" capsules. These "Backend" capsules will enable us to host back-end code and provide additional functionality - like implementing the contact form we removed at the beginning of the tutorial. 
+We've created a portfolio, pushed it to GitHub, and made the portfolio visible to the world. In the future, we'll take a look at "Backend" capsules. These "Backend" capsules will enable us to host back-end code and provide additional functionality – like implementing the contact form we removed at the beginning of the tutorial. 
 
-We'll also take a look at customizing your domain, so people can view your portfolio by typing something like `https://www.myportfolio.co.za`
+We'll also take a look at customising your domain, so people can view your portfolio by typing something like `https://www.myportfolio.co.za`
 
-If any of the HTML code was confusing, or you'd like to learn more for further customization, check out this [tutorial](https://developer.mozilla.org/en-US/docs/Learn/HTML) written by Mozilla. 
+If any of the HTML code was confusing, or you'd like to learn more for further customisation, check out this [tutorial](https://developer.mozilla.org/en-US/docs/Learn/HTML) written by Mozilla. 
 
 For any help with GitHub, take a look at their [documentation](https://docs.github.com/en).
