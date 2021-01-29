@@ -2,7 +2,7 @@
 
 In this tutorial, we'll set up a custom domain name for your website or application hosted on Code Capsules.
 
-## Why custom domains and how do they work?
+## Why Custom Domains and How Do They Work?
 
 Custom domains garner name recognition for your web-application or website. Consider the Google search-engine: without a domain, you would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for it. This would be far more difficult to remember than the URL www.google.com – instantly recognizable. 
 
@@ -17,7 +17,7 @@ To complete this tutorial, we'll need:
 - A web-application hosted on [Code Capsules](www.codecapsules.io). 
 - A valid payment method (credit card, PayPal, cryptocurrency, bank transfer) to purchase a custom domain.
 
-## Where to buy domain
+## Where to Buy a Domain
 
 Domain Registrars are businesses accredited to sell domains. We'll purchase a domain from the registrar www.gandi.net. Some things to keep in mind when choosing a domain name:
 
@@ -59,7 +59,7 @@ Like the Google example, we'll make sure that if a user attempts to connect via 
 
 Setting up HTTPS is a quick process with Gandi – let's do that for your domain.
 
-## Setting up HTTPS for your domain
+## Setting Up HTTPS for Your Domain
 
 To set up HTTPS with the domain, we need to register a free SSL (Secure Sockets Layer) certificate. In short, an SSL certificate helps encrypt the data sent when connected via HTTPS.
 
@@ -94,7 +94,7 @@ You'll need to verify your email address with Gandi before receiving the SSL cer
 
 Now that the domain has an SSL certificate, we'll route your Code Capsules web-application to the domain. Navigate to your domain on the Gandi dashboard.
 
-## Routing your web-application to the domain
+## Routing Your Web-application to The Domain
 
 Click the "DNS Records" tab at the top of the page. DNS records contain your domain's "information". When users enter your domain in their search bar, their computer will receive these records (or information). 
 
@@ -141,7 +141,7 @@ To allow users to enter in "www." before your domain name:
 
 You can now view your web-application by entering either `https://yourdomainname.tld` or `https://www.yourdomainname.tld`. Once more, it **may take up to 3 hours for these changes to process**.  
 
-## What next?
+## What Next?
 
 We've learned how to purchase, secure, and configure a domain, route a domain to your Code Capsules application, and even a little bit about DNS. 
 
