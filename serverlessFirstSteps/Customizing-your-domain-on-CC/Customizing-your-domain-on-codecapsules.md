@@ -23,7 +23,7 @@ Domain Registrars are businesses accredited to sell domains. We'll purchase a do
 
 - Domains that don't contain [highly sought after words](https://webhostingcompare.co.za/most-expensive-domain-names-sold-south-africa/) are usually inexpensive. 
 
-- You can save on domains by using [less popular Top-level domains](https://en.wikipedia.org/wiki/Top-level_domain) – for example: rather than register a ".com" website, register a ".info" website.
+- You can save on domains by using [less popular Top-level domains](https://en.wikipedia.org/wiki/Top-level_domain)(TLD's) – for example: rather than register a ".com" website, register a ".info" website.
 
 Keeping these tips in mind, let's purchase a domain.
 
@@ -32,7 +32,7 @@ Keeping these tips in mind, let's purchase a domain.
 To purchase a domain on Gandi:
 
 1. Navigate to www.gandi.net.
-2. Enter the domain you want in the domain search box (ex: https://www.lincolnportfolio.co.za)
+2. Enter the domain you want in the domain search box (ex: https://www.lincolnsportfolio.co.za)
 3. Add the domain to the shopping cart.
 4. Checkout by clicking the shopping cart at the top right of the screen.
 5. Decide how many years you'd like to host the domain, and press the Checkout button.
@@ -88,7 +88,7 @@ To register an SSL certificate for our domain we must:
 10. Repeat this process, but choose "http://" in the **Address drop-down** and type "*" in the textbox next to it.
 
 
-This will forward any users connect to `http://www.yourdomainhere.tld` or `http://yourdomainhere.tld` to `https://yourdomainhere.extension` – it forces users to take advantage of HTTPS. After creating this forwarding address, Gandi automatically creates an SSL certificate. This can take some time to process. 
+This will forward any users connect to `http://www.yourdomainhere.tld` or `http://yourdomainhere.tld` to `https://yourdomainhere.tld` – it forces users to take advantage of HTTPS. After creating this forwarding address, Gandi automatically creates an SSL certificate. This can take some time to process. 
 
 You'll need to verify your email address with Gandi before receiving the SSL certificate, so check your email for a verification link from Gandi.
 
@@ -118,15 +118,15 @@ Let's modify the default A record to route to your web-application:
 
 7. Click create.
 
-View your web-application by typing `https://yourdomainname.tld`, replacing your domain name with "yourdomainname" and ".tld" with your extension (such as .com).
+**It may take up to 3 hours for these changes to process**. View your web-application by typing `https://yourdomainname.tld`, replacing your domain name with "yourdomainname" and ".tld" with your extension (such as .com).
 
-Notice that if you type `https://www.yourdomainhere.com`, you'll receive a 404 error. To fix this, we'll add a new "CNAME" record. A CNAME is like an alias for a domain – we're going to create one that tells the DNS that it should direct users who enter the leading "www." to the same place as those who leave it out. 
+Notice that if you type `https://www.yourdomainhere.tld`, you'll receive a 404 error. To fix this, we'll add a new "CNAME" record. A CNAME is like an alias for a domain – we're going to create one that tells the DNS that it should direct users who enter the leading "www." to the same place as those who leave it out. 
 
 To allow users to enter in "www." before your domain name:
 
 1. Return to Code Capsules and press the **Add A Custom Domain** button again.
 
-2. Under domain name, enter `www.yourdomainname.extension`, replacing your name and extension appropriately.
+2. Under domain name, enter `www.yourdomainname.tld`, replacing your name and TLD appropriately.
 
 3. Return to the DNS record tab on Gandi, and press **Add** at the top right.
 
@@ -134,12 +134,12 @@ To allow users to enter in "www." before your domain name:
 
 5. Enter "www" in the name text-box.
 
-6. Type your default Code Capsules web-application URL under **Hostname** (find this in the "Overview" tab in your web-applications Capsule).
+6. Type your default Code Capsules web-application URL under **Hostname** (find this in the "Overview" tab in your web-application's Capsule), with a period at the end. It should look like the below:
 	![image2](images/image2.png)
 
 7. Click create.
 
-You can now view your web-application by entering either `https://yourdomainname.extension` or `https://www.yourdomainname.extension`. 
+You can now view your web-application by entering either `https://yourdomainname.tld` or `https://www.yourdomainname.tld`. Once more, it **may take up to 3 hours for these changes to process**.  
 
 ## What next?
 
