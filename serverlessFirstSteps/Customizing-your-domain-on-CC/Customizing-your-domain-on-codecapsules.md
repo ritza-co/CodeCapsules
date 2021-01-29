@@ -4,9 +4,9 @@ In this tutorial, we'll set up a custom domain name for your website or applicat
 
 ## Why Custom Domains and How Do They Work?
 
-Custom domains garner name recognition for your web-application or website. Consider the Google search-engine: without a domain, you would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for it. This would be far more difficult to remember than the URL www.google.com – instantly recognizable. 
+Custom domains help grow the recognition for your web-application or website. Consider the Google search-engine: without a domain, you would need to type in the [IP](https://www.popularmechanics.com/technology/a32729384/how-to-find-ip-address/) address for it. It's way harder to remember 64.233.191.255 than the URL www.google.com – instantly recognisable. 
 
-Web-addresses like www.google.com act as placeholders for an IP address and help us remember the website. When you type a URL in your search bar, your computer sends a request with the URL to the _Domain Name System_ (DNS) – a cluster of servers worldwide containing domain names and corresponding IP addresses. The DNS then returns the URL's corresponding IP address, and you connect to the website you were trying to reach. 
+Web-addresses like www.google.com act as placeholders for an IP address and help us remember the website. When you type a URL in your search bar, your computer sends a request with the URL to the _Domain Name System_  (DNS) – a cluster of servers worldwide containing domain names and corresponding IP addresses. The DNS then returns the URL's corresponding IP address, and you connect to the website you were trying to reach. 
 
 Following this guide, we'll learn how to buy a domain and route it to a Code Capsules hosted web-application. Along the way, we'll learn more about the DNS and related topics.
 
@@ -19,11 +19,11 @@ To complete this tutorial, we'll need:
 
 ## Where to Buy a Domain
 
-Domain Registrars are businesses accredited to sell domains. We'll purchase a domain from the registrar www.gandi.net. Some things to keep in mind when choosing a domain name:
+Domain Registrars are businesses accredited to sell domains, and there are many registrars to chose from. We'll purchase a domain from the registrar www.gandi.net. Some things to keep in mind when choosing a domain name:
 
 - Domains that don't contain [highly sought after words](https://webhostingcompare.co.za/most-expensive-domain-names-sold-south-africa/) are usually inexpensive. 
 
-- You can save on domains by using [less popular Top-level domains](https://en.wikipedia.org/wiki/Top-level_domain)(TLD's) – for example: rather than register a ".com" website, register a ".info" website.
+- You can save on domains by using [less popular top-level domains](https://en.wikipedia.org/wiki/Top-level_domain) (TLDs) – for example: rather than register a ".com" website, register a ".info" website.
 
 Keeping these tips in mind, let's purchase a domain.
 
@@ -32,7 +32,7 @@ Keeping these tips in mind, let's purchase a domain.
 To purchase a domain on Gandi:
 
 1. Navigate to www.gandi.net.
-2. Enter the domain you want in the domain search box (ex: https://www.lincolnsportfolio.co.za)
+2. Enter the domain you want in the domain search box (ex: https://www.lincolnsportfolio.co.za).
 3. Add the domain to the shopping cart.
 4. Checkout by clicking the shopping cart at the top right of the screen.
 5. Decide how many years you'd like to host the domain, and press the Checkout button.
@@ -41,9 +41,9 @@ Follow the prompts to create an account and purchase your domain. Then log in to
 
 ![image3](images/image3.png)
 
-If Gandi has processed the domain, find it under the "Active" tab – if it's still processing, view it under the "Pending" tab. Processing a domain can take some time.
+If Gandi has processed the domain, find it under the "Active" tab – if it's still processing, view it under the "Pending" tab. Processing a domain can take some time – up to a few hours.
 
-Before routing the new domain to a web application, we have something left to consider – the security of your web-application.
+Before routing the new domain to a web application, we must consider the security of your web-application.
 
 ## HTTP vs. HTTPS
 
@@ -88,13 +88,13 @@ To register an SSL certificate for our domain we must:
 10. Repeat this process, but choose "http://" in the **Address drop-down** and type "*" in the textbox next to it.
 
 
-This will forward any users connect to `http://www.yourdomainhere.tld` or `http://yourdomainhere.tld` to `https://yourdomainhere.tld` – it forces users to take advantage of HTTPS. After creating this forwarding address, Gandi automatically creates an SSL certificate. This can take some time to process. 
+This will forward any users who connect to `http://www.yourdomainhere.tld` or `http://yourdomainhere.tld` to `https://yourdomainhere.tld` – it forces users to take advantage of HTTPS. After creating this forwarding address, Gandi automatically creates an SSL certificate. This can take some time to process. 
 
 You'll need to verify your email address with Gandi before receiving the SSL certificate, so check your email for a verification link from Gandi.
 
 Now that the domain has an SSL certificate, we'll route your Code Capsules web-application to the domain. Navigate to your domain on the Gandi dashboard.
 
-## Routing Your Web-application to The Domain
+## Routing Your Web-application to the Domain
 
 Click the "DNS Records" tab at the top of the page. DNS records contain your domain's "information". When users enter your domain in their search bar, their computer will receive these records (or information). 
 
@@ -145,9 +145,9 @@ You can now view your web-application by entering either `https://yourdomainname
 
 We've learned how to purchase, secure, and configure a domain, route a domain to your Code Capsules application, and even a little bit about DNS. 
 
-If you're interested, there is still a lot to learn about DNS. A fine place to start is [Amazon Web Services' page on DNS](https://aws.amazon.com/route53/what-is-dns/). 
+If you're interested, there is still a lot to learn about DNS. You can start with [Amazon Web Services' page on DNS](https://aws.amazon.com/route53/what-is-dns/). 
 
-If you'd like to know about the rest of the DNS records associated with your new domain, this [Google help page](https://support.google.com/a/answer/48090?hl=en) contains a good overview
+If you'd like to know about the rest of the DNS records associated with your new domain, this [Google help page](https://support.google.com/a/answer/48090?hl=en) contains a good overview.
 
 Finally, if you'd like to read more about how the HTTP protocol works, [this Mozilla Developers Network page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) is a good place to start.
 
