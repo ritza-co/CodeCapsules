@@ -190,7 +190,7 @@ Next, we'll implement the ability to "get" (using `requests.get()`) our data fro
 
 ### Combining the APIs
 
- We've already written code to retrieve our data - now we just need to "combine" it and create an endpoint to fetch it. 
+We've already written code to retrieve our data – now we just need to "combine" it and create an endpoint to fetch it. 
 
 Modify the program accordingly:
 
