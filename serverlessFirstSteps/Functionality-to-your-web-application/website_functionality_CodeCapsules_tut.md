@@ -323,8 +323,6 @@ Create a product by performing the following:
 2. Name the product.
 3. Add a description and price.
 4. Choose "One time" payment.
-  ![example_product](images/example_product.png)
-
 5. Click "Save product"
 
 After the last step, save the API key found in the "Pricing" section. We'll use this API key to tell Stripe which product we want our customers to pay for.
