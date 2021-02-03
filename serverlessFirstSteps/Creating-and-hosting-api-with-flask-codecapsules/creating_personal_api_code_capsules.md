@@ -143,7 +143,7 @@ Here we retrieve the temperature for Cape Town, South Africa. You can request an
 
 Now we'll get to creating the API with Flask. Our API will package the WeatherStacks and OpenExchangeRates data together, and when requested, return it.
 
-This means we won't have to through the same process as before – instead, with a single line like `requests.get(MY_CODE_CAPSULES_URL)`, we'll be able to fetch the exchange rates and temperature. 
+This means we won't have to go through the same process as before – instead, with a single line like `requests.get(MY_CODE_CAPSULES_URL)`, we'll be able to fetch the exchange rates and temperature. 
 
 On to creating the API – make sure to open the `app.py` file, then continue.
 
