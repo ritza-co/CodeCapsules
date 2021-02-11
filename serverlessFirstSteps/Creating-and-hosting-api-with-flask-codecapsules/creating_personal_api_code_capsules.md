@@ -6,7 +6,7 @@ An _API_, or Application Programming Interface, is a tool enabling developers to
 
 Without a doubt, they used an API. APIs are hosted on a server and operate as an access point between the user and some data. 
 
-Part of this guide takes a look at the [WeatherStack](https://weatherstack.com/) API -- an API providing weather data. For the weather website to retrieve your location's temperature, they would've sent a request to an API like WeatherStack. In the request, they would include information about your computer's location. WeatherStack''s API would then return weather data related to your locale, such as the temperature and cloud cover. The weather website will then display this data on their homepage for you to view.
+Part of this guide takes a look at the [WeatherStack](https://weatherstack.com/) API -- an API providing weather data. For the weather website to retrieve your location's temperature, they would've sent a request to an API like WeatherStack. In the request, they would include information about your computer's location. WeatherStack''s API would then return weather data related to your locale, such as the temperature and cloud cover. The weather website will then display this data on their homepage for you to view. 
 
 In this tutorial, we'll learn how to create a personal API with Python (using [Flask](https://palletsprojects.com/p/flask/)). Our API will use data from the [WeatherStack](https://weatherstack.com/) and [OpenExchangeRates](https://openexchangerates.org/) APIs to give us up-to-the-minute USD exchange rates and the temperature of a given city. 
 
