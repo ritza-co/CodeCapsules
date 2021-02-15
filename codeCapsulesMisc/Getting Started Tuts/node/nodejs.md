@@ -1,17 +1,17 @@
 
-# Getting started on Code Capsules with Node.js
+# Getting Started on Code Capsules with Node.js
 Deploy a Node.js application and learn how to host backend code on Code Capsules. 
 
 ## Set up
-Code Capsules connects to GitHub repositories to deploy code online, therefore you'll need a [GitHub](www.github.com) account to follow this tutorial. 
+Code Capsules connects to GitHub repositories to deploy code online, so you'll need a [GitHub](www.github.com) account to follow this tutorial. 
 
-We'll learn how to deploy backend code with Code Capsules by following this process using a sample Node.js application provided by Code Capsules. Find the GitHub repository containing the sample Node.js application here: https://github.com/codecapsules-io/demo-express-js
+We'll learn how to deploy backend code with Code Capsules by following this process, using a sample Node.js application provided by Code Capsules. Find the GitHub repository containing the sample Node.js application here: https://github.com/codecapsules-io/demo-express-js
 
-To use this repository, fork the application by navigating to the repository and clicking "Fork" at the top right of the screen. Once you've forked the application, we are ready to deploy it - no edits necessary. 
+To use this repository, fork the application by navigating to the repository and clicking "Fork" at the top-right of the screen. Once you've forked the application, we are ready to deploy it – no edits necessary. 
 
 ## Prepare a Team
 
-To deploy the Node.js web-application, we need to create an account with Code Capsules.
+To deploy the Node.js web application, we need to create an account with Code Capsules.
 
 To create an account:
 
@@ -23,9 +23,9 @@ After creating a new account, you'll see a prompt to create a [Team](Link-to-tea
 
 ![team-creation](images/team-creation.png)
 
-With a new team created, we can create a [Space](https://codecapsules.io/docs/faq/what-is-a-space/)
+With a new Team created, we can create a [Space](https://codecapsules.io/docs/faq/what-is-a-space/)
 
-## Creating a Space and linking GitHub
+## Creating a Space and Linking GitHub
 
 Click "Create Space" again. The name here is irrelevant.
 
@@ -46,7 +46,7 @@ Authorize Code Capsules to connect to the Node.js application by:
 
 ![install&authorize](images/authorize_cc.png)
 
-After clicking "Install & Authorize", Code Capsules links to the forked GitHub repository containing the Node.js application - this means we can now create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule/) that'll host the code found in our repository.
+After clicking "Install & Authorize", Code Capsules links to the forked GitHub repository containing the Node.js application – this means we can now create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule/) that'll host the code found in our repository.
 
 ## Create the Capsule
 
@@ -55,8 +55,7 @@ Select the Space created previously and add your payment information to create a
 1. Choose a "Backend Capsule".
 2. Select the "Sandbox" product.
 3. Choose the GitHub repository we forked.
-4. Press next.
+4. Press "Next".
 5. Leave the "Run Command" blank and create the Capsule.
 
-
-You can view the build logs under the "Logs" tab in your Capsule. When the Capsule builds, navigate to the "Overview" tab and click on the provided URL to view the application. For a closer look at a Capsules's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
+You can view the build logs under the "Logs" tab in your Capsule. When the Capsule builds, navigate to the "Overview" tab and click on the URL provided to view the application. For a closer look at a Capsules's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
