@@ -4,7 +4,7 @@ Deploy an Angular application and learn how to host frontend code on Code Capsul
 
 ## Set up
 
-Code Capsules connects to GitHub repositories to deploy applications - the only thing required for this tutorial is a [Code Capsules account](www.codecapsules.io) and a [GitHub account](www.github.com). Make sure to have both. 
+Code Capsules connects to GitHub repositories to deploy applications. All you need for this tutorial is a [Code Capsules account](www.codecapsules.io) and a [GitHub account](www.github.com). Make sure you have both. 
 
 To demonstrate deploying frontend code with Code Capsules, we'll use an Angular application already ready to be deployed. Find the application here: https://github.com/codecapsules-io/demo-angular.
 
@@ -14,9 +14,9 @@ To use it, fork the application by clicking "fork" at the top-right of the repos
 
 ![create-team](images/new_team.png) 
 
-Log in to Code Capsules. After logging in, Code Capsules prompts you to create a team. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is a tool that helps manage your various projects. Teams can have multiple members interacting with the projects associated with the Team. You can also add a credit card to your Team to handle [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule) billing. 
+Log in to Code Capsules. After logging in, Code Capsules prompts you to create a team. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is a tool that helps manage your various projects. Teams can have multiple members interacting with the projects associated with that particular Team. You can also add a credit card to your Team to handle [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule) billing. 
 
-Click "Create A New Team" and name it whatever you'd like. After creating a Team, you'll be prompted to enter your Team's billing information. Billing information is required to host any applications but **you will not be charged** for hosting the Angular application. Once you've entered billing information, we need to create a [Space](https://codecapsules.io/docs/faq/what-is-a-space).
+Click "Create A New Team" and give it a name of your choice. After creating a Team, you'll be prompted to enter your Team's billing information. Billing information is required to host any applications but **you will not be charged** for hosting the Angular application. Once you've entered billing information, we need to create a [Space](https://codecapsules.io/docs/faq/what-is-a-space).
 
 [Spaces](https://codecapsules.io/docs/faq/what-is-a-space) are another organizational tool for your applications. _You can create multiple spaces within a Team - each Space can consist of numerous Capsules_. Click the "Create A New Space" button and follow the prompts, naming the Space anything you'd like.
 
@@ -30,7 +30,7 @@ Under the Space we've just created, click the "Get Started By Installing the Git
 
 ![git-account](images/your_user.png)
 
-After, choose "Only select repositories", and from the dropdown menu select the name of the forked Angular application. 
+After, choose "Only select repositories" and select the name of the forked Angular application from the dropdown menu. 
 
 ![permissions-cc](images/permissions_cc.png)
 
