@@ -48,10 +48,10 @@ To add a custom domain:
 2. **Save** the IP address provided under "A Record Route" (this will be used shortly).
 
 3. Enter the custom domain you've purchased from a domain registrar under "Domain Name".
-  - Make sure that you've entered a _root domain_ only - do not include a
+    - Make sure that you've entered a _root domain_ only - do not include a
   subdomain.
 
-  - A root domain contains only your _domain name_ and your _top-level domain_ (TLD). Take `example.com`. Here, "example" is the domain name, and ".com" is the TLD.
+    - A root domain contains only your _domain name_ and your _top-level domain_ (TLD). Take `example.com`. Here, "example" is the domain name, and ".com" is the TLD.
 
 Once you've entered your root domain, add it by clicking the **Create Domain** button.
 
