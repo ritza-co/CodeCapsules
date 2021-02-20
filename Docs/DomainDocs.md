@@ -4,7 +4,7 @@ For every application deployed to Code Capsules, Code Capsules provides a defaul
 
 You can find everything relating to your Capsule's domains (including your default domain) under the "Overview" tab in the Capsule. This is also where you can add a purchased custom domain to your application.
 
-Much of this document will revolve around this overview tab. We'll cover various aspects and things to consider when  adding custom domains to applications on hosted on Code Capsules. This includes:
+Much of this document will revolve around this overview tab. We'll cover various aspects and things to consider when adding custom domains to applications hosted on Code Capsules. This includes:
 
 - Information on HTTPS and Code Capsules domains.
 
@@ -130,7 +130,7 @@ Here is a list of defined terms and concepts used throughout this article. Divid
 ### Makeup of a URL
 ![images](images/url-makeup.png)
 
-- **Uniform Resource Locator (URL)**: In the above image, `www.example.com` is the URL. A URL is a combination of three different aspects of a domain: A subdomain, second-level domain, and a top-level domain.
+- **Uniform Resource Locator (URL)**: In the above image, `www.example.com` is the URL. A URL is a combination of three different aspects of a domain: A subdomain, a second-level domain, and a top-level domain.
 
 - **Subdomain**: Subdomains are the first part of a URL, the most common being `www`. Subdomains provide users with a consistent naming strategy to access service you may provide (for example, `hr.myapplication.com` may route users to your business' human resources portal).
 
@@ -152,7 +152,7 @@ Here is a list of defined terms and concepts used throughout this article. Divid
 - **CNAME Record**: A CNAME record, also known as an _alias_, routes subdomains to other domain names. For example, `mail.example.com` may route to `mail.google.com`. CNAME records are unlike A records, which route to a specific IP address.
 
 ## HTTP and SSL
-- **Hyptertext Transfer Protocol** (HTTP): HTTP is a protocol for transferring data from a server (a web-application), to a client (your web-browser). 
+- **Hypertext Transfer Protocol** (HTTP): HTTP is a protocol for transferring data from a server (a web-application) to a client (your web-browser). 
 
 - **Hypertext Transfer Protocol Secure** (HTTPS): HTTPS is like HTTP, except the data transferred from the server to client is **encrypted** for better security. 
 
