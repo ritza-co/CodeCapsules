@@ -1,10 +1,10 @@
 # Custom Domains on Code Capsules
 
-For every application deployed to Code Capsules, Code Capsules provides a default domain that looks something like this: `capsulename.xxxx.codecapsules.co.za`. If you'd like to change this default domain, Code Capsules provides a cost-free method for adding custom domains to applications hosted on Code Capsules
+For every application deployed to Code Capsules, Code Capsules provides a default domain that looks something like this: `capsulename.xxxx.codecapsules.co.za`. If you have purchased a domain from a domain registrar and would like to replace it with the default Code Capsules domain, Code Capsules provides a cost-free method to do so. 
 
 You can find everything relating to your Capsule's domains (including your default domain) under the "Overview" tab in the Capsule. This is also where you can add a purchased custom domain to your application.
 
-Much of this document will revolve around this overview tab. We'll cover various aspects and things to consider when  adding custom domains to applications on hosted on Code Capsules, such as:
+Much of this document will revolve around this overview tab. We'll cover various aspects and things to consider when  adding custom domains to applications on hosted on Code Capsules. This includes:
 
 - Information on HTTPS and Code Capsules domains.
 
@@ -59,19 +59,19 @@ Once you've entered your root domain, add it by clicking the **Create Domain** b
 
 After adding your custom domain on Code Capsules, you need to create an _A record_ for the domain you've purchased. You'll use the IP that was saved [previously](#adding-a-domain) when creating the A record for your domain. You can add an A record to your purchased domain by visiting your domain registrar's website.
 
-Your A record table should look something like this,
+Your A record table should look something like this:
 
 |Record Type|Name|IPv4 Address|   
 |-----------|----|------------|
 |A Record   |  @ |`provided-IP-Address`|
 
-where:
+where,
 
 - "@" refers to your root domain.
 
 - `provided-IP-Address` is the IP address found [previously](#how-to-add-a-custom-domain) under "A Record Route"
 
-Consult your domain registrar for specific instructions for adding A records to your domain. Keep in mind, when making changes to your domain's _DNS records_, changes can take up to **four hours** to take effect.
+Consult your domain registrar for specific instructions on adding A records to your domain. Keep in mind, when making changes to your domain's _DNS records_, changes may take up to **four hours** to take effect.
 
 ## How to Add a Subdomain
 
@@ -81,7 +81,9 @@ When adding a subdomain to your application hosted on Code Capsules, keep in min
 
 - Applications hosted on Code Capsules can have a **maximum** of five subdomains.
 
-- _Wildcard domains_ are not allowed on Code Capsules - you'll need to create a CNAME record in your purchased domain for each subdomain you want to create.
+- _Wildcard subdomains_ are not allowed on Code Capsules - you'll need to create a CNAME record in your purchased domain for each subdomain you want to create.
+
+- Certain subdomains are reserved by Code Capsules. You cannot add subdomains named: **CONSULT MIKI FOR RESERVED SUBDOMAINS** 
 
 To add a subdomain for your application, follow the same process detailed [previously](#adding-a-domain), with some changes:
 
@@ -89,7 +91,7 @@ To add a subdomain for your application, follow the same process detailed [previ
 
 - You do **not** need to save the IP address provided under "A Record Route" when adding subdomains on Code Capsules.
 
-After clicking the **Create Domain** button, you must add a _CNAME record_ to your purchased domain for the subdomain you'd like to create.
+After clicking the **Create Domain** button, you must create a _CNAME record_ for your purchased domain with information about the subdomain you'd like to create.
 
 ### Creating CNAME Records
 
@@ -123,6 +125,9 @@ Note, removing a custom domain or subdomain does not affect your domain's DNS re
 
 ## Glossary of Terms & Concepts
 
+Here is a list of defined terms and concepts used throughout this article. Divided into three sections, here you'll find definitions for: structures related to URLs, DNS records, and information related to HTTP. 
+
+### Makeup of a URL
 ![images](images/url-makeup.png)
 
 - **Uniform Resource Locator (URL)**: In the above image, `www.example.com` is the URL. A URL is a combination of three different aspects of a domain: A subdomain, second-level domain, and a top-level domain.
@@ -135,14 +140,18 @@ Note, removing a custom domain or subdomain does not affect your domain's DNS re
 
 - **Root Domain**: The root domain is a combination of a second-level and top-level domain **without** a subdomain. `example.com` is an example of a root domain, whereas `www.example.com` is not a root domain.
 
+
+## DNS records
+
 - **Domain Registrar**: A company accredited to sell domains is called a domain registrar.
 
 - **A Record**: An A record routes domains to IP addresses.
 
 - **Wildcard subdomain**: A wildcard subdomain points all subdomains not created for your purchased domain to a specific place. For example, if a wildcard subdomain was created for `example.com`, and the subdomains `info` and `123` were not created for `example.com`, both `info.example.com` and `123.example.com` would route to `example.com`. 
 
-- **CNAME Record**: A CNAME record, also known as an _alias_ routes subdomains to other domain names. For example, `mail.example.com` may route to `mail.google.com`. CNAME records are unlike A records, which route to a specific IP address.
+- **CNAME Record**: A CNAME record, also known as an _alias_, routes subdomains to other domain names. For example, `mail.example.com` may route to `mail.google.com`. CNAME records are unlike A records, which route to a specific IP address.
 
+## HTTP and SSL
 - **Hyptertext Transfer Protocol** (HTTP): HTTP is a protocol for transferring data from a server (a web-application), to a client (your web-browser). 
 
 - **Hypertext Transfer Protocol Secure** (HTTPS): HTTPS is like HTTP, except the data transferred from the server to client is **encrypted** for better security. 
