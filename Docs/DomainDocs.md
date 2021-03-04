@@ -1,30 +1,8 @@
 # Custom Domains on Code Capsules
 
-For every application deployed to Code Capsules, Code Capsules provides a default domain that looks something like this: `capsulename.xxxx.codecapsules.co.za`. If you have purchased a domain from a domain registrar and would like to replace it with the default Code Capsules domain, Code Capsules provides a cost-free method to do so. 
+For every application deployed to Code Capsules, Code Capsules provides a default domain that looks something like this: `capsulename.xxxx.codecapsules.co.za`. If you have purchased a domain like `example.com` from a domain registrar and would like to replace it with the default Code Capsules domain, Code Capsules lets you use your own domain instead (for free).
 
 You can find everything relating to your Capsule's domains (including your default domain) under the "Overview" tab in the Capsule. This is also where you can add a purchased custom domain to your application.
-
-Much of this document will revolve around this overview tab. We'll cover various aspects and things to consider when adding custom domains to applications hosted on Code Capsules. This includes:
-
-- Information on HTTPS and Code Capsules domains.
-
-- Adding custom domains to applications deployed on Code Capsules.
-
-- Routing your purchased domain to your deployed application via _A records_.
-
-- Adding subdomains to applications deployed on Code Capsule by creating _CNAME records_ for your purchased domain.
-
-- Removing domains from applications deployed on Code Capsules.
-
-
-## SSL Certificates for Your Domain
-
-Before adding a custom domain to an application hosted on Code Capsules, your custom domain **must** have a valid _Secure Sockets Layer Certificate_ (SSL). This is because Code Capsules only supports _HTTPS_ connections. You cannot connect to applications deployed on Code Capsules via _HTTP_.
-
-**With a valid SSL certificate**, your domain can connect to your Code Capsules hosted application via HTTPS.
-
-
-There are many ways to obtain an SSL certificate for your domain. The most straightforward way is by checking with your domain registrar - many domain registrars offer a way to obtain an SSL certificate for their domains. Ensure that your domain has a valid SSL certificate before adding a custom domain to your application on Code Capsules.
 
 ## How to Add a Custom Domain
 
@@ -35,22 +13,15 @@ There is also an "Add a Custom Domain" button at the bottom of the page.
 ![images](images/overviewtab.png)
 
 **Before adding a custom domain**, consider:
-
-- If your domain name contains non-ASCII characters, you must: **consult Miki about what his plans are for this**.
-
 - Your capsule may route to only **one** root domain. You may not add multiple root domains to your Capsule.
-
 
 To add a custom domain:
 
 1. Click the "Add a Custom Domain" button.
-
 2. **Save** the IP address provided under "A Record Route" (this will be used shortly).
-
 3. Enter the custom domain you've purchased from a domain registrar under "Domain Name".
     - Make sure that you've entered a _root domain_ only - do not include a
   subdomain.
-
     - A root domain contains only your _domain name_ and your _top-level domain_ (TLD). Take `example.com`. Here, "example" is the domain name, and ".com" is the TLD.
 
 Once you've entered your root domain, add it by clicking the **Create Domain** button.
@@ -71,7 +42,7 @@ where,
 
 - `provided-IP-Address` is the IP address found [previously](#how-to-add-a-custom-domain) under "A Record Route"
 
-Consult your domain registrar for specific instructions on adding A records to your domain. Keep in mind, when making changes to your domain's _DNS records_, changes may take up to **four hours** to take effect.
+Consult your domain registrar for specific instructions on adding A records to your domain. Keep in mind, when making changes to your domain's _DNS records_, changes may take several hours to take effect.
 
 ## How to Add a Subdomain
 
@@ -80,15 +51,11 @@ Before adding a _subdomain_ to your application hosted on Code Capsules, make su
 When adding a subdomain to your application hosted on Code Capsules, keep in mind:
 
 - Applications hosted on Code Capsules can have a **maximum** of five subdomains.
-
 - _Wildcard subdomains_ are not allowed on Code Capsules - you'll need to create a CNAME record in your purchased domain for each subdomain you want to create.
-
-- Certain subdomains are reserved by Code Capsules. You cannot add subdomains named: **CONSULT MIKI FOR RESERVED SUBDOMAINS** 
 
 To add a subdomain for your application, follow the same process detailed [previously](#adding-a-domain), with some changes:
 
-- This time you **must include** the subdomain you want to create. This means that instead of entering the root domain `domain-name.tld`, you should specify your subdomain as well, such as: `www.domain-name.tld`.
-
+- This time you **must include** the subdomain you want to create. This means that instead of entering the root domain `domain-name.tld`, you should specify your subdomain as well, such as: `app.example.com`.
 - You do **not** need to save the IP address provided under "A Record Route" when adding subdomains on Code Capsules.
 
 After clicking the **Create Domain** button, you must create a _CNAME record_ for your purchased domain with information about the subdomain you'd like to create.
@@ -105,11 +72,10 @@ In general, the CNAME record table for your domain should look something like th
 
 where, 
 
-- `subdomain` is the subdomain you would like to create (`www`, `biz`, `info`).
-
+- `subdomain` is the subdomain you would like to create (e.g. `app`, `www`)
 - `your-root-domain` is your root domain that contains an A record routing to your application on Code Capsules.
 
-As with adding an A record, CNAME records or any other changes to your domain's DNS records may take up to **four hours** to take effect.
+As with adding an A record, CNAME records or any other changes to your domain's DNS records may take several hours to take effect.
 
 ## Removing Domains and Subdomains
 
@@ -143,9 +109,9 @@ Here is a list of defined terms and concepts used throughout this article. Divid
 
 ## DNS records
 
-- **Domain Registrar**: A company accredited to sell domains is called a domain registrar.
+- **Domain Registrar**: A company that sells and manages domains.
 
-- **A Record**: An A record routes domains to IP addresses.
+- **A Record**: An A record routes a domain (e.g. `example.com` to an IP addresses (e.g. `123.456.567.8`)
 
 - **Wildcard subdomain**: A wildcard subdomain points all subdomains not created for your purchased domain to a specific place. For example, if a wildcard subdomain was created for `example.com`, and the subdomains `info` and `123` were not created for `example.com`, both `info.example.com` and `123.example.com` would route to `example.com`. 
 
