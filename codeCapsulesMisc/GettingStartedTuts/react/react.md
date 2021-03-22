@@ -1,28 +1,41 @@
 
-# Getting started on Code Capsules with React
-Deploy a React application and learn how to host backend code on Code Capsules. 
+# How to Deploy a React Application on Code Capsules
 
-## Set up
+If you've built a web app with React, you probably want to deploy it to production to share it with the rest of the world. In this guide, we'll show you how to do that, step by step.
 
-Here we'll look at a step-by-step process for deploying a React application on Code Capsules. To do so, you'll need a [GitHub](www.github.com) account. Code Capsules uses GitHub repositories to deploy code - you can link any of your GitHub repositories to Code Capsules, and Code Capsules will deploy it.
+You'll need 
 
-We'll use a pre-made React application provided by Code Capsules – find the repository here: https://github.com/codecapsules-io/demo-react. To be able to deploy this repository to Code Capsules, make sure to fork the React application. You can do so by visiting the repository and clicking the "Fork" button at the top right of the repository. 
+* Your own [GitHub](https://github.com) account
+* An account on [Code Capsules](https://codecapsules.io)
 
-After forking the application, we can deploy the application. Make any edits you'd like to the repository and continue.
+## Getting some example code
 
-## Creating an Account with Code Capsules
+We'll use [our example React application](https://github.com/codecapsules-io/demo-react) for the demonstration, but you can use your own React application instead, or work from ours as a starting point.
 
-First, let's create an account with [Code Capsules](https://codecapsules.io). Make sure to confirm your Code Capsules account by checking your email. After account creation, Code Capsules will redirect you here:
+Fork the project to your own account by clicking on the above link and pressing "fork" in the top right.
 
-![login_screen](images/login.png)
+![CleanShot 2021-03-22 at 16 32 29@2x](https://user-images.githubusercontent.com/2641205/112015606-42c59900-8b2c-11eb-8ab4-bbabd0de6550.png)
 
-This is your default Code Capsules [Team](https://codecapsules.io/docs/faq/what-is-a-team/) (note the "Team Personal" at the top left). The centre box labelled "Personal" is the default personal [Space](https://codecapsules.io/docs/faq/what-is-a-space/). 
+Log into your Code Capsules account and press the "New Space" button.
 
-Code Capsules provides every new user with a default "Personal" Team and Space. The default personal Team allows users to host static frontend websites for free.
+<img width="1083" alt="CleanShot 2021-03-22 at 16 36 02@2x" src="https://user-images.githubusercontent.com/2641205/112016130-b8316980-8b2c-11eb-8141-629f1658ddca.png">
 
-Since we're deploying backend code, we'll need to add payment information. Add payment information by navigating to "Team Settings" at the top of the screen, then add a payment method under "Payment Methods".
+Now choose a region and name for your space and press "Create Space".
 
-After adding payment information, we just need to give Code Capsules access to the React application we forked.
+![CleanShot 2021-03-22 at 16 34 40@2x](https://user-images.githubusercontent.com/2641205/112016054-a51e9980-8b2c-11eb-9d55-a13102c084f5.png)
+
+Once the space has created, click on it and create a new capsule inside that space.
+
+<img width="999" alt="CleanShot 2021-03-22 at 16 37 23@2x" src="https://user-images.githubusercontent.com/2641205/112016415-f9c21480-8b2c-11eb-9cc2-16872907a990.png">
+
+Choose to create a front-end capsule.
+
+![CleanShot 2021-03-22 at 16 38 33@2x](https://user-images.githubusercontent.com/2641205/112016526-15c5b600-8b2d-11eb-8ca1-8c616293ffa6.png)
+
+
+
+
+
 
 ## Linking to GitHub
 
