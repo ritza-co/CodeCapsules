@@ -184,7 +184,7 @@ First, we need to create an account with Code Capsules. Follow these instruction
 
 After logging in, Code Capsules brings you to a page that will look similar to this. For now, ignore anything that you see on this picture that isn't on your account.
 
-![MainCodeCap](Images/MainScreenCC.png)
+![MainCodeCap](Images/MainScreenCCNew.png)
 
 Now that we have created a Code Capsules account, we can connect Code Capsules to our GitHub account. Perform the following:
 
@@ -219,13 +219,14 @@ Follow these steps to get your code into production:
 9. Select the correct GitHub repository and click `Next`.
 10. Because we have a Procfile in our repository, we do not need to use a `run` command. Instead, click `Create Capsule`.
 
-![CapCreate](Images/CreateCapsuleCC.png)
+![CapCreate](Images/CreateCapsuleCCNew.png)
+
 
 ### Viewing your work
 
 Now that you have created a capsule, you can see your website.
 
-![CapView](Images/CapView.png)
+![CapView](Images/CapViewNew.png)
 
 Click on the `Overview` button. Your URL is displayed under "domain". Enter it into your browser to see your web application!
 
