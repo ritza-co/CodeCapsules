@@ -33,10 +33,6 @@ Choose to create a front-end capsule.
 ![CleanShot 2021-03-22 at 16 38 33@2x](https://user-images.githubusercontent.com/2641205/112016526-15c5b600-8b2d-11eb-8ca1-8c616293ffa6.png)
 
 
-
-
-
-
 ## Linking to GitHub
 
 So we can host our React application on Code Capsules, we need to link our forked GitHub repository to our Code Capsules account.
