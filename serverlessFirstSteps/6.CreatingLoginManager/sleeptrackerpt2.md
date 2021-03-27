@@ -4,7 +4,7 @@ This is the second part of our sleep tracker web application tutorial, covering 
 
 ## Recap
 
-In the [first part of this series](==LINKHERE==), we build a web application with user registration and login using Python's Flask web framework and a hosted NoSQL database on MongoDB Atlas for data persistence. We will now be building on the code we started on in that tutorial, so please complete it before starting this one.
+In the [first part of this series](==LINKHERE==), we built a web application with user registration and login using Python's Flask web framework and a hosted NoSQL database on MongoDB Atlas for data persistence. We will now build on the code we wrote in that tutorial, so you must have completed it.
 
 In this second part of the series, we'll implement the logic that allows users to enter their sleep data and see that data on an interactive graph, generated using [Plotly](https://plotly.com/). Registered users will be able to log the number of hours slept on different days and visualise this data as a graph. 
 
@@ -46,7 +46,7 @@ Let's add the sleep data logging form first. Open the `main.html` file in the `t
 {% endblock %}
 ```
 
-This works similarly to the `login.html` file we created in the previous tutorial, with `base.html` acting as the page skeleton and our unique content being entered between the `{% block content %}` and `{% endblock %}` lines. We also ensure that our form uses the `POST` method so we can differentiate between a user visiting the page and clicking on of the three form buttons. To determine which button a user has clicked in a given `POST` request, we'll be use the button's HTML `name` attribute (`submit`, `graph` or `logout`) in Flask.
+This works similarly to the `login.html` file we created in the previous tutorial, with `base.html` acting as the page skeleton and our unique content being entered between the `{% block content %}` and `{% endblock %}` lines. We also ensure that our form uses the `POST` method so we can differentiate between a user visiting the page and clicking one of the three form buttons. To determine which button a user has clicked in a given `POST` request, we'll use the button's HTML `name` attribute (`submit`, `graph` or `logout`) in Flask.
 
 Notice the Jinja snippet `{{ user['username'] }}`. This will display data sent from our Flask back-end code in the page – in this case, the user's name.
 
@@ -87,11 +87,9 @@ def submit_sleep():
 
 This function operates similarly as our `login_or_register` function:
 
-If a user clicks "Submit", the data they entered will be stored in their MongoDB entry via the `add_sleep` function (that we'll create next). This function will return a string with an error message if it encounters an error, and `None` if it succeeds.
-
-If a user clicks "Logout", the user will be logged out. 
-
-If a user clicks "View Graph", the `app.config['plotting']` entry is set to `True`. Later, we'll expand `main.html` to display the graph.
++ If a user clicks "Submit", the data they entered will be stored in their MongoDB entry via the `add_sleep` function (that we'll create next). This function will return a string with an error message if it encounters an error, and `None` if it succeeds.
++ If a user clicks "Logout", the user will be logged out. 
++ If a user clicks "View Graph", the `app.config['plotting']` entry is set to `True`. Later, we'll expand `main.html` to display the graph.
 
 Let's wrap up our button functionality by creating the `add_sleep` function that is called when a user clicks "Submit". Add the following code **above** the `submit_logout_plot` function to create the `add_sleep` function:
 
@@ -124,7 +122,7 @@ Our `add_sleep` function takes three variables:
 
 First, we validate the user's input to ensure that a correctly formatted date has been provided and that the time given is not a negative number or larger than 24. If either value does not pass validation, we return a relevant error message from the function without writing to the database. Otherwise we continue.
 
-If a user has never entered any sleep data, we add a new `'date'` and `'time'` entry to the user's MongoDB entry with the date and time entered. Otherwise, we add the data they entered to their existing sleep data. Finally, we update the user's MongoDB entry with `db.users.update_one`. 
+If a user has never entered any sleep data, we add a new `'date'` and `'time'` entry to the user's MongoDB entry with the date and time entered. Otherwise, we take the data they entered and add it to their existing sleep data. Finally, we update the user's MongoDB entry with `db.users.update_one`. 
 
 We've implemented functionality for all three buttons. Now we need to modify the `main()` function to pass the current user's data to `main.html`. This will allow us to display their username on the page, and to graph their sleep data. Find the `main()` function and modify it like so:
 
@@ -138,7 +136,7 @@ def main():
     return render_template("main.html", user=user_data, plot=app.config['plotting'])
 ```
 
-First, we leverage Flask-Login's [anonymous users](https://flask-login.readthedocs.io/en/latest/#anonymous-users) functionality to check if the current user is not logged in, and if so, we redirect them to the login page. If the current user is logged it, we retrieve their MongoDB entry and assign it to `user_data`. Then we pass this variable to the `render_template` function as `user`. This is how the line below will access and display the user's name.
+First, we leverage Flask-Login's [anonymous users](https://flask-login.readthedocs.io/en/latest/#anonymous-users) functionality to check if the current user is not logged in and, if so, we redirect them to the login page. If the current user is logged it, we retrieve their MongoDB entry and assign it to `user_data`. Then we pass this variable to the `render_template` function as `user`. This is how the line below will access and display the user's name.
 
 ```html
 <h2>Hey, {{ user['username'] }}! Let's track your sleep.</h2>
@@ -216,11 +214,11 @@ The line `<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>` impo
 
 Under this line, we see a lot of code enclosed in `<script>...</script>` tags. This is all JavaScript code. In this code, we create two variables, `x` and `y`, which contain arrays of the dates and number of hours slept that a user has logged.
 
-Note that we have set these variables as `safe`, which means that Jinja will not attempt to escape or encode any of the characters within them when it renders the HTML. This is dangerous to do with user input, which is why we validated both the date and time values in our Python code.  If we had not validated them, a malicious user might be able to supply JavaScript code in the date or time input fields and alter the behaviour of this page.
+Note that we have set these variables as `safe`, which means that Jinja will not attempt to escape or encode any of the characters within them when it renders the HTML. This is dangerous to do with user input, which is why we validated both the date and time values in our Python code. If we had not validated them, a malicious user might be able to supply JavaScript code in the date or time input fields and alter the behaviour of this page.
 
 The code inside `var trace1 = {...}` tells Plotly which data to use for the x and y axes, and the type of graph we'll make – a bar graph.
 
-All the code in `var layout = {...}` effects things like x and y axis labelling, font type, and size of font. Customise this yourself!
+All the code in `var layout = {...}` effects things like x and y axis labelling, font type, and size of font. Customise this to your liking!
 
 Finally, The line `Plotly.newPlot('graph', data, layout)` creates the actual graph and displays it to a user. 
 
@@ -234,7 +232,7 @@ With our sleep tracker functionally complete, we need to make one last modificat
 
 Before we push our code to GitHub, we need to remove our `app.config['SECRET_KEY']` and the MongoDB user credentials. If we were to push our code now, anyone could use our secret key to forge user sessions on our application or our MongoDB credentials to alter our database. Luckily, there is an easy fix. 
 
-First, save your secret key and MongoDB credentials somewhere safe, outside of this project's directory so that you don't lose them. Then, at the top of `app.py`, add the line
+First, save your secret key and MongoDB credentials somewhere safe, outside of this project's directory so that you don't lose them. Then, at the top of `app.py`, add the line:
 
 ```python
 import os
@@ -277,19 +275,18 @@ To create the `Procfile`:
 
 In the same terminal, activate the virtual environment and enter `pip3 freeze > requirements.txt` to create `requirements.txt` and populate it with all the libraries we've used to create this application.
 
-Now we can push our code to GitHub. Create a GitHub repository and send every file and directory except for virtual env's `env` directory to GitHub.
+Now we can push our code to GitHub. Create a GitHub repository and send every file and directory to GitHub, **except for virtual env's `env` directory**.
 
 ## Deploying the Sleep Tracker to Code Capsules
 
-With all of the files on  GitHub, we can deploy the sleep tracer to Code Capsules:
+With all of the files on GitHub, we can deploy the sleep tracer to Code Capsules:
 
 1. Log in to Code Capsules, and create a Team and Space as necessary.
-2. Link Code Capsules to the GitHub repository created [previously](#creating-the-procfile-and-adding-requirements
-).
+2. Link Code Capsules to the GitHub repository created [previously](#creating-the-procfile-and-adding-requirements).
 3. Enter your Code Capsules Space.
 4. Create a new Capsule, selecting the "Backend" capsule type.
-5. Select the GitHub repository containing the sleep tracker – leave "Repo subpath" empty and click "Next"
-6. Leave the "Run Command" blank and click "Create Capsule"
+5. Select the GitHub repository containing the sleep tracker – leave "Repo subpath" empty and click "Next".
+6. Leave the "Run Command" blank and click "Create Capsule".
 
 Now we just need to set those environment variables we mentioned [previously](#creating-environment-variables).
 
@@ -309,7 +306,7 @@ Now the sleep tracker is ready to try out! The application is complete.
 
 There are many ways to expand or improve this application. Some ideas include:
 
-* Improve the application's styling – it's fairly simple right now. If you want to learn more about CSS styling, this tutorial written by Mozilla is a [great place to start](https://developer.mozilla.org/en-US/docs/Web/CSS).
+* Improve the application's styling – it's fairly simple right now. If you want to learn more about CSS styling, [this tutorial written by Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS) is a great place to start.
 * Add a way for users to keep track of other data (calories, daily notes, exercise).
-* Displaying better looking error messages, preferably somewhere in the current page.
+* Display better looking error messages, preferably somewhere in the current page.
 
