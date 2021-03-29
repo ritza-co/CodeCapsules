@@ -1,6 +1,8 @@
-Log into Ghost at https://codecapsues.io/docs/ghost
+If you are new to publishing on Ghost, follow these steps to get your content uploaded and accessible by your readers. 
 
-Click on "Posts" and then "New post"
+Log into Ghost at https://codecapsules.io/docs/ghost
+
+Under "Manage" in your left-hand menu, click on the plus button which appears when you hover over "Posts". This will create a new post.
 
 ![CleanShot 2021-03-29 at 10 41 02@2x](https://user-images.githubusercontent.com/2641205/112810443-5072a580-907b-11eb-9880-b91c7f80bff9.png)
 
@@ -17,7 +19,7 @@ Scroll through the file on GitHub and copy each code sample.
 
 Delete the equivalent sample from the Ghost editor. Enter three backticks ``` in its place and press Enter. This will create a new code block. Paste the code in there.
 
-Type in the language 
+Type in the language.
 
 ![CleanShot 2021-03-29 at 10 54 11](https://user-images.githubusercontent.com/2641205/112812229-27ebab00-907d-11eb-870c-320a104bcf7c.gif)
 
@@ -28,5 +30,6 @@ Under the 'settings' menu, add the correct tag (usually 'tutorials'). This speci
 
 <img width="1138" alt="CleanShot 2021-03-29 at 10 55 47@2x" src="https://user-images.githubusercontent.com/2641205/112812369-56698600-907d-11eb-82ef-5b0629d79dae.png">
 
+You can also assign authors in this menu. Amend as necessary. 
 
-
+Click "Publish" on the top right when you are ready. 
