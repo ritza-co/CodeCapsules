@@ -28,11 +28,11 @@ After clicking on the "Go To Personal Team" button you will be redirected to the
 
 ![](images/spaces.JPG)
 
-Now click on the "Create A New Space For Your Apps" button.
+Now click on the "Create A New Space For Your Apps" button. Alternatively, if you had logged into an existing Code Capsules account you should click on the "New Space" button instead. After actioning either of these steps a UI similar to the one shown below should slide in from the right of your screen.  
 
 <img width="1083" alt="CleanShot 2021-03-22 at 16 36 02@2x" src="https://user-images.githubusercontent.com/2641205/112016130-b8316980-8b2c-11eb-8141-629f1658ddca.png">
 
-Select a region and enter a name for your space and press "Create Space".
+Select an appropriate region and enter a name for your space and press "Create Space".
 
 ![CleanShot 2021-03-22 at 16 34 40@2x](https://user-images.githubusercontent.com/2641205/112016054-a51e9980-8b2c-11eb-9d55-a13102c084f5.png)
 
