@@ -16,11 +16,23 @@ Fork the project to your own account by clicking on the above link and pressing 
 
 ![CleanShot 2021-03-22 at 16 32 29@2x](https://user-images.githubusercontent.com/2641205/112015606-42c59900-8b2c-11eb-8ab4-bbabd0de6550.png)
 
-Log into your Code Capsules account and press the "New Space" button.
+## Code Capsules sign up
+
+Navigate to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up" button in the top right corner of the webpage. Alternatively, you can click on the "Log In" text next to the Sign Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
+
+If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step.
+
+![](images/welcome-screen.JPG)
+
+After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team that you just created. 
+
+![](images/spaces.JPG)
+
+Now click on the "Create A New Space For Your Apps" button.
 
 <img width="1083" alt="CleanShot 2021-03-22 at 16 36 02@2x" src="https://user-images.githubusercontent.com/2641205/112016130-b8316980-8b2c-11eb-8141-629f1658ddca.png">
 
-Now choose a region and name for your space and press "Create Space".
+Select a region and enter a name for your space and press "Create Space".
 
 ![CleanShot 2021-03-22 at 16 34 40@2x](https://user-images.githubusercontent.com/2641205/112016054-a51e9980-8b2c-11eb-9d55-a13102c084f5.png)
 
@@ -35,7 +47,7 @@ Choose to create a front-end capsule.
 
 ## Linking to GitHub
 
-So we can host our React application on Code Capsules, we need to link our forked GitHub repository to our Code Capsules account.
+To host our React application on Code Capsules, we need to link our forked GitHub repository to our Code Capsules account.
 
 We can link the React application by clicking the profile image at the top right of the screen, and finding the GitHub button under "GitHub Details"
 
@@ -50,7 +62,7 @@ Click the GitHub button. To give Code Capsules access to the React application:
 
 ![install&authorize](images/authorize_cc.png)
 
-After authorizing, Code Capsules will be able to deploy the React application. All that's left to deploy the application is to create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule). This Capsules will act as a storage space for the React application.
+After authorizing, Code Capsules will be able to deploy the React application. All that's left to deploy the application is to create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule). This Capsule will act as a storage space for the React application.
 
 ## Create the Capsule
 
