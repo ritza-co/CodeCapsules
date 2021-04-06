@@ -59,7 +59,7 @@ After authorizing, Code Capsules will be able to deploy the React application. A
 
 Return to the personal Team. Next, click on the Space you just created or are using and create a new capsule in that space. To do this, click the "New Capsule" or "Create A New Capsule For Your Space" button when inside the space.
 
-As we want to host a react application you should choose to create a frontend capsule as shown below.
+As we want to host a react application choose to create a frontend capsule as shown below.
 
 ![Create Front-end Capsule](images/creating-frontend-capsule.gif)
 
