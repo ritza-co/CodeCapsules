@@ -48,7 +48,7 @@ SaaS solutions provide a great way to quickly prototype ideas, but maybe prove u
 ## Platform as a Service (PaaS)
 
 | Pros | Cons | 
-| ––-|––- |
+| ---| --- |
 | Requires no infrastructure set-up. | May be inefficient or costly at scale. |
 | The vendor is responsible for system maintenance and security patches. | Less vendor lock-in than SaaS, more than IaaS. |
 
@@ -69,11 +69,11 @@ Different PaaS solutions target different parts of the standard three-layer appl
 
 Some PaaS solutions are highly focused on a single part of the stack, while others offer solutions for multiple areas of the stack. The table below gives some examples of each.
 
-Areas of the stack | PaaS solution examples
-–––––––––-|–––––––––––-
-Frontend           | Netlify, Vercel, AWS S3, GitHub Pages, Code Capsules (Frontend capsules)
-Backend            | Heroku, OpenShift, AWS Elastic Beanstalk, AWS Lambda, Code Capsules (Backend capsules)
-Data persistence   | MongoDB Atlas, AWS RDS, Azure SQL Database
+| Areas of the stack | PaaS solution examples| 
+| ----|---- |
+| Frontend           | Netlify, Vercel, AWS S3, GitHub Pages, Code Capsules (Frontend capsules) |
+| Backend            | Heroku, OpenShift, AWS Elastic Beanstalk, AWS Lambda, Code Capsules (Backend capsules) |
+| Data persistence   | MongoDB Atlas, AWS RDS, Azure SQL Database |
 
 Frontend code can be included with backend code, and some PaaS solutions offer data persistence solutions, so you may be able to deploy a complete application as a single project on a single PaaS, but you can also use multiple PaaS solutions for different stack components.
 
@@ -101,11 +101,11 @@ As we are not doing our own system administration when we use a PaaS solution, w
 
 ## Infrastructure as a Service (IaaS)
 
-Pros | Cons
-––-|––-
-Highly flexible. | Requires programming and system administration knowledge.
-Can be configured more precisely and efficiently than SaaS and PaaS solutions. | Requires regular maintenance.
-Very little vendor lock-in | ...
+| Pros | Cons |
+| ---|--- |
+| Highly flexible. | Requires programming and system administration knowledge.|
+| Can be configured more precisely and efficiently than SaaS and PaaS solutions. | Requires regular maintenance.|
+| Very little vendor lock-in | ... |
 
 Infrastructure as a Service (IaaS) solutions are the most technically demanding of their users. Rather than providing end-user software or deployment for user-developed code, most IaaS solutions merely provide you with virtual machines (VMs), commonly called a compute instances. These are fully capable computers that you have fully control over and responsibility for. Examples of IaaS services include AWS EC2, Google Cloud Platform's Compute Engine and Digital Ocean's Droplets.
 
