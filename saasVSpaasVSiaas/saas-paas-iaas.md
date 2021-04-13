@@ -32,7 +32,7 @@ If we want something more than email and Slack alterts, we could use a SaaS plat
 
 Our full application architecture would now look like this:
 
-![](/images/saas-diagram.svg)
+![](./images/saas-diagram.svg)
 
 In this way, we can get a fully functional budgetting application with multiple integrations working by using different SaaS solutions together, and without writing any code. However, if we're interested in building a business out of this application, we may soon run into problems like expensive per-user fees and a lack of flexibility and control. Glide's visual editor may not allow us to design our application in the exact way we want to, or we may run up against the limitations of what sorts of data analysis can reasonably be done using spreadsheets.
 
@@ -87,11 +87,11 @@ If we're feeling really ambitious, we could integrate [open banking](https://en.
 
 Using a single backend capsule, our application architecture would look something like this:
 
-![](/images/paas-diagram-1.svg)
+![](./images/paas-diagram-1.svg)
 
 Using a backend and frontend capsule, our application architecture would look like this:
 
-![](/images/paas-diagram-2.svg)
+![](./images/paas-diagram-2.svg)
 
 In the above architecture, we could replace the frontend module with a Netlify site, and the backend module with a collection of AWS Lambda functions, or just about any other PaaS solution that provides the appropriate area of the stack.
 
@@ -128,7 +128,7 @@ store like MongoDB.
 
 We could also put the database on a second EC2 instance, and configure your networking rules to allow both instances to speak to each other over the relevant port. Our application architecture would look now look like the diagram below – note that we would retain our open banking integration, as that is defined in code.
 
-![](/images/iaas-diagram.svg)
+![](./images/iaas-diagram.svg)
 
 The benefit this gives you is total control over your infrastructure, which can have efficiency and cost savings over working with a PaaS. How much will depend on your level of expertise and the amount of time you can allocate to optimising and managing your infrastructure. Depending on our application's architecture, we might create more than one VM for serving the application and managing the database, using load balancers and data replication. Alternatively, we may just dynamically increase the CPU speed, RAM and disk space of one or two VMs.
 
