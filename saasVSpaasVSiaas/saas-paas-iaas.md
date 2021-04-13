@@ -14,11 +14,11 @@ Roughly speaking, we will need greater depth and breadth of technical expertise 
 
 ## Software as a Service (SaaS)
 
-Pros | Cons
-––-|––-
-Quick to get started with.  | Limited flexibility.
-Requires little or no programming knowledge. | Significant vendor lock-in.
-&nbsp; | Likely to be inefficient and costly at scale.
+| Pros | Cons |
+| ---- | ---- |
+| Quick to get started with.  | Limited flexibility. |
+| Requires little or no programming knowledge. | Significant vendor lock-in. |
+&nbsp; | Likely to be inefficient and costly at scale. |
 
 Just about any application that runs in your browser can be considered Software as a Service. Software as a Service (SaaS) offerings include Google Drive and its associated office suite – Google Docs, Google Sheets, and others – as well as other file management services like Dropbox, communication platforms like Slack, and knowledge management solutions like Notion and Confluence.
 
@@ -47,10 +47,10 @@ SaaS solutions provide a great way to quickly prototype ideas, but maybe prove u
 
 ## Platform as a Service (PaaS)
 
-Pros | Cons
-––-|––-
-Requires no infrastructure set-up. | May be inefficient or costly at scale.
-The vendor is responsible for system maintenance and security patches. | Less vendor lock-in than SaaS, more than IaaS.
+| Pros | Cons | 
+| ––-|––- |
+| Requires no infrastructure set-up. | May be inefficient or costly at scale. |
+| The vendor is responsible for system maintenance and security patches. | Less vendor lock-in than SaaS, more than IaaS. |
 
 Unlike most SaaS solutions, Platform as a Service (PaaS) solutions are specifically intended for use by developers. You can think of a PaaS as anywhere you can upload code and have it automatically deployed and run. PaaS solutions include Code Capsules, Heroku, Netlify, Google App Engine and AWS Elastic Beanstalk.
 
