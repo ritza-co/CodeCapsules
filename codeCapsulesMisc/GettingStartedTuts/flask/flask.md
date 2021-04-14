@@ -9,7 +9,7 @@ You'll need
 
 ## Getting some example code
 
-We'll use [a demo Flask application](https://github.com/AnesuMurakata/demo-flask) for the demonstration, but you can use your own Flask application instead, or work from the one mentioned beforehand as a starting point.
+We'll use [our demo Flask application](https://github.com/codecapsules-io/demo-python) for the demonstration, but you can use your own Flask application instead, or work from the one mentioned beforehand as a starting point.
 
 Fork the project to your own account by clicking on the above link and pressing "fork" in the top right.
 
