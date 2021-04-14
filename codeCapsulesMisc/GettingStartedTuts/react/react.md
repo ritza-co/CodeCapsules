@@ -5,7 +5,7 @@ If you've built a web app with React, you probably want to deploy it to producti
 
 You'll need 
 
-* Your own [GitHub](https://github.com) account
+* A [GitHub](https://github.com) account
 * An account on [Code Capsules](https://codecapsules.io)
 
 ## Getting some example code
@@ -14,7 +14,7 @@ We'll use [our example React application](https://github.com/codecapsules-io/dem
 
 Fork the project to your own account by clicking on the above link and pressing "fork" in the top right.
 
-![CleanShot 2021-03-22 at 16 32 29@2x](https://user-images.githubusercontent.com/2641205/112015606-42c59900-8b2c-11eb-8ab4-bbabd0de6550.png)
+![getting started](images/getting-started.png)
 
 ## Code Capsules sign up
 
@@ -22,29 +22,29 @@ Navigate to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up"
 
 If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step.
 
-![](images/welcome-screen.JPG)
+![welcome screen](images/welcome-screen.JPG)
 
 After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team. Code Capsules gives every account a Personal Team as a default. 
 
 ## Create a Space for your apps
 
-![](images/spaces.JPG)
+![create a new space](images/spaces.png)
 
 Now click on the "Create A New Space For Your Apps" button. Alternatively, if you had logged into an existing Code Capsules account you could click on the "New Space" button to create a new space for this tutorial or select any of your existing ones. After actioning either of these steps a UI similar to the one shown below should slide in from the right of your screen.  
 
-<img width="1083" alt="CleanShot 2021-03-22 at 16 36 02@2x" src="https://user-images.githubusercontent.com/2641205/112016130-b8316980-8b2c-11eb-8141-629f1658ddca.png">
+![space name](images/space-name.png)
 
 Select an appropriate region and enter a name for your space and press "Create Space".
 
 ## Linking to GitHub
 
 To host our React application on Code Capsules, we need to link our forked GitHub repository to our Code Capsules account.
- 
-We can link the React application by clicking the profile image at the top right of the screen, and finding the GitHub button under "GitHub Details"
 
-![git-button](images/git-button.png)
+We can link the GitHub repository by clicking the profile image at the top right of the screen, and finding the GitHub button under "GitHub Details"
 
-Click the GitHub button. To give Code Capsules access to the React application:
+![GitHub button](images/git-button.png)
+
+Click the "GitHub" button. To give Code Capsules access to the React application:
 
 1. Click your GitHub username.
 2. Select "Only Select Repositories".
@@ -59,19 +59,19 @@ After authorizing, Code Capsules will be able to read the contents of the select
 
 Click on "Team Settings" on the top navigation bar to switch to the Team Settings tab. Once there, click on the Modify button under the "Team Repos" section to add the repo to your Personal Team. When the "Edit Team Repos" screen slides in select "Add" next to the repo you want to add to your Personal Team and then confirm. After this is done, all Spaces in your team will have access to this repo. 
 
-![Edit Team Repos](images/team-repos.JPG)
+![Edit Team Repos](images/team-repos.gif)
 
 ## Create the Capsule
 
 Return to the "Spaces" tab. Next, click on the Space you just created or are using and create a new capsule in that space. To do this, click the "New Capsule" or "Create A New Capsule For Your Space" button when inside the space.
 
-As we want to host a react application choose to create a frontend capsule as shown below.
+As we want to host a React application choose to create a frontend capsule as shown below.
 
 ![Create Front-end Capsule](images/creating-frontend-capsule.gif)
 
 Select the repository with the project you want to host on Code Capsules and enter the build command that will be used by Code Capsules when building your project. Also enter the static folder holding the static files for your project.
 
-After creating the Capsule, the Capsule will build the React application. You can view the build logs by clicking the "Logs" tab in the Capsule. 
+After creating the Capsule, the Capsule will build the React application. You can view the build logs by clicking the "Build and Deploy" tab in the Capsule and then "View build log". 
 
 ![Build logs](images/frontend-capsule-build-logs.gif)
 
