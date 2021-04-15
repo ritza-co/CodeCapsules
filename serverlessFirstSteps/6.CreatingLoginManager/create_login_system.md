@@ -16,7 +16,7 @@ This tutorial series is best suited for those with some Python, HTML, and Flask 
 
 One of the most important aspects of this tutorial is using a Mongo Database (MongoDB). With this MongoDB, we can track users' login information and sleep data. MongoDB is a _NoSQL_ databases, which means we can store data easily, in variable formats, without having to first create tables, as we would have to with a traditional SQL databse. If you're unfamiliar with NoSQL databases or MongoDB in general, take a look at [this explainer](https://www.mongodb.com/nosql-explained) by the MongoDB organisation. 
 
-MongoDB Atlas clusters are free to use. Follow [this short tutorial](link-to-how-to-setup-mongo-atlas.io) to create the MongoDB Atlas cluster that we'll use to store the user data for this sleep tracker application. This step is *extremely* important – without a database, our application will not function. 
+MongoDB Atlas clusters are free to use. Follow [this short tutorial](https://codecapsules.io/docs/how-to-connect-a-mongodb-using-mongodb-atlas-with-your-code-capsules-application) to create the MongoDB Atlas cluster that we'll use to store the user data for this sleep tracker application. This step is *extremely* important – without a database, our application will not function. 
 
 Once you've set up a MongoDB Atlas cluster, continue with this tutorial.
 
@@ -24,9 +24,9 @@ Once you've set up a MongoDB Atlas cluster, continue with this tutorial.
 
 In addition to creating a MongoDB Atlas Cluster, make sure you have the following:
 
-- [Git](https://git-scm.com/) installed and a registered [GitHub](www.github.com) account.
+- [Git](https://git-scm.com/) installed and a registered [GitHub](https://github.com) account.
 - [Virtualenv](https://pypi.org/project/virtualenv/) installed. 
-- A registered [Code Capsules](www.codecapsules.io) account.
+- A registered [Code Capsules](https://codecapsules.io) account.
 
 ## Project Setup and Introduction
 
@@ -363,7 +363,7 @@ def login_or_register():
 
 First, note the `POST` method. As mentioned when we created our `login.html` file, using a `POST` method for user login and registration allows our application to transmit username and information more securely and allows us to differentiate between a user login or registration (`POST`) and a user merely visiting the page (`GET`).
 
-If the login button is pressed (`if request.form.get('login')`), we check our MongoDB for a username that matches the one entered. Then we check if the password entered matches that user's password in the MongoDB. If `check_password` evaluates to true, we log the user in and redirect to the `main` route (which we'll create in the [next part of this series](==LINK-TO-PART-2==). Otherwise, we provide the user with an error message. To redirect users, we use Flask's `redirect` function and `url_for` functions. The `url_for` function finds the `main` route, and the `redirect` function sends users to that route. 
+If the login button is pressed (`if request.form.get('login')`), we check our MongoDB for a username that matches the one entered. Then we check if the password entered matches that user's password in the MongoDB. If `check_password` evaluates to true, we log the user in and redirect to the `main` route (which we'll create in the [next part of this series](https://codecapsules.io/docs/developing-a-persistent-sleep-tracker-part-2-tracking-and-graphing-sleep-data). Otherwise, we provide the user with an error message. To redirect users, we use Flask's `redirect` function and `url_for` functions. The `url_for` function finds the `main` route, and the `redirect` function sends users to that route. 
 
 If a user clicks "Register", we first validate the username and password they've provided. We're restricting usernames to a length of 20 characters, containing only alphanumeric characters and underscores. We're also ensuring that the chosen password is eight or more characters long. We then check whether the username they're trying to use is already taken. If their username and password are acceptable, we create a `new_user` dictionary with the specified name and a bcrypt hash of the specified password, which we then insert it into our MongoDB. Then we send the user back to the login page.
 
@@ -371,7 +371,7 @@ If a user clicks "Register", we first validate the username and password they've
 
 We've implemented the login and register buttons. Try running the program by opening a terminal in the `sleep-tracker` directory and entering `flask run`. Test out registering a few new accounts and logging into them. Remember, we haven't put any HTML in our `main.html` file, so when you log in, you'll see a blank page. Don't worry, everything is working! 
 
-In the [next part of this series](==LINKHERE==), we'll implement the rest of the sleep tracker application. This means populating the `main.html` file and learning how to store user sleep data in MongoDB. 
+In the [next part of this series](https://codecapsules.io/docs/developing-a-persistent-sleep-tracker-part-2-tracking-and-graphing-sleep-data), we'll implement the rest of the sleep tracker application. This means populating the `main.html` file and learning how to store user sleep data in MongoDB. 
 
 ## Further Reading
 
@@ -379,4 +379,4 @@ To learn more about Flask-Login, take a look at [their documentation](https://fl
 
 For more information on the Jinja templating language, [their documentation can be found here](https://jinja.palletsprojects.com/en/2.11.x/templates/).
 
-Finally, when you're ready, finish the sleep tracker application by [following the second tutorial in this series](==LINKHERE==).
+Finally, when you're ready, finish the sleep tracker application by [following the second tutorial in this series](https://codecapsules.io/docs/developing-a-persistent-sleep-tracker-part-2-tracking-and-graphing-sleep-data).
