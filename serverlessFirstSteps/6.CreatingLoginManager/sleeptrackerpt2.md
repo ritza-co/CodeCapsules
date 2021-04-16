@@ -4,7 +4,7 @@ This is the second part of our sleep tracker web application tutorial, covering 
 
 ## Recap
 
-In the [first part of this series](==LINKHERE==), we built a web application with user registration and login using Python's Flask web framework and a hosted NoSQL database on MongoDB Atlas for data persistence. We will now build on the code we wrote in that tutorial, so you must have completed it.
+In the [first part of this series](https://codecapsules.io/docs/developing-a-persistent-sleep-tracker-part-1-handling-users-with-flask-login), we built a web application with user registration and login using Python's Flask web framework and a hosted NoSQL database on MongoDB Atlas for data persistence. We will now build on the code we wrote in that tutorial, so you must have completed it.
 
 In this second part of the series, we'll implement the logic that allows users to enter their sleep data and see that data on an interactive graph, generated using [Plotly](https://plotly.com/). Registered users will be able to log the number of hours slept on different days and visualise this data as a graph. 
 
