@@ -21,19 +21,17 @@ If you've just signed up for an account you will be directed to the Welcome page
 
 ![welcome screen](images/welcome-screen.jpg)
 
-After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team. Code Capsules gives every account a Personal Team as a default. 
+After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is an environment for you to manage your spaces and capsules. Teams can have multiple members interacting with the projects associated with that particular Team. Code Capsules gives every account a Personal Team as a default.
 
-## Creating a Team and Space
+## Create a Space for your apps
 
-![create-team](images/new_team.png) 
+![create a new space](images/spaces.png)
 
-Log in to Code Capsules. After logging in, Code Capsules prompts you to create a team. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is a tool that helps manage your various projects. Teams can have multiple members interacting with the projects associated with that particular Team. You can also add a credit card to your Team to handle [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule) billing. 
+[Spaces](https://codecapsules.io/docs/faq/what-is-a-space) are an organizational tool for your applications. _You can create multiple spaces within a Team - each Space can consist of numerous Capsules_. Click the "Create A New Space For Your Apps" button and follow the prompts, naming the Space anything you'd like.
+   
+![space name](images/space-name.png)
 
-Click "Create A New Team" and give it a name of your choice. After creating a Team, you'll be prompted to enter your Team's billing information. Billing information is required to host any applications but **you will not be charged** for hosting the Angular application. Once you've entered billing information, we need to create a [Space](https://codecapsules.io/docs/faq/what-is-a-space).
-
-[Spaces](https://codecapsules.io/docs/faq/what-is-a-space) are another organizational tool for your applications. _You can create multiple spaces within a Team - each Space can consist of numerous Capsules_. Click the "Create A New Space" button and follow the prompts, naming the Space anything you'd like.
-
-Now that we've created a Space, we need to connect the GitHub to Code Capsules.
+Now that we've created a Space, we need to connect the GitHub repository we forked to our Code Capsules.
 
 ## Linking to GitHub
 
