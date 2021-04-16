@@ -19,7 +19,7 @@ Go to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up" butto
 
 If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step.
 
-![welcome screen](images/welcome-screen.JPG)
+![welcome screen](images/welcome-screen.jpg)
 
 After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team. Code Capsules gives every account a Personal Team as a default. 
 
