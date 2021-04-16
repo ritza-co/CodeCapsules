@@ -1,14 +1,27 @@
 
 # Getting Started on Code Capsules with Angular 
+
 Deploy an Angular application and learn how to host frontend code on Code Capsules. 
 
 ## Set up
 
-Code Capsules connects to GitHub repositories to deploy applications. All you need for this tutorial is a [Code Capsules account](www.codecapsules.io) and a [GitHub account](www.github.com). Make sure you have both. 
+Code Capsules connects to GitHub repositories to deploy applications. All you need for this tutorial is a [Code Capsules](https://codecapsules.io/) and [GitHub](https://github.com/) account.  
 
-To demonstrate deploying frontend code with Code Capsules, we'll use an Angular application already ready to be deployed. Find the application here: https://github.com/codecapsules-io/demo-angular.
+To demonstrate how to deploy an Angular application with Code Capsules, we'll use our [example application](https://github.com/codecapsules-io/demo-angular) which is ready to be deployed. 
 
-To use it, fork the application by clicking "fork" at the top-right of the repository. With the Angular application forked to your GitHub account, we are ready to deploy it on Code Capsules.
+Follow the link above and fork the application by clicking "fork" at the top-right of the repository. With the Angular application forked to your GitHub account, we are ready to deploy it on Code Capsules.
+
+![demo angular github](images/cc-demo-angular-github.png)
+
+## Code Capsules sign up
+
+Go to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up" button in the top right corner of the webpage. Alternatively, you can click on the "Log In" text next to the Sign Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
+
+If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step.
+
+![welcome screen](images/welcome-screen.JPG)
+
+After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team. Code Capsules gives every account a Personal Team as a default. 
 
 ## Creating a Team and Space
 
