@@ -58,6 +58,8 @@ Select an appropriate region and enter a name for your space and press "Create S
 
 ## Create the Capsule
 
+Capsules provide the server for hosting applications on Code Capsules.
+
 ![space_image](images/space.png)
 
 We can deploy our Flask application to Code Capsules by clicking the "Create a New Capsule for Your Space" button. Do so, then:
