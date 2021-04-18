@@ -1,56 +1,76 @@
 
 # Getting Started on Code Capsules with Express.js
-Deploy a Express JS application and learn how to host backend code on Code Capsules. 
 
-## Set up
-Code Capsules connects to GitHub repositories to deploy code online, so you'll need a [GitHub](www.github.com) account to follow this tutorial. 
+In this tutorial, we'll see how to deploy an Express JS application as well as learn how to host backend code on Code Capsules. 
 
-We'll learn how to deploy backend code with Code Capsules by following this process, using a sample Express.js application provided by Code Capsules. Find the GitHub repository containing the sample Express.js application here: https://github.com/codecapsules-io/demo-express-js
+Prerequisites:
 
-To use this repository, fork the application by navigating to the repository and clicking "Fork" at the top-right of the screen. Once you've forked the application, we are ready to deploy it – no edits necessary. 
+* A [GitHub](https://github.com) account
 
-## Prepare a Team
+## Get some example code
 
-To deploy the Express.js web application, we need to create an account with Code Capsules.
+Code Capsules connects to GitHub repositories to deploy code online, so you'll need a [GitHub](https://github.com) account to follow along. 
 
-To create an account:
+Let's get some example code first by forking the repository containing our [example Express JS application](https://github.com/codecapsules-io/demo-express-js). We'll use this ready to be deployed application to jump straight to the intricacies of how to deploy with Code Capsules. 
 
-1. Register an account at https://codecapsules.io/.
-    ![account-creation](images/create-account.png)
-2. Confirm your account by viewing the email sent to you.
+To use the repository mentioned above, fork the application by navigating to the repository and clicking "Fork" at the top-right of the screen. Once you've forked the application, we are ready to deploy it – no edits necessary. 
 
-After creating a new account, you'll see a prompt to create a [Team](Link-to-team-explanation-here). Create a Team, and name it anything you'd like.
+![cc demo express repo](images/cc-demo-express-github.png)
 
-![team-creation](images/team-creation.png)
+## Code Capsules sign up
 
-With a new Team created, we can create a [Space](https://codecapsules.io/docs/faq/what-is-a-space/)
+Navigate to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up" button in the top right corner of the webpage. Alternatively, you can click on the "Log In" text next to the Sign Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
 
-## Creating a Space and Linking GitHub
+If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is an environment for you to manage your spaces and capsules.
 
-Click "Create Space" again. The name here is irrelevant.
+![welcome screen](images/welcome-screen.jpg)
 
-![space_img](images/create-space.png)
+After clicking on the "Go To Personal Team" button you will be redirected to the Spaces tab for your Personal Team. Code Capsules gives every account a Personal Team as a default.
 
-Next, we need to link our GitHub repository to our Code Capsules account.
+Code Capsules requires us to add payment information in order to use a backend Capsule which we'll need in this tutorial. Do this by navigating to "Team Settings" at the top of the screen, then add a payment method under "Payment Methods". 
 
-Click the profile image on the top right of the page, and find the "GitHub" button.
+![payment methods](images/payment-methods.png)
 
-![git-button](images/git-button.png)
+Once you've added payment information, we need to create a Space which will contain our application.
 
-Authorize Code Capsules to connect to the Express.js application by:
+## Create a Space for your apps
 
-1. Clicking your GitHub username.
-2. Selecting "Only Select Repositories".
-3. Choosing the GitHub repository we forked.
-4. Pressing "Install & Authorize".
+![create a new space](images/spaces.png)
 
-![install&authorize](images/authorize_cc.png)
+Now click on the "Create A New Space For Your Apps" button. Alternatively, if you had logged into an existing Code Capsules account you could click on the "New Space" button to create a new space for this tutorial or select any of your existing ones. After actioning either of these steps a UI similar to the one shown below should slide in from the right of your screen.  
 
-After clicking "Install & Authorize", Code Capsules links to the forked GitHub repository containing the Express.js application – this means we can now create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule/) that'll host the code found in our repository.
+![space name](images/space-name.png)
+
+Select an appropriate region and enter a name for your space and press "Create Space".
+
+## Linking to GitHub
+
+The next step is to link the GitHub repository we forked earlier to our Code Capsules account. To do this, click the profile image at the top right of the screen, and find the GitHub button under "GitHub Details".
+
+![GitHub button](images/git-button.png)
+
+Click the "GitHub" button to give Code Capsules access to the Express application:
+
+1. Click your GitHub username.
+2. Select "Only Select Repositories".
+3. Choose the GitHub repository we forked.
+4. Press "Install & Authorize".
+
+![Install & authorize github](images/github-integration.gif)
+
+After authorizing, Code Capsules will be able to read the contents of the selected repositories. All that's left to deploy the application is to add the repo to your team and create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule). 
+
+## Add Repo to Team
+
+Click on "Team Settings" on the top navigation bar to switch to the Team Settings tab. Once there, click on the Modify button under the "Team Repos" section to add the repo to your Personal Team. When the "Edit Team Repos" screen slides in select "Add" next to the repo you want to add to your Personal Team and then confirm. After this is done, all Spaces in your team will have access to this repo. 
+
+![Edit Team Repos](images/team-repos.gif)
 
 ## Create the Capsule
 
-Select the Space created previously and add your payment information to create a new Capsule, Afterward, click the "Create a New Capsule for Your Space" button.
+Capsules provide the server for hosting applications on Code Capsules. For a closer look at a Capsules's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
+
+Go back to the "Spaces" tab. Next, click on the Space you just created or are using and create a new capsule in that space. To do this, click the "New Capsule" or "Create A New Capsule For Your Space" button when inside the space.
 
 1. Choose a "Backend Capsule".
 2. Select the "Sandbox" product.
@@ -58,7 +78,13 @@ Select the Space created previously and add your payment information to create a
 4. Press "Next".
 5. Leave the "Run Command" blank and create the Capsule.
 
-You can view the build logs under the "Logs" tab in your Capsule. For a closer look at a Capsules's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/). When the Capsule is built, navigate to the "Overview" tab and click on the URL provided to view the application. 
+![Create Backend Capsule](images/creating-backend-capsule.gif)
+
+You can view the build logs under the "Logs" tab in your Capsule whilst it is building. 
+
+![Build logs](images/backend-capsule-build-logs.gif)
+
+When the Capsule is built, navigate to the "Overview" tab and click on the URL provided to view the application.  
 
 This application also exposes a `GET` endpoint at `/api/data`. If [curl](https://curl.se/download.html) is installed on your computer (MacOSX and Linux distributions generally have curl installed), we can request the data exposed at that endpoint using the URL that Code Capsules provided. Try this in your terminal:
 
