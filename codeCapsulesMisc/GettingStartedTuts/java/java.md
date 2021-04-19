@@ -60,7 +60,7 @@ Click the GitHub button. To give Code Capsules access to the Java application:
 
 ![install&authorize](images/github-integration.gif)
 
-After authorising, Code Capsules will have access to the Java application. The next step is to add the repository to our "Personal Team" so that all Capsules created under that Team can read its data. 
+After authorizing, Code Capsules will have access to the Java application. The next step is to add the repository to our "Personal Team" so that all Capsules created under that Team can read its data. 
 
 ## Add Repo to Team
 
