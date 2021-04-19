@@ -44,7 +44,15 @@ Click on the GitHub button. You can authorize Code Capsules to connect to the Fl
 
 ![Install & authorize github](images/github-integration.gif)
 
-Once you've clicked the "Install & Authorize" button, Code Capsules will link to the GitHub repository containing the Flask application. Now, all we have left to do is to create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule) that will host our Flask application. But first, let's create a space for the capsule.
+Once you've clicked the "Install & Authorize" button, Code Capsules will link to the GitHub repository containing the Flask application. The next step is to add the repository to our "Personal Team" so that all Capsules created under that Team can read its data. 
+
+## Add Repo to Team
+
+Click on "Team Settings" on the top navigation bar to switch to the Team Settings tab. Once there, click on the Modify button under the "Team Repos" section to add the repo to your Personal Team. When the "Edit Team Repos" screen slides in select "Add" next to the repo you want to add to your Personal Team and then confirm. After this is done, all Spaces in your team will have access to this repo. 
+
+![Edit Team Repos](images/team-repos.gif)
+
+Now, all we have left to do is to create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule) that will host our Flask application. But first, let's create a space for the capsule.
 
 ## Create a Space for your apps
 
@@ -57,6 +65,8 @@ Navigate to the "Spaces" tab and click on the "Create A New Space For Your Apps"
 Select an appropriate region and enter a name for your space and press "Create Space".
 
 ## Create the Capsule
+
+Capsules provide the server for hosting applications on Code Capsules.
 
 ![space_image](images/space.png)
 
