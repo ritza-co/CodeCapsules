@@ -11,15 +11,15 @@ Prerequisites:
 
 We're going to learn how to deploy backend code on Code Capsules using an example Java application provided by Code Capsules. The source code for the application can be found [here](https://github.com/codecapsules-io/demo-java) on our GitHub account. Code Capsules connects to GitHub repositories to deploy applications online. 
 
-We can use this repository by forking it. Navigate to the repository and "Fork" it by clicking the fork button at the top right of the repository. After forking the application, we can deploy it on Code Capsules - no further edits required. 
+We can use this repository by forking it. Navigate to the repository and "Fork" it by clicking the fork button at the top right of the repository. After forking the application, we can deploy it on Code Capsules. 
 
 ![Demo Java Repository](images/cc-demo-java-github.png)
 
 ## Code Capsules Account Sign Up
 
-First we need to register an account with [Code Capsules](https://codecapsules.io). Alternatively, you can click on the "Log In" text next to the Sign Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
+First we need to register an account with [Code Capsules](https://codecapsules.io). Alternatively, you can click on the "Log In" text next to the Sign-Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
 
-If you've just signed up for an account, make sure to confirm it by checking for an email from Code Capsules.On your first login you will be directed to the Welcome page. Click on the "Go To Personal Team" button to advance to the next step. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is an environment for you to manage your spaces and capsules.
+If you've just signed up for an account, make sure to confirm it by checking for an email from Code Capsules. On your first login you will be directed to the Welcome page. Click on the "Go To Personal Team" button to advance to the next step. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is an environment for you to manage your spaces and capsules.
 
 ![welcome screen](images/welcome-screen.jpg)
 
@@ -37,7 +37,7 @@ Select an appropriate region and enter a name for your space and press "Create S
 
 ## Add Payment Information
 
-Because we're deploying backend code, we need to add our payment information. Add payment information by navigating to "Team Settings" at the top of the screen. Add a payment method by clicking "Payment Methods".
+Because we're deploying backend code, we need to add our payment information. Add payment information by navigating to "Team Settings" on the top navigation bar. Add a payment method by clicking "Payment Methods" and then "Add Payment Method".
 
 ![payment methods](images/payment-methods.png)
 
@@ -58,7 +58,7 @@ Click the GitHub button. To give Code Capsules access to the Java application:
 3. Choose the GitHub repository we forked.
 4. Press "Install & Authorize".
 
-![install&authorize](images/github-integration.gif)
+![install&authorize](images/github-integration.png)
 
 After authorizing, Code Capsules will have access to the Java application. The next step is to add the repository to our "Personal Team" so that all Capsules created under that Team can read its data. 
 
@@ -84,9 +84,9 @@ To deploy the Java application, click the button "Create a New Capsule for Your 
 
 ![Create Backend Capsule](images/creating-backend-capsule.gif)
 
-After creating the Capsule, the Capsule will build the Java application. You can view the build logs by clicking the "Logs" tab in the Capsule.
+After creating the Capsule, the Capsule will build the Java application. You can view the build logs by clicking the "Build and Deploy" tab in the Capsule.
 
-![Build logs](images/backend-capsule-build-logs.gif)
+![Build logs](images/backend-capsule-build-logs.png)
 
 Once built, navigate to the "Overview" tab. Code Capsules provides a default URL for viewing applications - find this under "domains". Click the URL to view the application.
 
