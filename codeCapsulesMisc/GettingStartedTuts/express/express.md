@@ -19,7 +19,7 @@ To use the repository mentioned above, fork the application by navigating to the
 
 ## Code Capsules sign up
 
-Navigate to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up" button in the top right corner of the webpage. Alternatively, you can click on the "Log In" text next to the Sign Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
+Navigate to [Code Capsules](https://codecapsules.io/) and click on the "Sign Up" button in the top right corner of the webpage. Alternatively, you can click on the "Log In" text next to the Sign-Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
 
 If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is an environment for you to manage your spaces and capsules.
 
@@ -56,7 +56,7 @@ Click the "GitHub" button to give Code Capsules access to the Express applicatio
 3. Choose the GitHub repository we forked.
 4. Press "Install & Authorize".
 
-![Install & authorize github](images/github-integration.gif)
+![Install & authorize github](images/github-integration.png)
 
 After authorizing, Code Capsules will be able to read the contents of the selected repositories. All that's left to deploy the application is to add the repo to your team and create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule). 
 
@@ -68,7 +68,7 @@ Click on "Team Settings" on the top navigation bar to switch to the Team Setting
 
 ## Create the Capsule
 
-Capsules provide the server for hosting applications on Code Capsules. For a closer look at a Capsules's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
+Capsules provide the server for hosting applications on Code Capsules. For a closer look at a Capsule's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
 
 Go back to the "Spaces" tab. Next, click on the Space you just created or are using and create a new capsule in that space. To do this, click the "New Capsule" or "Create A New Capsule For Your Space" button when inside the space.
 
@@ -80,9 +80,9 @@ Go back to the "Spaces" tab. Next, click on the Space you just created or are us
 
 ![Create Backend Capsule](images/creating-backend-capsule.gif)
 
-You can view the build logs under the "Logs" tab in your Capsule whilst it is building. 
+You can view the build logs under the "Build and Deploy" tab in your Capsule whilst it is building. 
 
-![Build logs](images/backend-capsule-build-logs.gif)
+![Build logs](images/backend-capsule-build-logs.png)
 
 When the Capsule is built, navigate to the "Overview" tab and click on the URL provided to view the application.  
 

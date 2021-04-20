@@ -1,11 +1,11 @@
 
-# Getting started on Code Capsules with Python's Flask
+# Getting started on Code Capsules with Python Flask
 
 Deploy a Flask application and learn how to host backend code on Code Capsules. 
 
 ## Set up
 
-Here we'll learn how to deploy backend code with Code Capsules and Flask. Because Code Capsules connects with GitHub to deploy code, you'll need a [GitHub](www.github.com) account to follow this tutorial. We'll use a sample Flask application provided by Code Capsules to demonstrate deployment – you can find the GitHub repository for the application [here](https://github.com/codecapsules-io/demo-python).
+Here we'll learn how to deploy backend code with Code Capsules and Flask. Because Code Capsules connects with GitHub to deploy code, you'll need a [GitHub](https://github.com) account to follow this tutorial. We'll use a sample Flask application provided by Code Capsules to demonstrate deployment – you can find the GitHub repository for the application [here](https://github.com/codecapsules-io/demo-python).
 
 To deploy this repository, we'll need to fork the application by clicking "Fork" at the top right of the GitHub repository. Once forked, we're ready to deploy the application – feel free to make any edits to it, otherwise continue. 
 
@@ -19,7 +19,7 @@ After creating a new account, you'll be greeted with a screen that looks like th
 
 ![welcome screen](images/welcome-screen.jpg)
 
-Click on the "Go To Personal Team" button and you will be redirected to the Spaces tab for your Personal Team. Code Capsules provides a personal [Team](https://codecapsules.io/docs/faq/what-is-a-team/) and a personal [Space](https://codecapsules.io/docs/faq/what-is-a-space/) (located in the middle of the screen) to every new user. 
+Click on the "Go To Personal Team" button, and you will be redirected to the Spaces tab for your Personal Team. Code Capsules provides a personal [Team](https://codecapsules.io/docs/faq/what-is-a-team/) and a personal [Space](https://codecapsules.io/docs/faq/what-is-a-space/) (located in the middle of the screen) to every new user. 
 
 For this tutorial, we'll need to add payment information to create a backend Capsule. Do so by navigating to "Team Settings" at the top of the screen, then add a payment method under "Payment Methods". 
 
@@ -42,7 +42,7 @@ Click on the GitHub button. You can authorize Code Capsules to connect to the Fl
 3. Choosing the GitHub repository we forked.
 4. Pressing "Install & Authorize".
 
-![Install & authorize github](images/github-integration.gif)
+![Install & authorize github](images/github-integration.png)
 
 Once you've clicked the "Install & Authorize" button, Code Capsules will link to the GitHub repository containing the Flask application. The next step is to add the repository to our "Personal Team" so that all Capsules created under that Team can read its data. 
 
@@ -80,9 +80,9 @@ We can deploy our Flask application to Code Capsules by clicking the "Create a N
 
 ![Create Backend Capsule](images/creating-backend-capsule.gif)
 
-While the Capsule is building, you can view its logs under the "Logs" tab in the Capsule. Once built, you can navigate to the "Overview" tab and click on the provided URL to view the application. 
+While the Capsule is building, you can view its logs under the "Build and Deploy" tab in the Capsule. Once built, you can navigate to the "Overview" tab and click on the provided URL to view the application. 
 
-![Build logs](images/backend-capsule-build-logs.gif)
+![Build logs](images/backend-capsule-build-logs.png)
 
 For a closer look at capsules, take a look at this explanation of [Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule).
 

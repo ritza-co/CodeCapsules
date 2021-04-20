@@ -17,7 +17,7 @@ So we can deploy this repository to Code Capsules, we'll need to fork the reposi
 
 Create an account with [Code Capsules](https://codecapsules.io/) by following the link mentioned beforehand and clicking the "Sign Up" button in the top right section of our homepage. Once you've created an account, make sure to confirm it by checking your email for a message from Code Capsules. 
 
-Alternatively, you can click on the "Log In" text next to the Sign Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
+Alternatively, you can click on the "Log In" text next to the Sign-Up button if you already have a registered Code Capsules account. Enter your details to sign up for an account or to log into an existing one. 
 
 If you've just signed up for an account you will be directed to the Welcome page on your first login. Click on the "Go To Personal Team" button to advance to the next step. A [Team](https://codecapsules.io/docs/faq/what-is-a-team/) is an environment for you to manage your spaces and capsules.
 
@@ -32,7 +32,7 @@ This default "personal" Team allows users to host static frontend websites for f
 ![create a new space](images/spaces.png)
 
 [Spaces](https://codecapsules.io/docs/faq/what-is-a-space) are an organizational tool for your applications. _You can create multiple spaces within a Team - each Space can consist of numerous Capsules_. Click the "Create A New Space For Your Apps" button and follow the prompts, naming the Space anything you'd like.
-   
+
 ![space name](images/space-name.png)
 
 Now that we've created a Space, we need to connect the GitHub repository we forked to our Code Capsules.
@@ -52,7 +52,7 @@ Click on the GitHub button. You can authorize Code Capsules to connect to the fo
 3. Choosing the GitHub repository we forked.
 4. Pressing "Install & Authorize".
 
-![Install & authorize github](images/github-integration.gif)
+![Install & authorize github](images/github-integration.png)
 
 Once authorized on your GitHub account, Code Capsules will be able to access the repository and deploy the code. Now we just need to tell Code Capsules to deploy the HTML code, by adding the repository to our "Personal Team" and creating a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule).
 
@@ -74,9 +74,9 @@ The next step is to create a [Capsule](https://codecapsules.io/docs/faq/what-is-
 
 ![Create Front-end Capsule](images/creating-frontend-capsule.gif)
 
-While the Capsule is building, you can view its logs under the "Logs" tab in the Capsule. 
+While the Capsule is building, you can view its logs under the "Build and Deploy" tab in the Capsule. 
 
-![Build logs](images/frontend-capsule-build-logs.gif)
+![Build logs](images/frontend-capsule-build-logs.png)
 
 Once built, you can navigate to the "Overview" tab and click on the provided URL to view the application. For a closer look at capsules, take a look at this explanation of [Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule).
 
