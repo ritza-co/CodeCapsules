@@ -35,14 +35,6 @@ Now click on the "Create A New Space For Your Apps" button. Alternatively, if yo
 
 Select an appropriate region and enter a name for your space and press "Create Space".
 
-## Add Payment Information
-
-Since we're deploying backend code, we'll need to add payment information. Add payment information by navigating to "Team Settings" at the top of the screen, then add a payment method under "Payment Methods".
-
-![payment methods](images/payment-methods.png)
-
-After adding payment information, we just need to give Code Capsules access to the Vue application we forked.
-
 ## Linking to GitHub
 
 So we can host our Vue application on Code Capsules, we need to link our forked GitHub repository to our Code Capsules account.
@@ -74,17 +66,17 @@ Capsules act as storage spaces for applications. For a closer look at a Capsules
 
 To deploy the Vue application, go back to the "Spaces" tab. Next, click on the Space you just created or are using and create a new Capsule in that space. Click the "New Capsule" or "Create A New Capsule For Your Space" button when inside the space. Next:
 
-1. Choose a "Backend Capsule".
-2. Select the "Sandbox" product.
+1. Choose a "Frontend" Capsule.
+2. Select the "Trial - Static Site Hosting" product.
 3. Choose the GitHub repository we forked.
 4. Press next.
-5. Leave the "Run Command" blank and create the Capsule.
+5. Leave the "Build command" and "Static content folder path" blank and create the Capsule.
 
-![Create Backend Capsule](images/creating-backend-capsule.gif)
+![Create Front-end Capsule](images/creating-frontend-capsule.gif)
 
 After creating the Capsule, the Capsule will build the Vue application. You can view the build logs by clicking the "Logs" tab in the Capsule. 
 
-![Build logs](images/backend-capsule-build-logs.gif)
+![Build logs](images/frontend-capsule-build-logs.gif)
 
 Once built, navigate to the "Overview" tab. Code Capsules provides a default URL for viewing applications - find this under "domains". Click the URL to view the application.
 
