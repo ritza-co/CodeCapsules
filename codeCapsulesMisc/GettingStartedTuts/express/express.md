@@ -56,7 +56,7 @@ Click the "GitHub" button to give Code Capsules access to the Express applicatio
 3. Choose the GitHub repository we forked.
 4. Press "Install & Authorize".
 
-![Install & authorize github](images/github-integration.gif)
+![Install & authorize github](images/github-integration.png)
 
 After authorizing, Code Capsules will be able to read the contents of the selected repositories. All that's left to deploy the application is to add the repo to your team and create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule). 
 
