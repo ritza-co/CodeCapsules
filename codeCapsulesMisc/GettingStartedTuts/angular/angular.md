@@ -64,7 +64,8 @@ It's time to create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsu
 2. Select the "Trial - Static Site Hosting" product.
 3. Choose the GitHub repository we forked.
 4. Press next.
-5. Leave the "Build command" and "Static content folder path" blank and create the Capsule.
+5. Use `npm run build` for the "Build command" and `dist` for "Static content folder path"
+6. Press "Create Capsule".
 
 ![Create Front-end Capsule](images/creating-frontend-capsule.gif)
 
