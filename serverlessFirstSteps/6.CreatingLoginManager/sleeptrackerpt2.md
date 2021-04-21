@@ -282,13 +282,13 @@ Now we can push our code to GitHub. Create a GitHub repository and send every fi
 With all of the files on GitHub, we can deploy the sleep tracer to Code Capsules:
 
 1. Log in to Code Capsules, and create a Team and Space as necessary.
-2. Link Code Capsules to the GitHub repository created [previously](#creating-the-procfile-and-adding-requirements).
+2. Link Code Capsules to the GitHub repository created [previously](#creatingaprocfileandaddingrequirementstxt).
 3. Enter your Code Capsules Space.
 4. Create a new Capsule, selecting the "Backend" capsule type.
 5. Select the GitHub repository containing the sleep tracker – leave "Repo subpath" empty and click "Next".
 6. Leave the "Run Command" blank and click "Create Capsule".
 
-Now we just need to set those environment variables we mentioned [previously](#creating-environment-variables).
+Now we just need to set those environment variables we mentioned [previously](#creatingenvironmentvariables).
 
 ### Creating environment variables in Code Capsules
 
