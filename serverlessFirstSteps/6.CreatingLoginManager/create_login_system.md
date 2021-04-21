@@ -14,7 +14,7 @@ This tutorial series is best suited for those with some Python, HTML, and Flask 
 
 ## MongoDB Atlas
 
-One of the most important aspects of this tutorial is using a Mongo Database (MongoDB). With this MongoDB, we can track users' login information and sleep data. MongoDB is a _NoSQL_ databases, which means we can store data easily, in variable formats, without having to first create tables, as we would have to with a traditional SQL databse. If you're unfamiliar with NoSQL databases or MongoDB in general, take a look at [this explainer](https://www.mongodb.com/nosql-explained) by the MongoDB organisation. 
+One of the most important aspects of this tutorial is using a Mongo Database (MongoDB). With this MongoDB, we can track users' login information and sleep data. MongoDB is a _NoSQL_ databases, which means we can store data easily, in variable formats, without having to first create tables, as we would have to with a traditional SQL database. If you're unfamiliar with NoSQL databases or MongoDB in general, take a look at [this explainer](https://www.mongodb.com/nosql-explained) by the MongoDB organisation. 
 
 MongoDB Atlas clusters are free to use. Follow [this short tutorial](https://codecapsules.io/docs/how-to-connect-a-mongodb-using-mongodb-atlas-with-your-code-capsules-application) to create the MongoDB Atlas cluster that we'll use to store the user data for this sleep tracker application. This step is *extremely* important – without a database, our application will not function. 
 
@@ -56,8 +56,8 @@ If the virtual environment activated correctly, you'll notice `(env)` to the lef
 Our sleep tracker will use the following Python libraries:
 
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) is a lightweight Python web development framework.
-- [Flask-Login](https://flask-login.readthedocs.io/en/latest/) provides user session management for Flask. This will help us implement a user login and registeration system without having to create one from scratch. 
-- [Flask Bcrypt](https://flask-bcrypt.readthedocs.io/en/latest/) is a [hashing](https://en.wikipedia.org/wiki/Cryptographic_hash_function) extension for Flask. This allow us to store users' passwords securely and without knowing what they are.
+- [Flask-Login](https://flask-login.readthedocs.io/en/latest/) provides user session management for Flask. This will help us implement a user login and registration system without having to create one from scratch. 
+- [Flask Bcrypt](https://flask-bcrypt.readthedocs.io/en/latest/) is a [hashing](https://en.wikipedia.org/wiki/Cryptographic_hash_function) extension for Flask. This allows us to store users' passwords securely and without knowing what they are.
 - [Gunicorn](https://gunicorn.org/) is the [WSGI server](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) we'll use to host our application on Code Capsules.
 - [Pymongo](https://pymongo.readthedocs.io/en/stable/) is a Python library that has tools for interacting with MongoDBs. We'll use Pymongo to connect and send data to our MongoDB hosted on MongoDB Atlas.
 
@@ -79,7 +79,7 @@ Inside `templates`, create three files: `base.html`, `login.html`, and `main.htm
 - `login.html` will contain the HTML for the main page of our web application. Here, users will log in or register an account with our sleep tracker.
 - `main.html` will contain the HTML for the page where users will enter their sleep data and view a graph of this data. We'll deal with this file in the second part of this tutorial.
 
-Next, open the `static` directory and create a file named `style.css`. This will be the only file in this directory, and will conain the CSS style for our website.
+Next, open the `static` directory and create a file named `style.css`. This will be the only file in this directory, and will contain the CSS style for our website.
 
 Finally, in the main `sleep-tracker` directory, create a file named `app.py`. In this file, we'll write the Python code that serves our HTML content to user and manages their activities on the web application. 
 
@@ -147,7 +147,7 @@ Now that we've created the `base.html` file, we can implement our `login.html` f
 
 The line `{% extends "base.html" %}` tells Jinja to render this page by populating each of `base.html`'s named [`block` directives](https://jinja.palletsprojects.com/en/2.11.x/templates/#template-inheritance) with the corresponding `block` content defined in `login.html`. In this instance, we've only defined a single block named `content`, but we could define multiple blocks. For example, we might want to have a `head` block that defines some page-specific content that needs to be in the HTML `<head>` tag.
 
-On this page, we've created a form containing input fields for users to enter their username and password, as well as login and register buttons. Note the [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) HTTP method – this will ensure that the username and password are sent as `POST` parameters in the HTTP request body, rather than as `GET` parameters in the URL. This allows us to differentate between when a user visits the login page (a `GET` request) versus when they click the register or login button.
+On this page, we've created a form containing input fields for users to enter their username and password, as well as login and register buttons. Note the [`POST`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) HTTP method – this will ensure that the username and password are sent as `POST` parameters in the HTTP request body, rather than as `GET` parameters in the URL. This allows us to differentiate between when a user visits the login page (a `GET` request) versus when they click the register or login button.
 
 Before we take a look at our work so far, let's populate our `style.css` file to make our HTML look a bit better.
 
@@ -236,7 +236,7 @@ After running the application, Flask will provide you with URL. Enter this URL i
 
 ## Handling User Registration and Login
 
-Rather than implementing a user registration and login system ourselves, we'll use the Flask Login library that we installed earlier to provide this functionality. This will help us to save time and avoid common usability and security pitfalls. We will store user information in the database we created [at the beginning of this tutorial](#mongodb-atlas).
+Rather than implementing a user registration and login system ourselves, we'll use the Flask Login library that we installed earlier to provide this functionality. This will help us to save time and avoid common usability and security pitfalls. We will store user information in the database we created [at the beginning of this tutorial](#mongodbatlas).
 
 First, let's import the functionality we'll need from:
 + `flask-login`, `flask-bcrypt`, to handle users.

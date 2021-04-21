@@ -1,7 +1,7 @@
 
 # Getting started on Code Capsules with Vue
 
-Deploy a Vue application and learn how to host backend code on Code Capsules. 
+Deploy a Vue application and learn how to host frontend code on Code Capsules. 
 
 Prerequisites:
 
@@ -9,7 +9,7 @@ Prerequisites:
 
 ## Set up
 
-Here we'll look at a step-by-step process for deploying a Vue application on Code Capsules using source code provided by Code Capsules on their GitHub. You can find the repository [here](https://github.com/codecapsules-io/demo-vue) and you can also link any of your GitHub repositories to Code Capsules, and Code Capsules will deploy it.
+Here we'll look at a step-by-step process for deploying a Vue application on Code Capsules using example source code provided by Code Capsules on their GitHub. You can find the repository [here](https://github.com/codecapsules-io/demo-vue) and you can also link any of your GitHub repositories to Code Capsules, and Code Capsules will deploy it.
 
 To be able to deploy this repository to Code Capsules, make sure to fork the Vue application. You can do so by visiting the repository and clicking the "Fork" button at the top right of the repository. 
 
@@ -50,7 +50,7 @@ Click the GitHub button. To give Code Capsules access to the Vue application:
 3. Choose the GitHub repository we forked.
 4. Press "Install & Authorize".
 
-![install&authorize](images/github-integration.gif)
+![install&authorize](images/github-integration.png)
 
 After authorizing, Code Capsules will be able to read the repository containing the Vue application. All that's left to deploy the application is to add the repo to our Team and create a [Capsule](https://codecapsules.io/docs/faq/what-is-a-capsule). 
 
@@ -62,7 +62,7 @@ Click on "Team Settings" on the top navigation bar to switch to the Team Setting
 
 ## Create the Capsule
 
-Capsules act as storage spaces for applications. For a closer look at a Capsules's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
+Capsules act as storage spaces for applications. For a closer look at a Capsule's properties, refer to this [explanation on Capsules](https://codecapsules.io/docs/faq/what-is-a-capsule/).
 
 To deploy the Vue application, go back to the "Spaces" tab. Next, click on the Space you just created or are using and create a new Capsule in that space. Click the "New Capsule" or "Create A New Capsule For Your Space" button when inside the space. Next:
 
@@ -70,13 +70,14 @@ To deploy the Vue application, go back to the "Spaces" tab. Next, click on the S
 2. Select the "Trial - Static Site Hosting" product.
 3. Choose the GitHub repository we forked.
 4. Press next.
-5. Leave the "Build command" and "Static content folder path" blank and create the Capsule.
+5. Use `npm run build` for the "Build command" and `dist` for "Static content folder path" 
+6. Press "Create Capsule".
 
 ![Create Front-end Capsule](images/creating-frontend-capsule.gif)
 
 After creating the Capsule, the Capsule will build the Vue application. You can view the build logs by clicking the "Logs" tab in the Capsule. 
 
-![Build logs](images/frontend-capsule-build-logs.gif)
+![Build logs](images/frontend-capsule-build-logs.png)
 
 Once built, navigate to the "Overview" tab. Code Capsules provides a default URL for viewing applications - find this under "domains". Click the URL to view the application.
 
