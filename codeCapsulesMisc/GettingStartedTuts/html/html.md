@@ -9,7 +9,7 @@ Prerequisites:
 
 ## Set up
 
-This tutorial will focus on deploying frontend code to Code Capsules - we'll deploy a simple static HTML website and see how this process works. The HTML code has already been provided by Code Capsules. Follow this [link](https://github.com/AnesuMurakata/demo-html) to view the repository.
+This tutorial will focus on deploying frontend code to Code Capsules - we'll deploy a simple static HTML website and see how this process works. The HTML code has already been provided by Code Capsules. Follow this [link](https://github.com/codecapsules-io/demo-html) to view the repository.
 
 So we can deploy this repository to Code Capsules, we'll need to fork the repository. Fork the repository by clicking the Fork button at the top right of the repository. Feel free to make any edits to the HTML code, otherwise, we can continue and get to deploying the static website.
 
