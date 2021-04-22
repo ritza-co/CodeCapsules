@@ -1,5 +1,4 @@
-
-# How to Deploy a Vue Application on Code Capsules
+# How to Deploy a Vue Application to Production on Code Capsules
 
 Deploy a Vue application and learn how to host frontend code on Code Capsules. 
 

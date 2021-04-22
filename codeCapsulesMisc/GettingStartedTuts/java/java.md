@@ -1,5 +1,4 @@
-
-# How to Deploy a Pre-made Java Application on Code Capsules
+# How to Deploy a Java Application to Production on Code Capsules
 
 Learn how to deploy backend Code on Code Capsules by deploying a Java application.
 

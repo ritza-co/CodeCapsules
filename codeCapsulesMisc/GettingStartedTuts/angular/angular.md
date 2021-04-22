@@ -1,5 +1,4 @@
-
-# How to Deploy an Angular Application on Code Capsules
+# How to Deploy an Angular Application to Production on Code Capsules
 
 Deploy an Angular application and learn how to host frontend code on Code Capsules. 
 

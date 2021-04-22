@@ -1,5 +1,4 @@
-
-# Getting Started on Code Capsules with Python Flask
+# How to Deploy a Flask Application to Production on Code Capsules
 
 Deploy a Flask application and learn how to host backend code on Code Capsules. 
 

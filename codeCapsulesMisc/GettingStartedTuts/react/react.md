@@ -1,4 +1,3 @@
-
 # How to Deploy a React Application to Production on Code Capsules
 
 React is an efficient and flexible JavaScript library which is great for building user interfaces. If you've built a web app with React, you'll want to deploy it to production so you can share it with the rest of the world. In this tutorial, we'll show you how to do just that, step by step.

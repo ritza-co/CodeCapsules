@@ -1,5 +1,4 @@
-
-# How to Deploy a Static HTML Site on Code Capsules
+# How to Deploy an HTML Site to Production on Code Capsules
 
 Deploy a static HTML site and learn how to host frontend code on Code Capsules.
 
